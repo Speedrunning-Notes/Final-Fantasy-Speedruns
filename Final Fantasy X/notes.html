@@ -38,7 +38,7 @@
   <body>
     <header>
       <p>One Column:&nbsp;</p>
-      <button onclick="PDF.src = 'https://raw.githubusercontent.com/Speedrunning-Notes/Final-Fantasy-Speedruns/f0ddb4cf339bd1a1897c138826d3f028f1892ea1/Final%20Fantasy%20X/FFX_Any_%20-%20Single%20Column%20-%20Blitz%20Win.pdf';">Blitz Win</button>
+      <button onclick="PDF.src = 'FFX_Any_ - Single Column - Blitz Win.pdf';">Blitz Win</button>
       <button onclick="PDF.src = 'FFX_Any_ - Single Column - Blitz Loss.pdf';">Blitz Loss</button>
       <p>&nbsp;| Two Columns:&nbsp;</p>
       <button onclick="PDF.src = 'FFX_Any_Blitz_Win.pdf';">Blitz Win</button>
@@ -47,6 +47,6 @@
       <button onclick="PDF.src = 'FFX_Any_ - Single Column.pdf';">One Column</button>
       <button onclick="PDF.src = 'FFX_Any_.pdf';">Two Columns</button>
     </header>
-	<embed src=`https://drive.google.com/viewerng/viewer?embedded=true&url=${PDF.src}`>
+    <embed id="PDF" type="application/pdf">
   </body>
 </html>
