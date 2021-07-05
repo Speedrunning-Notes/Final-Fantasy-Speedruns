@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>FFXIII Speedrun Guides% Guide</title>
+    <style media="screen">
+    @font-face {
+      src: url('open-sans-v20-latin-regular.woff2');
+    }
+    * {
+      padding: 0;
+      margin: 0;
+      font-family: "Open Sans";
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      color: white;
+      background-color: black;
+    }
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 1.5em;
+    }
+    button {
+      padding: 0px 2px 0px 2px;
+      margin: 3px 1px 4px 1px;
+    }
+    #PDF {
+      width: 100%;
+      height: 100%;
+    }
+    </style>
+  </head>
+  <body>
+    <header>
+      <p>Any%:&nbsp;</p>
+      <button onclick="PDF.src = 'FF13_Any_.pdf';">PC</button>
+      <button onclick="PDF.src = 'FF13_Any_ Lightning.pdf';">PC - Lightning Turtle</button>
+      <button onclick="PDF.src = 'FF13_Any_ -Console.pdf';">Console</button>
+      <p>&nbsp;| All Missions:&nbsp;</p>
+      <button onclick="PDF.src = 'All Missions\FF13_AllMissions.pdf';">All Missions</button>
+    </header>
+    <embed id="PDF" type="application/pdf">
+  </body>
+</html>
