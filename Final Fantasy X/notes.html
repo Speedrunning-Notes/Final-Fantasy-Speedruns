@@ -38,7 +38,6 @@
   <body>
     <header>
       <p>One Column:&nbsp;</p>
-	  
       <button onclick="PDF.src = 'FFX_Any_ - Single Column - Blitz Win.pdf';">Blitz Win</button>
       <button onclick="PDF.src = 'FFX_Any_ - Single Column - Blitz Loss.pdf';">Blitz Loss</button>
       <p>&nbsp;| Two Columns:&nbsp;</p>
@@ -48,7 +47,6 @@
       <button onclick="PDF.src = 'FFX_Any_ - Single Column.pdf';">One Column</button>
       <button onclick="PDF.src = 'FFX_Any_.pdf';">Two Columns</button>
     </header>
-	<embed src="https://drive.google.com/viewerng/
-viewer?embedded=true&url=${PDF.src}">
+    <embed id="PDF" type="application/pdf">
   </body>
 </html>
