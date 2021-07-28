@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>FFX No Sphere Grid Any% Guide</title>
+    <style media="screen">
+      * {
+        padding: 0; margin: 0;
+        font-family: "Open Sans";
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        color: white;
+        background-color: #222;
+      }
+      a:link {color: cyan;}
+      a:visited {color: lightblue;}
+      p {
+        font-size: 0.95em;
+        line-height: 1.5em;
+        margin-top: 1em;
+      }
+      header {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        min-height: 1.5em;
+      }
+      button {
+        padding: 0px 2px 0px 2px;
+        margin: 3px 1px 4px 1px;
+      }
+      #PDF {
+        width: 100%;
+        height: 100%;
+      }
+      #desc {
+        flex-direction: column;
+        text-align: left;
+        margin: 3em auto auto auto;
+        width: 75%;
+        min-width: 55ch;
+        max-width: 1200px;
+        font-weight: 300;
+        letter-spacing: 0.01em;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      No Sphere Grid:&nbsp;
+      <button onclick="PDF.src = 'FFX_NSG.pdf'; desc.style.display = 'none'">Full</button>
+      <button onclick="PDF.src = 'FFX_NSG_Lite.pdf'; desc.style.display = 'none'">Lite</button>
+    </header>
+    <div id="desc">
+      <h1 style="text-align:center">FFX No Sphere Grid Any% Guide</h1>
+      <p>
+        Welcome to the Final Fantasy X No Sphere Grid Any% Speedrun Guide. <br>
+        This guide is the work of a lot of very amazing people that helped in the creation of this guide in various ways.<br>
+      </p>
+      <p>
+        To use the notes, just click on one of the buttons at the top of the screen 🡅.<br>
+      </p>
+      <p>
+        If you are on mobile, this site might not work correctly since some mobile browsers removed the ability to display embedded PDFs. In that case you should visit <a href="https://github.com/Speedrunning-Notes/Final-Fantasy-Speedruns/tree/master/Final%20Fantasy%20X">this link</a> to download the guide instead. Keep in mind that you will have to manually re-download the guide if it has been updated.
+      </p>
+      <br>
+      <h2>Credits</h2>
+      <p>
+        Strategies and Routing: CrimsonInferno9, CloseToWar, Flobberworm, Roosta, Keeano, TheMixedHerb, Madhyama<br>
+        Lots of small suggestions and corrections: The Final Fantasy X Speedrun Community and <a href="https://discord.gg/X3qXHWG">Discord</a><br>
+        Creating the Guide: CrimsonInferno9, with help from MrTyton<br>
+        Creating this website: shenef
+      </p>
+    </div>
+    <embed id="PDF" type="application/pdf">
+  </body>
+</html>
