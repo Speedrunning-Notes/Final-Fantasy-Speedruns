@@ -243,13 +243,14 @@
 \newcommand{\winvfill}{\ifthenelse{\equal{\blitzresult}{win}}{\vfill}{}}
 \newcommand{\lossvfill}{\ifthenelse{\equal{\blitzresult}{loss}}{\vfill}{}}
 
-\newcommand{\bothcb}{\ifthenelse{\equal{\blitzresult}{both}}{\columnbreak}{}}
-\newcommand{\wincb}{\ifthenelse{\equal{\blitzresult}{win}}{\columnbreak}{}}
-\newcommand{\losscb}{\ifthenelse{\equal{\blitzresult}{loss}}{\columnbreak}{}}
+\newcommand{\colbreak}{\ifthenelse{\equal{\colstyle}{multi}}{\columnbreak}{}}
 
 \newcommand{\bothnp}{\ifthenelse{\equal{\blitzresult}{both}}{\newpage}{}}
 \newcommand{\winnp}{\ifthenelse{\equal{\blitzresult}{win}}{\newpage}{}}
 \newcommand{\lossnp}{\ifthenelse{\equal{\blitzresult}{loss}}{\newpage}{}}
+
+\newcommand{\colstart}{\ifthenelse{\equal{\colstyle}{multi}}{\begin{multicols}{2}}{}}
+\newcommand{\colend}{\ifthenelse{\equal{\colstyle}{multi}}{\end{multicols}}{}}
 
 \newcommand{\blitzballSphereGrid}[6]{%
 \ifthenelse{%
@@ -307,7 +308,7 @@ Mr.Tyton, Roosta, Madhyama
 
 \input{Chapters_NSG/000_introduction.tex}
 
-\begin{multicols}{2}
+\colstart
 	\input{Chapters_NSG/001_zanarkand.tex}
 	\input{Chapters_NSG/002_baajtemple.tex}
 	\input{Chapters_NSG/003_besaid.tex}
@@ -334,6 +335,6 @@ Mr.Tyton, Roosta, Madhyama
 	\input{Chapters_NSG/024_zanarkand2.tex}
 	\input{Chapters_NSG/025_airship2.tex}
 	\input{Chapters_NSG/026_insidesin.tex}
-\end{multicols}
+\colend
 
 \end{document}
