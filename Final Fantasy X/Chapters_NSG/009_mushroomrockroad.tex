@@ -40,7 +40,7 @@
 				\item Elixirs
 				\item Mega-Potions
 				\item Hunter's Spear
-				\item Anything other than Official Ball, Lightning Steel, Thunder Ball
+				\item Any Equipment other than Official Ball, Lightning Steel, Thunder Ball, Stunning Steel
 			\end{itemize}
 		\item Buy
 			\begin{itemize}
@@ -54,52 +54,57 @@
 	\item \sd, go right, \cs[1:00], \sd\ after Seymour. Go down to guard, use the \nth{2} option to confirm Yes, \sd
 \end{enumerate}
 }
-\vfill\ \columnbreak
+\vfill\
+\end{multicols}
 \begin{battle}[12000]{Sinspawn Gui 1}
+This fight aims to use Valefor to deal the bulk of the damage with energy blast. After the first energy blast Gui will Attack and follow up with Demi. Then you need to do 3-4 Thunders with Valefor to get Gui to 4218HP or below to kill with Energy Blast. Energy Blast has a damage range of 4218 - 4763 with an average of 4491, so it is possible to kill Gui if its HP is between these values but not guaranteed.
+\newline\ \newline
+Gui will always follow up an Attack with Demi but can follow up Demi with either an Attack or Demi. Depending on which attacks Gui uses and whether his Attacks miss or not you may only be able to fit in 3 Thunders when a 4th is needed to get Gui below 4218 HP. If Valefor has < 329 HP and Gui just used Demi then Valefor is at risk of dying so you should shield until Gui uses a normal Attack and then use Thunder. After this Thunder use Energy Blast. It is possible that at this point Gui is not dead, however 3 Thunders should be sufficient ~80\%\ of the time.
+\newline\ \newline
+\textbf{If \yuna\ hit by Thunder:}
 	\begin{itemize}
-		\item If \yuna\ hit by Thunder:
-			\begin{itemize}
-				\tidusf Switch Weapon to Stunning Steel
-				\switch{\yuna}{\auron}
-				\auronf Power Break Main Body
-				\switch{\wakka}{\kimahri}
-				\kimahrif Self Destruct main body
-				\switch{\tidus}{\yuna}
-				\summon{\valefor}
-			\end{itemize}
-		\item Otherwise:
-			\begin{itemize}
-				\switch{\tidus}{\auron}
-				\auronf Power Break Main Body
-				\yunaf Switch Weapon to Staff
-				\switch{\wakka}{\kimahri}
-				\kimahrif Self Destruct main body
-				\summon{\valefor}
-			\end{itemize}
+		\tidusf Switch Weapon to Stunning Steel
+		\switch{\yuna}{\auron}
+		\auronf Power Break Main Body
+		\switch{\wakka}{\kimahri}
+		\kimahrif Self Destruct main body
+		\switch{\tidus}{\yuna}
+		\summon{\valefor}
+	\end{itemize}
+\vspace{\baselineskip}
+\textbf{Otherwise:}
+	\begin{itemize}
+		\switch{\tidus}{\auron}
+		\auronf Power Break Main Body
+		\yunaf Switch Weapon to Staff
+		\switch{\wakka}{\kimahri}
+		\kimahrif Self Destruct main body
+		\summon{\valefor}
+	\end{itemize}
+\vspace{\baselineskip}
+\textbf{Then:}
+	\begin{itemize}
 		\valeforf Energy Blast
 		\enemyf Attack
 		\enemyf Demi
-		\valeforf Thunder
+		\valeforf Thunder Body
 		\enemyf Attack / Demi
-		\valeforf Thunder
+		\valeforf Thunder Body
 		\enemyf Attack / Demi
-		\valeforf Thunder (If HP < 329 and last action was Demi, use shield until gui attacks then use Thunder)
+		\valeforf Thunder Body 1x-2x (If HP < 329 and last action was Demi, use shield until gui attacks then use Thunder)
 		\valeforf Energy Blast
+		\item If Gui still alive: \switch{anyone}{\lulu} and Thunder Gui to death
 		\item \textit{If Self Destruct Crit \textit{(3864)}:}
 			\begin{itemize}
 				\valeforf Energy Blast
 				\valeforf Boost
+				\valeforf If Gui used demi: Thunder Body
 				\valeforf Energy Blast
-			\end{itemize}
-		\item \textit{If Power Break Failed}
-			\begin{itemize}
-				\valeforf Energy Blast
-				\summon{\ifrit} once \valefor\ dies.
-				\ifritf Fire Main Body until 3000 HP
-			 	\ifritf Hellfire
 			\end{itemize}
 	\end{itemize}
 \end{battle}
+\pagebreak
+\begin{multicols}{2}
 \liteversiondetermination{Exclude}{%
 \begin{enumerate}[resume]
 	\item \cs+\skippablefmv[2:20]. \sd\ Seymour dialogue.
@@ -118,6 +123,6 @@
 	\item \sd, \cs+\skippablefmv[2:00] (press Start immediately after the skip. Do not use it on the upcoming scenes, as you will crash your game). Walk left and up to Gatta, \sd. \fmv+\cs[1:30], \sd\ during \tidus\ monologue. \cs[1:00], \sd
 	\item Walk left, \sd. Walk left, speak to \auron, \sd. \save\ if \auron\ is in critical HP. Go up and right, \sd, exit area, \sd.
 \end{enumerate}
-\vfill\ \columnbreak
+%\vfill\ \columnbreak
 }
 
