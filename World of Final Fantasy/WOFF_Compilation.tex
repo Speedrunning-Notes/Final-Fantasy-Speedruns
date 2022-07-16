@@ -1,0 +1,172 @@
+\documentclass[a4paper]{report}
+\usepackage[group-separator={,},group-minimum-digits={3}]{siunitx}
+\usepackage[utf8]{inputenc}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{soul}
+\usepackage{tcolorbox}
+\usepackage{multicol}
+\usepackage{lipsum}
+\usepackage[margin=0.2in]{geometry}
+\usepackage{xstring}
+\usepackage{xifthen}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\pagenumbering{gobble}
+\setlength{\columnsep}{1.5cm}
+\setlength{\columnseprule}{0.2pt}
+\usepackage{hyperref}
+\usepackage[none]{hyphenat}
+\usepackage{graphicx}
+\usepackage{etoolbox}
+\usepackage{titlepic}
+\usepackage[super]{nth}
+\usepackage{setspace}
+\usepackage[document]{ragged2e}
+
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\usepackage[default]{sourcesanspro}
+\usepackage[T1]{fontenc}
+
+\makeatletter
+\def\@makechapterhead#1{%
+  %\vspace*{5\p@}%
+  {\parindent \z@ \raggedleft \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+        \large\bfseries #1
+        \par\nobreak
+%        \vskip 10\p@
+        \rule{\columnwidth}{.1pt}%
+%        \vskip 10\p@
+    \fi
+    \interlinepenalty\@M
+%    \large \bfseries \MakeUppercase{#1}\par\nobreak
+%    \vskip 5\p@
+  }}
+\makeatother
+
+\makeatletter
+ \def\SOUL@hlpreamble{%
+ \setul{}{3ex}%         !!!change this value!!! default is 2.5ex
+ \let\SOUL@stcolor\SOUL@hlcolor
+ \SOUL@stpreamble
+ }
+\makeatother
+
+\newcommand{\important}[1]{\textbf{\textcolor{Red}{\hl{#1}}}}
+
+\newcommand{\blitzloss}{\textbf{\textcolor{Magenta}{Blitz Loss}}}
+\newcommand{\lostblitz}{\textbf{\textcolor{Magenta}{lost Blitz}}}
+
+\newcommand{\blitzwin}{\textbf{\textcolor{OliveGreen}{Blitz Win}}}
+\newcommand{\wonblitz}{\textbf{\textcolor{OliveGreen}{won Blitz}}}
+
+\newcommand{\category}{WOFF - Any\%}
+
+\usepackage{enumitem}
+\setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
+\usepackage{graphicx}
+
+\title{\category}
+\author{CrimsonInferno9}
+%\titlepic{\includegraphics[width=\textwidth]{}}
+\begin{document}
+\singlespacing
+\maketitle
+\tableofcontents
+
+\makeatletter
+\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+\makeatother
+
+\newcommand{\lann}{\textbf{Lann}: }
+\newcommand{\reynn}{\textbf{Reynn}: }
+
+\newcommand{\lannf}{\item \textbf{Lann}: }
+\newcommand{\reynnf}{\item \textbf{Reynn}: }
+
+\newenvironment{battle}[2][]{\begin{tcolorbox}[title=\begin{center}\MakeUppercase{#2} \ifthenelse{\isempty{#1}}{}{- \num{#1} HP}\end{center},colbacktitle=red!50!white,colframe=red!55,coltitle=black]}{\end{tcolorbox}}
+
+\newenvironment{shop}{\begin{tcolorbox}[title=\begin{center}SHOP\end{center},colbacktitle=blue!50!white,coltitle=black,colframe=blue!50!white]}{\end{tcolorbox}}
+
+\newenvironment{menu}{\begin{tcolorbox}[title=\begin{center}MENU\end{center},colbacktitle=purple!50!white,colframe=purple!55,coltitle=black]}{\end{tcolorbox}}
+
+\newenvironment{encounters}{\begin{tcolorbox}[title=\begin{center}ENCOUNTERS\end{center},colbacktitle=VioletRed!50!white,colframe=VioletRed!55,coltitle=black]}{\end{tcolorbox}}
+
+\newenvironment{puzzle}{\begin{tcolorbox}[title=\begin{center}PUZZLE\end{center},colbacktitle=Bittersweet!50!white,colframe=Bittersweet!55,coltitle=black]}{\end{tcolorbox}}
+
+\newcommand{\save}{\textbf{Touch the Save Point}}
+\newcommand{\safetysave}{\textbf{SAVE FOR SAFETY!!!}}
+
+\newcommand{\Pickup}[1]{Open the chest for the \textbf{#1}}
+\newcommand{\pickup}[1]{open the chest for the \textbf{#1}}
+
+\newcommand{\sd}{\textbf{SD}}
+
+\newcommand{\cs}{\textbf{Skip Cutscene}}
+
+\newcommand{\unskippablecs}{\textbf{Unskippable CS}}
+
+%\newcommand{\formation}[3]{\textcolor{Mulberry}{\textbf{Formation: }}#1, #2, #3}
+
+\newcommand{\liteversiondetermination}[2]{%
+	\ifthenelse{%
+		\equal{#1}{Exclude}
+	}{%
+		\ifthenelse{%
+			\equal{\liteversion}{True}
+		}{}{#2}
+	}{%
+		\ifthenelse{%
+			\equal{#1}{Include}
+		}{%
+			\ifthenelse{%
+				\equal{\liteversion}{True}
+			}{#2}{}
+		}{}
+	}
+}
+
+\setlength{\columnsep}{.5cm}
+
+\section*{Acknowledgements}
+
+KawaiNL, Cereth, ChrisTenarium, MrTyton
+\newpage
+
+\onehalfspacing
+
+\input{Chapters/000_introduction.tex}
+
+	\input{Chapters/001_Prologue_Chapter1.tex}
+	\input{Chapters/002_Chapter2.tex}
+	\input{Chapters/003_Chapter3.tex}
+	\input{Chapters/004_Chapter4.tex}
+	\input{Chapters/005_Chapter5.tex}
+	\input{Chapters/006_Chapter6.tex}
+	\input{Chapters/007_Chapter7.tex}
+	\input{Chapters/008_Chapter8.tex}
+	\input{Chapters/009_Chapter9.tex}
+	\input{Chapters/010_Chapter10.tex}
+%	\input{Chapters/011_Chapter11.tex}
+%	\input{Chapters/012_Chapter12.tex}
+%	\input{Chapters/013_Chapter13.tex}
+%	\input{Chapters/014_Chapter14.tex}
+%	\input{Chapters/015_Chapter15.tex}
+%	\input{Chapters/016_Chapter16.tex}
+%	\input{Chapters/017_Chapter17.tex}
+%	\input{Chapters/018_Chapter18.tex}
+%	\input{Chapters/019_Chapter19.tex}
+%	\input{Chapters/020_Chapter20.tex}
+%	\input{Chapters/021_Chapter21.tex}
+%	\input{Chapters/022_Postscript.tex}
+
+\end{document}
