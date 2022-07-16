@@ -23,6 +23,7 @@
 \usepackage{titlepic}
 \usepackage[super]{nth}
 \usepackage{setspace}
+\usepackage{mfirstuc}
 \usepackage[document]{ragged2e}
 
 \hypersetup{
@@ -142,36 +143,30 @@
 
 \newcommand{\formation}[3]{\textcolor{Mulberry}{\textbf{Formation: }}#1, #2, #3}
 
+\newcommand{\createCharacter}[2]{%
+\expandafter\newcommand\csname #1\endcsname{\textbf{\textcolor{#2}{\capitalisewords{#1}}}} %
+\expandafter\newcommand\csname #1f\endcsname{\item \textbf{\textcolor{#2}{\capitalisewords{#1}}}:}
+}
 
-\newcommand{\lulu}{\textbf{\textcolor{purple}{Lulu}}}
-\newcommand{\yuna}{\textbf{\textcolor{gray}{Yuna}}}
-\newcommand{\auron}{\textbf{\textcolor{red}{Auron}}}
-\newcommand{\tidus}{\textbf{\textcolor{blue}{Tidus}}}
-\newcommand{\wakka}{\textbf{\textcolor{BurntOrange}{Wakka}}}
-\newcommand{\rikku}{\textbf{\textcolor{ForestGreen}{Rikku}}}
-\newcommand{\kimahri}{\textbf{\textcolor{Tan}{Kimahri}}}
+\createCharacter{lulu}{purple}
+\createCharacter{yuna}{gray}
+\createCharacter{auron}{red}
+\createCharacter{tidus}{blue}
+\createCharacter{wakka}{BurntOrange}
+\createCharacter{rikku}{ForestGreen}
 
-\newcommand{\luluf}{\item \textbf{\textcolor{purple}{Lulu}}: }
-\newcommand{\yunaf}{\item \textbf{\textcolor{gray}{Yuna}}: }
-\newcommand{\auronf}{\item \textbf{\textcolor{red}{Auron}}: }
-\newcommand{\tidusf}{\item \textbf{\textcolor{blue}{Tidus}}: }
-\newcommand{\wakkaf}{\item \textbf{\textcolor{BurntOrange}{Wakka}}: }
-\newcommand{\rikkuf}{\item \textbf{\textcolor{ForestGreen}{Rikku}}: }
-\newcommand{\kimahrif}{\item \textbf{\textcolor{Tan}{Kimahri}}: }
-\newcommand{\enemyf}{\item \textbf{\textcolor{RubineRed}{Enemy}}: }
-\newcommand{\valeforf}{\item \textbf{\textcolor{Salmon}{Valefor}}: }
-\newcommand{\bahamutf}{\item \textbf{\textcolor{RoyalPurple}{Bahamut}}: }
-\newcommand{\ixilonf}{\item \textbf{\textcolor{Lavender}{Ixion}}: }
-\newcommand{\ifritf}{\item \textbf{\textcolor{OrangeRed}{Ifrit}}: }
-\newcommand{\shivaf}{\item \textbf{\textcolor{Cyan}{{Shiva}}}: }
+\createCharacter{enemy}{RubineRed}
+
+\createCharacter{valefor}{Salmon}
+\createCharacter{ixilon}{Lavender}
+\createCharacter{shiva}{Cyan}
+\createCharacter{bahamut}{RoyalPurple}
+\createCharacter{ifrit}{OrangeRed}
+
+
 \newcommand{\switch}[2]{\item Switch #1 for #2}
 \newcommand{\summon}[1]{\yunaf Summon #1}
 
-\newcommand{\valefor}{\textbf{\textcolor{Salmon}{Valefor}}}
-\newcommand{\ixilon}{\textbf{\textcolor{Lavender}{Ixion}}}
-\newcommand{\shiva}{\textbf{\textcolor{Cyan}{Shiva}}}
-\newcommand{\bahamut}{\textbf{\textcolor{RoyalPurple}{Bahamut}}}
-\newcommand{\ifrit}{\textbf{\textcolor{OrangeRed}{Ifrit}}}
 
 
 
