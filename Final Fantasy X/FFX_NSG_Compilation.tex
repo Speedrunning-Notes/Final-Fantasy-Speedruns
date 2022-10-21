@@ -144,8 +144,8 @@
 \newcommand{\formation}[3]{\textcolor{Mulberry}{\textbf{Formation: }}#1, #2, #3}
 
 \newcommand{\createCharacter}[2]{%
-\expandafter\newcommand\csname #1\endcsname{\textbf{\textcolor{#2}{\capitalisewords{#1}}}} %
-\expandafter\newcommand\csname #1f\endcsname{\item \textbf{\textcolor{#2}{\capitalisewords{#1}}}:}
+\expandafter\newcommand\csname #1\endcsname{\textbf{\textcolor{#2}{\capitalisewords{#1}}}}
+\expandafter\newcommand\csname #1f\endcsname{\item \textbf{\textcolor{#2}{\capitalisewords{#1}}}: }
 }
 
 \createCharacter{lulu}{purple}
@@ -154,6 +154,7 @@
 \createCharacter{tidus}{blue}
 \createCharacter{wakka}{BurntOrange}
 \createCharacter{rikku}{ForestGreen}
+\createCharacter{kimahri}{Tan}
 
 \createCharacter{enemy}{RubineRed}
 

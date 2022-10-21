@@ -132,24 +132,10 @@
 \newcommand{\formation}[3]{\textcolor{Mulberry}{\textbf{Formation: }}#1, #2, #3}
 
 \newcommand\compileLanguage{english}
-\newcommand{\languageChoice}[2]{%
-	\ifthenelse{%
-		\equal{\compileLanguage}{english}
-	}{%
-		#1
-	}{%
-		\ifthenelse{%
-			\equal{\compileLanguage}{japanese}
-		}{%
-		\begin{CJK*}{UTF8}{min}
-			#1 (#2)
-		\end{CJK*}
-		}{}
-	}
-}
+\newcommand{\languageChoice}[2]{\ifthenelse{\equal{\compileLanguage}{english}}{#1}{\ifthenelse{\equal{\compileLanguage}{japanese}}{\begin{CJK*}{UTF8}{min}#1 (#2)\end{CJK*}}{}}}
 
 \newcommand{\createCharacter}[4]{%
-\expandafter\newcommand\csname #1\endcsname{\textbf{\textcolor{#2}{\languageChoice{#3}{#4}}}} %
+\expandafter\newcommand\csname #1\endcsname{\textbf{\textcolor{#2}{\languageChoice{#3}{#4}}}}
 \expandafter\newcommand\csname #1f\endcsname{\item \textbf{\textcolor{#2}{\languageChoice{#3}{#4}}}: }
 }
 
