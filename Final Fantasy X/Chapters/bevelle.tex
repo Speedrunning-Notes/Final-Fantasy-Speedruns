@@ -1,32 +1,47 @@
 \chapter{Bevelle}
-\begin{equip}
-	\begin{itemize}
-		\tidusf Equip Sonic Steel
-	\end{itemize}
-\end{equip}
 \begin{enumerate}
 	\item Use a Mega-Potion
+	\ifthenelse{\equal{\blitzresult}{win}}{}{
+		\ifthenelse{\equal{\blitzresult}{both}}{
+			\item \textit{If you \lostblitz}
+	}{}
+		\begin{equip}
+			\begin{itemize}
+				\tidusf Equip Sonic Steel
+			\end{itemize}	
+		\end{equip}
+	}
 	\item \textit{With Sleeping Powder:}
 \end{enumerate}
 \begin{battle}{Guard Fights - Sleeping Powder}
 	\begin{itemize}
-		\item \textit{Fights 1 and 3:}
-		      \begin{itemize}
-			      \tidusf Attack
-			      \item Defend or use Distillers
-		      \end{itemize}
-		\item \textit{Fights 2 and 4:}
-		      \begin{itemize}
-			      \tidusf Attack
-			      \rikkuf Sleeping Powder
-			      \kimahrif Bomb Core/Silence Grenade/Smoke Bomb/Distiller
-		      \end{itemize}
-		\item \textit{Fight 5:}
-		      \begin{itemize}
-			      \tidusf Haste \rikku
-			      \rikkuf Throw Items x2
-			      \tidusf Attack
-		      \end{itemize}
+		\item \textit{Fights 1 and 3 (3 Monks):}
+			\begin{itemize}
+				\tidusf Attack
+				\item Others: Defend or use Distillers
+			\end{itemize}
+		\item \textit{Fights 2 and 4 (2 Monks and a YKT-63):}
+			\begin{itemize}
+				\tidusf Attack the YKT-63
+				\rikkuf Sleeping Powder
+				\kimahrif Smoke Bomb/Silence Grenade/Sleeping Powder/Distiller
+			\end{itemize}
+		\item \textit{Fight 5 (2 Monks and a YAT-99):}
+			\begin{itemize}
+				\item \textit{If you have 2 Smoke Bombs/Sleeping Powders/Silence Grenades:}
+					\begin{itemize}
+						\tidusf Haste \rikku
+						\rikkuf Smoke Bomb/Sleeping Powder/Silence Grenade
+						\rikkuf Bomb Core the YAT-99 if you have one
+						\rikkuf Smoke Bomb/Sleeping Powder/Silence Grenade
+						\tidusf Attack
+					\end{itemize}
+				\item \textit{If you have 2 Bomb Cores:}
+					\begin{itemize}
+						\tidusf Attack the Monks
+						\item Others: Use Bomb Core x2 on the YAT-99
+					\end{itemize}
+			\end{itemize}
 	\end{itemize}
 \end{battle}
 \bothvfill
@@ -40,34 +55,42 @@
 \ \bothnewline \winnewline \lossnewline
 \begin{enumerate}[resume]
 	\item \textit{Without Sleeping Powder:}
-	      \begin{itemize}
-		      \item \formation{\tidus}{\rikku}{\auron} \textit{unless \lulu\ doesn't have at least 35 levels, then } \formation{\tidus}{\rikku}{\lulu}
-	      \end{itemize}
+		\begin{itemize}
+			\item Keep \formation{\tidus}{\rikku}{\lulu} for the first 4 fights, \formation{\tidus}{\rikku}{\kimahri} for the last one
+		\end{itemize}
 \end{enumerate}
 \begin{battle}{Guard Fights - No Sleeping Powder}
 	\begin{itemize}
-		\item \textit{Fights 1 and 3:}
-		      \begin{itemize}
-			      \tidusf Attack
-			      \item Defend or use Distillers
-		      \end{itemize}
-		\item \textit{Fights 2 and 4:}
-		      \begin{itemize}
-			      \switch{\tidus}{\kimahri}
-			      \kimahrif Bomb Core/Silence Grenade/Smoke Bomb
-			      \switch{\rikku}{\tidus}
-			      \tidusf Attack
-			      \kimahrif Repeat
-			      \item If Underdamaged anyone, use another Throwable
-		      \end{itemize}
-		\item After the second fight, \formation{\tidus}{\rikku}{\lulu}
-		\item \textit{Fight 5:}
-		      \begin{itemize}
-			      \switch{\tidus}{\rikku}
-			      \rikkuf Bomb Core/Silence Grenade/Smoke Bomb x2
-			      \switch{\kimahri}{\tidus}
-			      \tidusf Attack
-		      \end{itemize}
+		\item \textit{Fights 1 and 3 (3 Monks):}
+			\begin{itemize}
+				\tidusf Attack
+				\item Others: Defend or use Distillers
+			\end{itemize}
+		\item \textit{Fights 2 and 4 (2 Monks and a YKT-63):}
+			\begin{itemize}
+				\switch{\tidus}{\kimahri}
+				\kimahrif Silence Grenade/Smoke Bomb
+				\rikkuf Silence Grenade/Smoke Bomb
+				\switch{\kimahri}{\tidus}
+				\tidusf Attack the YKT-63
+				\item \textit{If the YKT-63 is still alive} Use a Lightning Marble/Arctic Wind/Fish Scale or Attack with \tidus
+			\end{itemize}
+			\item \textit{Fight 5 (2 Monks and a YAT-99):}
+			\begin{itemize}
+				\item \textit{If you have 2 Smoke Bombs/Silence Grenades:}
+					\begin{itemize}
+						\tidusf Haste \rikku
+						\rikkuf Smoke Bomb/Silence Grenade
+						\rikkuf Bomb Core the YAT-99 if you have one
+						\rikkuf Smoke Bomb/Silence Grenade
+						\tidusf Attack
+					\end{itemize}
+				\item \textit{If you have 2 Bomb Cores:}
+					\begin{itemize}
+						\tidusf Attack the Monks
+						\item Others: Use Bomb Core x2 on the YAT-99
+					\end{itemize}
+			\end{itemize}
 	\end{itemize}
 \end{battle}
 \begin{enumerate}[resume]
@@ -79,35 +102,51 @@
 \ 
 \begin{trial}
 	\begin{itemize}
-		\item For all of these you can Hold X instead of pressing it when you get onto the directional pad. The counts of which junction are 1-indexed, starting at the beginning of each area.
-		\item Push the pedestal in
-		\item Press X
-		\item Go left at the second junction
-		\item Take sphere, push pedestal back into the junction
-		\item At the third junction, go back
-		\item Go left at the second junction
-		\item Place sphere into wall, push pedestal back
-		\item Go left at the first junction
-		\item Go left
-		\item At the third junction and go right
-		\item Take glyph sphere from wall, push pedestal back onto the road
-		\item At the fourth junction go right
-		\item Place glyph sphere into pedestal
-		\item Take Bevelle sphere from pedestal
-		\item Place Bevelle sphere into the wall
-		\item Take the glyph sphere
-		\item Place into the next wall
-		\item Take Destruction sphere from the new wall %where to put it
-		\item Take Bevelle sphere from old wall
-		\item Push pedestal back and fall off the edge
-		\item Go straight
-		\item At the third junction go right
-		\item Place destruction sphere into wall
-		\item Push pedestal back and fall off the edge
-		\item Go straight
-		\item At the second junction go right
-		\item Push pedestal
-		\item Go up the stairs, open the chest
+		\item \textit{Upper section:}
+			\begin{itemize}
+				\item Push the pedestal in
+				\item Press X
+				\item Go left at the 2nd junction
+				\item Take sphere, push pedestal back
+				\item At the 3rd junction, go back (hold X)
+				\item Go left at the 2nd junction
+				\item Place sphere into wall, push pedestal back
+				\item At the 3rd junction, go back (hold X)
+				\item Go left at the 1st junction
+			\end{itemize}
+		\item \textit{Lower section (1st visit):}
+			\begin{itemize}
+				\item The platform will automatically stop at the 1st junction
+				\item After the platform stops, press X the 2nd time the arrow is pointing left
+				\item Go right at the 3rd junction (hold X after the 2nd junction)
+				\item Take Glyph sphere from wall, push pedestal back
+				\item At the 4th junction go right (hold X)
+				\item Place Glyph sphere into pedestal
+				\item Take Bevelle sphere from pedestal
+				\item Place Bevelle sphere into the wall
+				\item Take the Glyph sphere
+				\item Place Glyph sphere into the next wall
+				\item Take Destruction sphere from the new wall
+				\item Place Destruction sphere on the pedestal
+				\item Take Bevelle sphere from the wall
+				\item Push pedestal back and fall off the edge
+			\end{itemize}
+		\item \textit{Lower section (2nd visit):}
+			\begin{itemize}
+				\item Go straight (hold X)
+				\item At the 3rd junction go right (hold X after the 2nd junction)
+				\item Place Glyph sphere on the pedestal
+				\item Take Destruction sphere from the pedestal
+				\item Place destruction sphere into wall
+				\item Push pedestal back and fall off the edge
+			\end{itemize}
+		\item \textit{Lower section (3nd visit):}
+			\begin{itemize}
+				\item Go straight
+				\item At the 2nd junction go right (hold X)
+				\item Push pedestal
+				\item Go up the stairs, open the chest
+			\end{itemize}
 	\end{itemize}
 \end{trial}
 \begin{enumerate}[resume]

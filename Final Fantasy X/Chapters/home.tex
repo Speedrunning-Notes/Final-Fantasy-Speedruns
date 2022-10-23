@@ -7,9 +7,11 @@
 	\begin{itemize}
 		\tidusf Haste \tidus
 		\tidusf Attach each, starting with Guado
-		\auronf Attack Guado if it didn't die to \tidus
-		\blitzballdetermination[true]{}{%
-			      \rikkuf Grenade
+		\blitzballdetermination[true]{
+			\item Others: Defend
+		}{
+			\rikkuf Grenade
+			\auronf Attack Guado if it didn't die
 		}
 	\end{itemize}
 	Guaranteed 6 Power Spheres.
@@ -20,7 +22,7 @@
 \begin{battle}{Dual Horn}
 	\begin{itemize}
 		\switch{anyone}{\kimahri}
-		\kimahrif Lancet Dual Horn (Fire Breath)
+		\kimahrif Lancet Dual Horn (Fire Breath) if he doesn't have \od
 		\kimahrif \od\ Stone Breath
 	\end{itemize}
 \end{battle}
@@ -31,10 +33,18 @@
 		\item You will be forced into another Dual Horn encounter
 			\begin{battle}{Dual Horns}
 				\begin{itemize}
-					\tidusf Haste \tidus\ \textit{If no Petrify Grenade else } Defend
-					\tidusf Attack Dual Horns
-					\rikkuf 1 Petrify Grenade/Smoke Bomb/Silence Grenade (Try to keep Sleeping Powders)
-					\tidusf Attack
+					\item \textit{If Kimahri didn't Lancet in the previous fight:}
+						\begin{itemize}
+							\kimahrif Lancet Dual Horn (Fire Breath)
+							\kimahri \od\ Stone Breath
+						\end{itemize}
+					\item \textit{Else:}
+						\begin{itemize}
+							\tidusf Haste \tidus
+							\tidusf Attack Dual Horns
+							\rikkuf 1 Smoke Bomb/Silence Grenade (or Sleeping Powder if you have more than 2)
+							\tidusf Attack
+						\end{itemize}
 				\end{itemize}
 			\end{battle}
 		\item Open the right chest for a \textbf{Friend Sphere}, with the codes: Bottom Middle (up x2), Middle Right (up x4), Middle (down x4), exit the room
