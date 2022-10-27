@@ -22,7 +22,14 @@
 \end{equip}
 \begin{enumerate}[resume]
 	\item Run up to meet with \wakka, \sd. Go left to enter next screen, go right to join with \kimahri, \sd. Run back and then up to meet \rikku, \sd
-	\item After the Forced Encounter with \rikku: \formation{\tidus}{\kimahri}{\auron} \textit{if more than 3 Silence Grenades off Anima else} \formation{\tidus}{\rikku}{\auron}
+	\item Need \ifthenelse{\equal{\blitzresult}{loss}}{7}{6} (\ifthenelse{\equal{\blitzresult}{loss}}{5}{4} if you still have 2 Bomb Cores)\ifthenelse{\equal{\blitzresult}{both}}{ (+1 if on \blitzloss)}{} in any combination of Silence Grenades, Sleeping Powders, Smoke Bombs
+	\item If \rikku\ needs her \od, you can charge it on an encounter with a Zu or a Sand Worm (Escape with the others).
+	\blitzballdetermination[true]{
+		\item After the Forced Encounter with \rikku: \textit{if you need to Steal or need to charge \rikku's \od} \formation{\tidus}{\rikku}{\auron}, otherwise \formation{\tidus}{\kimahri}{\auron}
+	}{
+		\item After the Forced Encounter with \rikku: \formation{\tidus}{\rikku}{\auron}
+	}
+	
 \end{enumerate}
 \blitzballdetermination{
 \begin{spheregrid}
@@ -33,18 +40,8 @@
 	\includegraphics[width=.8\columnwidth]{graphics/tidus_bikanel}
 \end{spheregrid}}{}
 \begin{enumerate}[resume]
-	\item You need 22 Power Spheres (you will get 6 in an upcoming fight) and 8 Speed Spheres for the rest of the run.
-	\item Make sure that \rikku's \od\ is full
+	\item You need 16 Power Spheres and 8 Speed Spheres \textbf{at this point} to be done farming them.
 	\item Continue along path. On the next screen, go in north-west towards the save sphere, take the shortcut to the left. Go up to the next screen and fight the Sandragora fights. They're located in the Top Right Sinkhole with Chest, and then at the end of the path up and to the left, then go up and \sd
-	\item \textit{If you still have 2 Bomb Cores:}
-	      \begin{itemize}
-		      \item Need 5 in any combination of Sleeping Powders, Smoke Bombs, Silence Grenades
-	      \end{itemize}
-	\item \textit{Else:}
-	      \begin{itemize}
-		      \item Need 7 in any combination of Sleeping Powders, Smoke Bombs, Silence Grenades
-		      \item 2 Sleeping Powders is Mandatory for the Bevelle Guards
-	      \end{itemize}
 \end{enumerate}
 \winvfill
 \begin{encounters}
@@ -67,7 +64,7 @@
 		      \begin{itemize}
 			      \switch{\tidus}{\kimahri}
 			      \kimahrif Steal
-				  \rikkuf Switch for Tidus or Use a Smoke Bomb/Silence Grenade/Sleeping Powder
+				  \rikkuf Switch for \tidus\ or Use a Smoke Bomb/Silence Grenade/Sleeping Powder
 			      \item Flee
 		      \end{itemize}
 		\item \textit{Ambush:} Flee
@@ -75,18 +72,32 @@
 \end{encounters}
 \begin{battle}{Sandragora 1}
 	\begin{itemize}
+		\tidusf Haste \auron
+		\auronf \od\ Shooting Star (Triangle, O, Square, X, $\leftarrow, \rightarrow$, X)
+	\end{itemize}
+\end{battle}
+\begin{enumerate}[resume]
+	\item At the bottom of the pit, \pickup{Teleport Spheres}
+	\item Sandragora skip:
+		\begin{itemize}
+			\item Go near the Sandragora pit that blocks the entrance to Home
+			\item Run North into the wall just on the right of the pit until Tidus is in the pit
+			\item Let \rikku\ push you (don't move until she goes past you)
+			\item Go north and enter Home
+			\item If you fail the skip you can Flee and retry or kill the Sandragora
+		\end{itemize}
+\end{enumerate}
+\begin{battle}{Sandragora 2}
+	\begin{itemize}
 		\switch{\tidus}{\kimahri} or \tidus: Haste \kimahri
 		\kimahrif \od\ Stone Breath
 	\end{itemize}
 \end{battle}
 \begin{enumerate}[resume]
-	\item At the bottom of the pit, \pickup{Teleport Spheres}
-	\item \formation{\tidus}{\rikku}{\auron}
+	\blitzballdetermination[true]{
+		\item \formation{\tidus}{\lulu}{\auron}
+	}{
+		\item \formation{\tidus}{\rikku}{\auron}
+	}
 \end{enumerate}
-\begin{battle}{Sandragora 2}
-	\begin{itemize}
-		\tidusf Haste \auron
-		\auronf \od\ Shooting Star (Triangle, O, Square, X, $\leftarrow, \rightarrow$, X)
-	\end{itemize}
-\end{battle}
 \ \lossvfill \ \lossnewline \losscb \ 
