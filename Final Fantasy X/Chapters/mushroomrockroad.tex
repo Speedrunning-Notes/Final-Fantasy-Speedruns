@@ -68,7 +68,7 @@
 \end{spheregrid}
 \bothvfill\winvfill\lossvfill
 \begin{encounters}
-	The actions that you do here to charge \valefor's overdrive will change depending on the enemies. Follow the flow chart.
+	The actions that you do here to charge \valefor's \od\ will change depending on the enemies. Follow the flow chart.
 	\begin{itemize}
 		\item \textit{If the enemy is a Garuda:}
 		\begin{itemize}
@@ -116,7 +116,7 @@
 \end{encounters}
 \begin{enumerate}[resume]
 	\item Keep the \formation{\kimahri}{\wakka}{\yuna}
-	\item Keep on fighting encounters until Yuna can do the next Sphere Grid menu, which is at 3 S. Levels, as you progress through the area.
+	\item Keep on fighting encounters until \yuna\ can do the next Sphere Grid menu, which is at 3 S. Levels, as you progress through the area.
 \end{enumerate}
 \begin{encounters}
 	\begin{itemize}
@@ -215,7 +215,26 @@
 \end{battle}
 \begin{enumerate}[resume]
 	\item \sd, \cs+\skippablefmv[2:00] (press Start immediately after the skip. Do not use it on the upcoming scenes, as you will crash your game). Walk left and up to Gatta, \sd. \fmv+\cs[1:30], \sd\ during \tidus\ monologue. \cs[1:00], \sd
-	\item Walk left, \sd. Walk left, speak to \auron, \sd. \save\ if \auron\ is in critical HP. Go up and right, \sd, exit area, \sd.
+\end{enumerate}
+\begin{spheregrid}
+	\begin{itemize}
+		\tidusf
+		\begin{itemize}
+			\item Move $\rightarrow\uparrow$
+			\item Str+1, HP+200, Agil+2
+		\end{itemize}
+		\ifthenelse{\equal{\colstyle}{multi}}{\includegraphics[width=.6\columnwidth]{graphics/Tidus_post_gui}}{\includegraphics[width=.35\columnwidth]{graphics/Tidus_post_gui}}
+		\wakkaf
+		\begin{itemize}
+			\item Move $\uparrow\uparrow\uparrow$ (PC) or $\uparrow\uparrow$ (PS2)
+			\item Str +2
+		\end{itemize}
+		\ifthenelse{\equal{\colstyle}{multi}}{\includegraphics[width=.6\columnwidth]{graphics/djosewakka}}{\includegraphics[width=.35\columnwidth]{graphics/djosewakka}}
+	\end{itemize}
+\end{spheregrid}
+\begin{enumerate}[resume]
+	\item \formation{\tidus}{\yuna}{\auron}
+	\item Walk left, \save, \sd. Walk left, speak to \auron, \sd. Go up and right, \sd, exit area, \sd.
 \end{enumerate}
 \bothvfill\winvfill\lossvfill
 \ 
