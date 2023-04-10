@@ -1,69 +1,70 @@
 \chapter{Home}
 
 \begin{enumerate}
-	\item Go into door, \sd
+    \item Go into door, \sd
 \end{enumerate}
 \begin{battle}{Bombs}
-	\begin{itemize}
-		\tidusf Haste \tidus
-		\tidusf Attack each, starting with Guado
-		\blitzballdetermination[true]{
-			\item Others: Defend
-		}{
-			\rikkuf Grenade
-			\auronf Attack Guado if it didn't die
-		}
-	\end{itemize}
-	Guaranteed 6 Power Spheres.
+    \begin{itemize}
+        \tidusf Haste \tidus
+        \tidusf Attack each, starting with Guado
+        \blitzballdetermination[true]{
+            \item Others: Defend
+        }{
+            \rikkuf Grenade
+            \auronf Attack Guado if it didn't die
+        }
+    \end{itemize}
+    Guaranteed 6 Power Spheres.
 \end{battle}
 \begin{enumerate}[resume]
-	\item \sd
+    \item \sd
 \end{enumerate}
 \begin{battle}{Dual Horn}
-	\begin{itemize}
-		\switch{anyone}{\kimahri}
-		\kimahrif Lancet Dual Horn (Fire Breath) if he doesn't have \od
-		\kimahrif \od\ Stone Breath
-	\end{itemize}
+    \begin{itemize}
+        \switch{anyone}{\kimahri}
+        \kimahrif Lancet Dual Horn (Fire Breath) if he doesn't have \od
+        \kimahrif \od\ Stone Breath
+    \end{itemize}
 \end{battle}
 \begin{enumerate}[resume]
-	\item Heal \tidus\ without Elixirs
-	\blitzballdetermination[true]{}{%
-		\item Go down the stairs. Once the camera flips, \formation{\tidus}{\rikku}{\auron}, go back up the stairs into the left door.
-		\item You will be forced into another Dual Horn encounter
-			\begin{battle}{Dual Horns}
-				\begin{itemize}
-					\item \textit{If Kimahri didn't Lancet in the previous fight:}
-						\begin{itemize}
-							\kimahrif Lancet Dual Horn (Fire Breath)
-							\kimahrif \od\ Stone Breath
-						\end{itemize}
-					\item \textit{Else:}
-						\begin{itemize}
-							\tidusf Haste \tidus
-							\tidusf Attack Dual Horns
-							\rikkuf 1 Smoke Bomb/Silence Grenade (or Sleeping Powder if you have more than 2)
-							\tidusf Attack
-						\end{itemize}
-				\end{itemize}
-			\end{battle}
-		\item Open the right chest for a \textbf{Friend Sphere}, with the codes: Bottom Middle (up x2), Middle Right (up x4), Middle (down x4), exit the room
+    \item Go down the stairs. Once the camera flips, \blitzballdetermination{\formation{\tidus}{\lulu}{\auron}}{\formation{\tidus}{\rikku}{\auron}}
+    \blitzballdetermination[true]{}{%
+        \item Heal \tidus\ (don't use Elixirs)
+        \item Go back up the stairs into the left door.
+        \item You will be forced into another Dual Horn encounter
+        \begin{battle}{Dual Horns}
+            \begin{itemize}
+                \item \textit{If Kimahri didn't Lancet in the previous fight:}
+                \begin{itemize}
+                    \kimahrif Lancet Dual Horn (Fire Breath)
+                    \kimahrif \od\ Stone Breath
+                \end{itemize}
+                \item \textit{Else:}
+                \begin{itemize}
+                    \tidusf Haste \tidus
+                    \tidusf Attack Dual Horns
+                    \rikkuf 1 Smoke Bomb/Silence Grenade (or Sleeping Powder if you have more than 2)
+                    \tidusf Attack
+                \end{itemize}
+            \end{itemize}
+        \end{battle}
+        \item Open the right chest for a \textbf{Friend Sphere}, with the codes: Bottom Middle (up x2), Middle Right (up x4), Middle (down x4), exit the room and go down the stairs once again
+        \item \formation{\tidus}{\lulu}{\auron}
 	}
-	\item \formation{\tidus}{\lulu}{\auron}
-	\item Go down the stairs and left, \cs[0:50]
+    \item Go left into the door, \cs[0:50]
 \end{enumerate}
 \begin{battle}{Chimera}
-	\begin{itemize}
-		\switch{anyone}{\kimahri}
-		\kimahrif Lancet Chimera (Aqua Breath)
-		\kimahrif \od\ Stone Breath
-	\end{itemize}
+    \begin{itemize}
+        \switch{anyone}{\kimahri}
+        \kimahrif Lancet Chimera (Aqua Breath)
+        \kimahrif \od\ Stone Breath
+    \end{itemize}
 \end{battle}
 \winvfill
 \begin{enumerate}[resume]
-	\item Walk down steps, \cs[1:30]
-	\item Before going further, \pickup{Level 2 Key Sphere}
-	\item \sd\ until \tidus\ asks ``why'', \cs[6:20]
-	\item \formation{\tidus}{\rikku}{\kimahri}
-	\item Go bottom right to the next screen, run across the bridge
+    \item Walk down steps, \cs[1:30]
+    \item Before going further, \pickup{Level 2 Key Sphere}
+    \item \sd\ until \tidus\ asks ``why'', \cs[6:20]
+    \item \formation{\tidus}{\rikku}{\kimahri}
+    \item Go bottom right to the next screen, run across the bridge
 \end{enumerate}
