@@ -10,55 +10,39 @@
 		\rikkuf Lightning Marble Crawler
 		\kimahrif Lightning Marble Crawler
 		\luluf Phoenix Down \rikku
-		\ifthenelse{%
-		\equal{\blitzresult}{win}}{%
-			      \switch{\kimahri}{\yuna} \textit{If \kimahri\ didn't die}
-			      \yunaf Defend
-			      \rikkuf Lightning Marble Crawler
-			      \luluf Phoenix Down \rikku\ \textit{If \kimahri\ didn't die else} Swap for \yuna\ and \yuna\ Phoenix Down \rikku
+		\rikkuf Lightning Marble Crawler
+		\ifthenelse{\equal{\blitzresult}{win}}{%
+			\switch{\lulu}{\yuna}
+			\yunaf Mega Phoenix
+			\switch{\yuna}{\tidus}
+			\tidusf Equip Brotherhood
 		}{\ifthenelse{\equal{\blitzresult}{loss}}{%
-		\item \textit{If you have a Lunar Curtain:}
-		      \begin{itemize}
-			      \switch{\kimahri}{\yuna} \textit{If \kimahri\ didn't die}
-			      \yunaf Defend
-			      \rikkuf Lightning Marble Crawler
-			      \luluf Phoenix Down \rikku\ \textit{If \kimahri\ didn't die else} Swap for \yuna\ and \yuna\ Phoenix Down \rikku
-		      \end{itemize}
-		      \item \textit{If you don't have a Lunar Curtain:}
-		      \begin{itemize}
-			      \kimahrif Steal
-			      \rikkuf Lightning Marble Crawler
-			      \switch{\lulu}{\yuna}
-			      \yunaf Phoenix Down \rikku
-		      \end{itemize}
-		}{\ifthenelse{\equal{\blitzresult}{both}}{%
-		\item \textit{If \blitzwin\ or you have a Lunar Curtain:}
-		      \begin{itemize}
-			      \switch{\kimahri}{\yuna} \textit{If \kimahri\ didn't die}
-			      \yunaf Defend
-			      \rikkuf Lightning Marble Crawler
-			      \luluf Phoenix Down \rikku\ \textit{If \kimahri\ didn't die else} Swap for \yuna\ and \yuna\ Phoenix Down \rikku
-		      \end{itemize}
-		      \item \textit{If \blitzloss\ and don't have a Lunar Curtain:}
-		      \begin{itemize}
-			      \kimahrif Steal
-			      \rikkuf Lightning Marble Crawler
-			      \switch{\lulu}{\yuna}
-			      \yunaf Phoenix Down \rikku
-		      \end{itemize}
-		}{}}}
-		
-		      \switch{\yuna}{\tidus}
-		      \tidusf Defend
-		      \rikkuf \od\ HP Sphere and Lightning Marble
+			\kimahrif If you need a Lunar Curtain Steal Crawler, else Defend
+			\switch{\lulu}{\yuna}
+			\yunaf If 2 Characters dead Mega Phoenix, else Phoenix Down \rikku
+			\switch{\yuna}{\tidus}
+			\tidusf If \kimahri\ is dead Phoenix Down him, otherwise Equip Brotherhood
+		}{%
+			\kimahrif If \blitzloss and you need a Lunar Curtain Steal Crawler, else Defend
+			\switch{\lulu}{\yuna}
+			\yunaf If 2 Characters dead Mega Phoenix, else Phoenix Down \rikku
+			\switch{\yuna}{\tidus}
+			\tidusf If \kimahri\ is dead Phoenix Down him, otherwise Equip Brotherhood
+		}}
+		\rikkuf \od\ Lv. 2 Key Sphere and Lightning Marble
 	\end{itemize}
-	\tidus, \yuna, \lulu\ need AP.
+	\tidus, \yuna, \lulu\ and \kimahri\ need AP.
 \end{battle}
 \bothvfill
 \winvfill
 \lossvfill
 \begin{spheregrid}
 	\begin{itemize}
+		\kimahrif (12 S.Lvl)
+		\begin{itemize}
+			\item Move on the Luck node #TODO add movement
+			\item HP +200, Agi+4
+		\end{itemize}
 		\tidusf (22 S.Lvl)
 		\begin{itemize}
 			\item Level 2 Key Sphere
@@ -69,11 +53,11 @@
 			\item Move $\rightarrow\rightarrow\uparrow$
 			\item HP+200, Str+4, Agi+2
 			\blitzballdetermination[true]{%
-				      \item Move $\rightarrow$
-				      \item Use Strength Sphere, Activate it
-				      \item Move $\uparrow\leftarrow\leftarrow$ or $\nwarrow\nwarrow$
+				\item Move $\rightarrow$
+				\item Use Strength Sphere, Activate it
+				\item Move $\uparrow\leftarrow\leftarrow$ or $\nwarrow\nwarrow$
 			}{%
-				      \item Move $\uparrow\nwarrow$			
+				\item Move $\uparrow\nwarrow$
 			}
 			\item HP+200, Str+4, Agi+2
 			\item Move $\leftarrow$
@@ -82,7 +66,13 @@
 		\ifthenelse{\equal{\colstyle}{multi}}{\includegraphics[width=.8\columnwidth]{graphics/Tidus_post_crawler}}{\includegraphics[width=.5\columnwidth]{graphics/Tidus_post_crawler}}
 	\end{itemize}
 \end{spheregrid}
+\begin{equip}
+	\begin{itemize}
+		\tidusf Equip Brotherhood
+	\end{itemize}	
+\end{equip}
 \begin{enumerate}[resume]
+	\item 
 	\item \sd, \cs[0:40], head to next screen
 	\item Head to Temple, \sd. \save.
 	\wincb
@@ -100,29 +90,21 @@
 \bothvfill
 \begin{battle}[3000]{Seymour}
 	\begin{itemize}
-		\blitzballdetermination[true]{%
-			\tidusf Switch Weapon to Brotherhood
-			\tidusf Haste \tidus
-			\enemyf Seymour Blizzara
-			\tidusf Talk to Seymour
-			\yunaf Change Weapon to Staff
-			\enemyf Guado Guardians Blizzard/Thunder/Shremedy or do nothing
-			\kimahrif Use Remedy on Confused character/Phoenix Down \yuna/Defend
-			\switch{\yuna}{\auron}
-			\auronf Defend
-			\tidusf \od\ Spiral Cut Seymour
-		}{%
-			\tidusf Haste \tidus
+		\tidusf Haste \tidus
+		\yunaf Change Weapon to Staff
+		\kimahrif \od Stone Breath
+		\tidusf Talk to Seymour
+		\switch{\yuna}{\auron}
+		\auronf Defend
+		\enemyf Seymour Blizzara
+		\ifthenelse{\equal{\blitzresult}{win}}{%
+			\tidusf Defend
+		}{\ifthenelse{\equal{\blitzresult}{loss}}{%
 			\tidusf Cheer
-			\tidusf Talk to Seymour
-			\yunaf Change Weapon to Staff
-			\switch{\kimahri}{\rikku}
-			\rikkuf Use Remedy on Confused character/Phoenix Down \yuna/Defend
-			\switch{\yuna}{\kimahri}
-			\kimahrif Use Remedy or Attack Confused character/Phoenix Down \yuna/Defend
-			\tidusf Switch to Brotherhood
-			\tidusf \od\ Spiral Cut Seymour
-		}
+		}{%
+			\tidusf if \blitzloss Cheer, else Defend
+		}}
+		\tidusf Attack
 	\end{itemize}
 \end{battle}
 \bothvfill
@@ -130,24 +112,26 @@
 \begin{battle}[18000]{Anima}
 	\begin{itemize}
 		\blitzballdetermination[true]{%
+			\kimahrif Defend
+			\auronf Defend
 			\switch{\tidus}{\wakka}
 			\wakkaf Change Weapon to anything
-			\kimahrif Steal
 			\enemyf Pain
 			\switch{first survivor}{\tidus}
 			\tidusf Attack x4
 			\switch{second survivor}{\rikku}
-			\rikkuf Phoenix Down \yuna/Steal
+			\rikkuf Steal x2
 		}{%
-			\rikkuf Use Lightning Marble/Arctic Wind
+			\kimahrif Lightning Marble Anima
+			\switch{\auron}{\rikku}
+			\rikkuf Lightning Marble Anima
 			\switch{\tidus}{\wakka}
 			\wakkaf Change Weapon to anything
-			\kimahrif Use Lightning Marble/Arctic Wind
 			\enemyf Pain
-			\switch{\wakka}{\tidus}, if \wakka\ died then switch \rikku\ instead.
+			\switch{first survivor}{\tidus}
 			\tidusf Attack x4
-			\switch{\kimahri}{\rikku} \textit{if you had to switch out \rikku\ before}
-			\rikkuf Phoenix Down \yuna/Steal
+			\item second survivor: switch for \rikku or \kimahri
+			\item \rikku or \kimahri: Steal
 		}
 		\item \textit{If Tidus Misses:}
 			\begin{itemize}
@@ -246,7 +230,7 @@
 				\switch{\rikku}{\auron}
 				\auronf Power Break
 			\end{itemize}
-		\tidusf Attack Wendigo until its dead, then Guado
+		\tidusf Spiral Cut Wendigo, then Attack it until it's dead, then Attack Guado
 		\yunaf Elixir \tidus/Phoenix Down dead character/Defend
 		\switch{\yuna}{\lulu} on \yuna's 2nd turn
 		\rikkuf Elixir \tidus/Phoenix Down dead character/Steal from the Guado/Defend

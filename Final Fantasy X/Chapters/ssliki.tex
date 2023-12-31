@@ -4,19 +4,24 @@
 	\item \cs[2:00], walk up to \yuna, \sd, walk back to \wakka, \sd, walk back up to \yuna, \cs + 4 \skippablefmv[4:20], \sd\ from `Sin!'
 \end{enumerate}
 \begin{battle}[2000]{Sin Fin}
-	\begin{itemize}
-		\tidusf Defend
-		\switch{\yuna}{\lulu}
-		\luluf Thunder the Sin Fin
-		\kimahrif Lancet the Sin Fin
-		\enemyf Moves
-		\tidusf Defend
-		\kimahrif Lancet the Sin Fin
-		\luluf Thunder the Sin Fin
-		\switch{\tidus}{\yuna}
-		\summon{\valefor}
-		\valeforf Energy Blast \od\ on Sin Fin
-	\end{itemize}
+    \begin{itemize}
+        \tidusf Defend
+        \switch{\yuna}{\lulu}
+        \luluf Thunder the Sin Fin
+        \switch{\kimahri}{\yuna}
+        \summon{\valefor}
+        \valeforf Energy Ray \od\ on Sin Fin
+        \enemyf Move x2 and Spines x2
+        \valeforf Thunder the Sin Fin
+        \enemyf Spines and Move
+        \valeforf Thunder the Sin Fin x2
+        \item \textit{If Sin Fin is not dead yet:}
+            \begin{itemize}
+                \enemyf Spines
+                \switch{\tidus}{\wakka}
+				\wakkaf Attack the Sin Fin
+            \end{itemize}
+    \end{itemize}
 \end{battle}
 \begin{enumerate}[resume]
 	\item \fmv+\cs[1:40]

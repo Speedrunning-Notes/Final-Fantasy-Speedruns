@@ -5,7 +5,22 @@
     \item \sd\ in locker room. Don't do the tutorial. \sd\ by mashing another button (like \textbf{R1}) at the same time as confirm, walk down, \sd
     \item Walk down to next screen, \sd. Whistle \cs[0:30], walk right to next screen.
     \item \sd, run to the cafe. \sd, \skippablefmv+\cs[1:20], \sd
-    \item Run left to next screen, then left to the docks. Run north to the next screen.
+    \item Run left to next screen, then left to the docks.
+    \item Talk to O'aka on the first docks screen, before going into the Machina Fights. Do the following shop:
+    \begin{shop}{3050}
+        \begin{itemize}
+            \item Sell
+                  \begin{itemize}
+                      \item All Weapons and Armor other than Official Ball, Lightning Steel, Thunder Ball.
+                  \end{itemize}
+            \item Buy
+                  \begin{itemize}
+                      \item Stunning Steel, Equip
+                  \end{itemize}
+            \item If you don't have enough gil after selling Equipment, on the same dock as O'aka there are 2 chests with 600 Gil and a Tidal Spear you can sell
+        \end{itemize}
+    \end{shop}
+    \item Run north to the next screen.
 \end{enumerate}
 \begin{battle}{Machina}
     \begin{itemize}
@@ -43,14 +58,14 @@
 \begin{enumerate}[resume]
     \item If anyone is Critical HP, use Potions.
     \item Do the below Sphere Grid if \tidus\ has 5 S.Levels.
-    \item Run right. 
+    \item Run right.
 \end{enumerate}
 \begin{battle}[3000]{Oblitzerator}
     \begin{itemize}
         \kimahrif Defend
         \tidusf Defend \textit{If No Early Haste Else} Haste \lulu
         \luluf Thunder Crane x3
-        \tidusf Use Crane after \lulu's string
+        \tidusf Use Crane after \lulu's 3rd Thunder
         \kimahrif Defend
         \luluf Thunder
         \tidusf Attack
@@ -70,18 +85,15 @@
     \end{itemize}
     \ifthenelse{\equal{\colstyle}{multi}}{\includegraphics[width=.6\columnwidth]{graphics/haste}}{\includegraphics[width=.3\columnwidth]{graphics/haste}}
 \end{spheregrid}
-\begin{enumerate}[resume]
-    \item Auto-Sort items
-\end{enumerate}
 \begin{equip}
     \begin{itemize}
-        \item \textit{If you got Lightning Steel}
-        \begin{itemize}
-            \tidusf Lightning Steel
-        \end{itemize}
         \item \textit{If you got Thunder Ball}
         \begin{itemize}
             \wakkaf Thunder Ball
+            \item \textit{If you also got Lightning Steel}
+            \begin{itemize}
+                \tidusf Lightning Steel
+            \end{itemize}
         \end{itemize}
     \end{itemize}
 \end{equip}
@@ -143,19 +155,11 @@
 \bothvfill\winvfill\lossvfill
 \begin{battle}{Sahagin Chief}
     \begin{itemize}
-        \item \textit{If no Lightning Steel and no Thunder Ball:}
+        \item \textit{If no Thunder Ball:}
         \begin{itemize}
             \tidusf Haste \tidus
             \wakkaf For the first two waves Attack Sahagin C
             \wakkaf For the third wave Potion \tidus\ if he has less than 156 HP, otherwise Defend
-        \end{itemize}
-        \item \textit{If only Lightning Steel:}
-        \begin{itemize}
-            \tidusf Haste \tidus
-            \wakkaf Defend x2
-            \tidusf Cheer x3
-            \wakkaf Attack
-            \tidusf Haste \wakka
         \end{itemize}
         \item \textit{If Thunder Ball:}
         \begin{itemize}

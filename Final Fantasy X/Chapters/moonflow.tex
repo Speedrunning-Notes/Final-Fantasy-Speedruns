@@ -2,27 +2,42 @@
 
 \begin{enumerate}
 	\item Walk north, \sd\ on \kimahri\ Scene.
-	\item Near the end of the screen, go left through the hidden path. \pickup{Magic Def Sphere}.
-	\item Walk north, \sd, walk left, \sd, walk left past 2 screens, \sd.  Potion/Cure \tidus\ if he got injured. Walk right and use the \nth{2} option to ride ze shoopuf, \sd.
+	\item Before Belgemine, go right into alcove and \pickup{Lv. 1 Key Spheres x3}
+	\item Walk north, \sd, walk left, \sd, walk left past 2 screens, \sd.
+\end{enumerate}
+\begin{spheregrid}
+	\wakkaf (7 S.Lvl)(if you don't have enough, skip this Grid entirely)
+	\begin{itemize}
+		\item Move $\rightarrow x4 (\downarrow)$Silence Attack
+		\item +2 Strength
+	\end{itemize}
+	\ifthenelse{\equal{\colstyle}{multi}}{\includegraphics[width=.9\columnwidth]{graphics/Wakka_Grid}}{\includegraphics[width=.45\columnwidth]{graphics/Wakka_Grid}}
+\end{spheregrid}
+\begin{enumerate}[resume]
+	\item Potion/Cure \tidus\ if he got injured. Walk right and use the \nth{2} option to ride ze shoopuf, \sd.
 \end{enumerate}
 \bothvfill\winvfill\lossvfill
 \begin{battle}[4000]{Extractor}
 	\begin{itemize}
-		\tidusf Haste self, then \wakka
+		\tidusf Haste self
 		\wakkaf Attack
+		\tidusf Attack Extractor until you apply Slow
+		\item \textit{If Extractor is not Slowed when it Rises:}
+			\begin{itemize}
+				\wakkaf \od\ Thunder Reels.
+			\end{itemize}
+		\tidusf Haste Wakka
 		\tidusf \textit{If Lightning Steel:}
-		\begin{itemize}
-			\item Cheer x1
-		\end{itemize}
+			\begin{itemize}
+				\tidusf Cheer x1
+				\tidusf Equip Lightning Steel
+			\end{itemize}
 		\textit{Else:}
-		\begin{itemize}
-			\item Cheer x4
-		\end{itemize}
+			\begin{itemize}
+				\tidusf Cheer x1
+				\tidusf Equip Brotherhood
+			\end{itemize}
 		\tidusf Attack
-		\item \textit{If got a Crit and don't have Thunder Ball:}
-		\begin{itemize}
-			\wakkaf \od\ Thunder Reels before Extractor's 4th turn.
-		\end{itemize}
 	\end{itemize}
 \end{battle}
 \begin{enumerate}[resume]
@@ -33,7 +48,7 @@
 	\begin{itemize}
 		\item Mash through the tutorial
 		\rikkuf Steal from the Treasure Chest
-		\item \textit{If you have less than 30 Power Spheres:}
+		\item \textit{If you have less than 34 Power Spheres:}
 		      \begin{itemize}
 			      \rikkuf \od\ Two Ability Spheres
 		      \end{itemize}
@@ -44,11 +59,22 @@
 				  \item Flee
 		      \end{itemize}
 	\end{itemize}
-Guaranteed 2 Power Spheres when doing the Ability Sphere Mix.
++2 Power Spheres when doing the Ability Sphere Mix.
 \end{battle}
+\begin{spheregrid}
+	\begin{itemize}
+		\tidusf (4 S.Lvl)
+		\begin{itemize}
+			\item Move $\rightarrow\uparrow$
+			\item Str+1, HP+200, Agil+2
+		\end{itemize}
+		\ifthenelse{\equal{\colstyle}{multi}}{\includegraphics[width=.6\columnwidth]{graphics/Tidus_post_gui}}{\includegraphics[width=.35\columnwidth]{graphics/Tidus_post_gui}}
+	\end{itemize}
+\end{spheregrid}
 \begin{enumerate}[resume]
-	\item Walk to next screen.
-	\item \formation{\tidus}{\wakka}{\auron}
+	\item Auto-Sort items
 	\item Heal everyone with Potions (use them all if you can to free up the 1st Inventory Slot)
+	\item If your 1st Inventory Slot is not empty Manual sort the item in that slot 1 page down
+	\item \formation{\tidus}{\wakka}{\auron}
 	\item Walk north to next screen.
 \end{enumerate}

@@ -20,9 +20,14 @@
 	\formation{\tidus}{\yuna}{\kimahri}
 	\item \save, talk to O'aka, pick the first option ("Got any weapons?"), exit the shop, pick the first option ("Too pricey."), talk to him again ("Got any weapons?")
 \end{enumerate}
-\begin{shop}{9075}
+\begin{shop}{11550}
 	\begin{itemize}
-		\item Buy: Sonic Steel, Equip
+		\item Sell: Stunning Steel, Shield, any other equipment to go above 11550 Gil
+		\item Buy:
+			\begin{itemize}
+				\item Sonic Steel, Equip
+				\item Shimmering Blade, Equip
+			\end{itemize}
 	\end{itemize}
 \end{shop}
 \begin{enumerate}[resume]
@@ -31,19 +36,27 @@
 \bothvfill\winvfill\lossvfill
 \begin{battle}[12000]{Spherimorph}
 	\begin{itemize}
-		\tidusf Change Armor to Yellow Shield
+		\tidusf Change Weapon to Sonic Steel
 		\tidusf Defend
-		\yunaf Defend
 		\switch{\tidus}{\rikku}
 		\rikkuf Grenade, check the Element
-		\item \kimahri\ and \yuna: If anyone is dead \textbf{Mega Phoenix}, otherwise Defend
-		\rikkuf \od, Mag Def Sphere with
+		\item \kimahri\ and \yuna: If anyone is dead \textbf{Phoenix Down}, otherwise Defend
+		\rikkuf \od, HP Sphere with
 		\begin{itemize}
 			\item Fire: Arctic Wind
 			\item Ice: Bomb Core
 			\item Water: Lightning Marble
 			\item Thunder: Fish Scale
 		\end{itemize}
+		\item \textit{If you don't have the elemental item:}
+			\begin{itemize}
+				\switch{rikku}{lulu}
+				\luluf Use the spell opposite of what Spherimorph used
+				\yunaf Defend
+				\kimahrif Attack, check the Element
+				\switch{lulu}{rikku}
+				\rikkuf \od
+			\end{itemize}
 	\end{itemize}
 	\tidus, \yuna, \kimahri, \rikku\ all need AP.
 \end{battle}
@@ -54,17 +67,6 @@
 \begin{spheregrid}
 	\begin{multicols}{2}
 		\begin{itemize}
-			\yunaf (9 S.Lvl)
-			\begin{itemize}
-				\item Move $\uparrow x4$ or $\nwarrow x3$
-				\item HP +200, Level 2 Key Sphere
-				\item Move $\uparrow$
-				\item Str+2, HP+200
-				\item Move $\uparrow\uparrow$
-				\item Str+2, Str+4, Agi+2
-			\end{itemize}
-			\includegraphics[width=.6\columnwidth]{graphics/Yuna_post_spheremorph}
-			\columnbreak
 			\rikkuf (1 S.Lvl)
 			\begin{itemize}
 				\item Move $\downarrow$
@@ -73,11 +75,11 @@
 			\includegraphics[width=.5\columnwidth]{graphics/macalaniarikku}
 			\kimahrif (15 S.Lvl)
 			\begin{itemize}
-				\item Move $\downarrow x7$ or $\swarrow\swarrow\downarrow\downarrow$, Agi+3 next to Key Sphere
-				\item Agi+3, Level 1 Key Sphere
+				\item Move $\downarrow x7$ or $\swarrow\swarrow\downarrow\downarrow$, next to Lv. 1 Lock
+				\item Level 1 Key Sphere
 				\item Move $\leftarrow\leftarrow\leftarrow\leftarrow$
 				\item Level 1 Key Sphere
-				\item Move $\leftarrow\leftarrow\leftarrow$
+				\item Move $\uparrow\uparrow\leftarrow$
 				\item Steal, Use
 			\end{itemize}
 			\includegraphics[width=.8\columnwidth]{graphics/Kimahri_post_spheremorph}
@@ -87,9 +89,12 @@
 \colstart
 \begin{enumerate}
 	\setcounter{enumi}{10}
-	\item Manual Sort Items, put Phoenix Downs in the First Slot and Lightning Marbles in the Third
-	\item Cure \kimahri\ if he has less than 985 HP
 	\item \formation{\tidus}{\lulu}{\kimahri}
+	\ifthenelse{\equal{\blitzresult}{both}}{%
+		\item If \blitzloss and don't have a Light Curtain heal everyone
+	}{\ifthenelse{\equal{\blitzresult}{loss}}{%
+		\item If you don't have a Light Curtain heal everyone
+	}{}}
 	\item Talk to \auron\ on the way out, then exit
 \end{enumerate}
 \newpage

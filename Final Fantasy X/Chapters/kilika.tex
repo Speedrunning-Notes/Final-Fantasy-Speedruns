@@ -1,173 +1,120 @@
 \chapter{Kilika}
 
 \begin{enumerate}
-	\item \sd\ on exiting the boat, go up and left, \sd. \skippablefmv[2:00], (press Start immediately after skip) \sd
-	\item Exit inn, go right to \wakka, \sd. Go left and up to Kilika Woods, \sd
+    \item \sd\ on exiting the boat, go up and left, \sd. \skippablefmv[2:00], (press Start immediately after skip) \sd
+    \item Exit inn, go right to \wakka, \sd. Go left and up to Kilika Woods, \sd
 \end{enumerate}
 \begin{battle}{Lancet Tutorial}
-	\begin{itemize}
-		\item \sd
-		      \kimahrif Lancet
-		      \switch{\kimahri}{\yuna}
-		      \yunaf Defend
-		      \tidusf Attack
-		      \luluf Fire
-	\end{itemize}
+    \begin{itemize}
+        \item \sd
+        \kimahrif Lancet
+        \switch{\kimahri}{\wakka}
+        \wakkaf Defend
+		\tidusf Attack
+		\item \texit{If Valefor died on Sin Fin:}
+			\begin{itemize}
+				\switch{\lulu}{\yuna}
+				\summon{\valefor}
+				\valeforf Boost x2
+				\valeforf Fire
+			\end{itemize}
+		\item \texit{Else:}
+			\begin{itemize}
+        		\luluf Fire
+			\end{itemize}        
+    \end{itemize}
 \end{battle}
 \includegraphics{graphics/kilikamap}
 \begin{enumerate}[resume]
-	\item Go left and up the hidden path, \pickup{Scout}
+    \item Go left and up the hidden path, \pickup{Scout}
 \end{enumerate}
 \begin{spheregrid}
-	\begin{itemize}
-		\tidusf
-		\begin{itemize}
-			\item Move $\leftarrow\leftarrow$
-			\item Flee, Agi+1
-		\end{itemize}
-	\end{itemize}
-	\includegraphics{graphics/Tidus_Kilika}
+    \begin{itemize}
+        \tidusf
+        \begin{itemize}
+            \item Move $\leftarrow\leftarrow$
+            \item Flee, Agi+1 (, Str +1 if you didnt't get it already)
+        \end{itemize}
+    \end{itemize}
+    \includegraphics{graphics/Tidus_Kilika}
 \end{spheregrid}
 \begin{equip}
-	\begin{itemize}
-		\wakkaf Scout/Ice Ball
-		\wakkaf Any Armguard (optional)
-		\tidusf Ice Brand (optional)
-	\end{itemize}
+    \begin{itemize}
+        \wakkaf Scout/Ice Ball
+        \wakkaf Any Armguard (optional)
+        \tidusf Ice Brand (optional)
+    \end{itemize}
 \end{equip}
 \begin{enumerate}[resume]
-	\item \formation{\tidus}{\yuna}{\wakka}
-	\item Continue up the hidden path, following the map. Fill up \valefor's \od\ with the first set, then do the rest of the encounters with the second set.
-	\item Need 45-55 AP on \tidus, which is about 5-7 kills (Overkills count as 2). This is your main source of Speed Spheres but you can obtain the rest later, need 16 for the rest of the run.
+    \item \formation{\tidus}{\wakka}{\lulu}
+    \item Continue up the hidden path, following the map. Fight encounters as described below.
+    \item Need 45 AP on \tidus, which is 5 kills (Overkills count as 2). This is your main source of Speed Spheres but you can obtain the rest later.
+    \item You can benefit from kills beyond the first 5 but do not intentionally farm encounters and stop killing if you have 17 kills already.
 \end{enumerate}
 \bothvfill\winvfill\lossvfill
 \begin{encounters}
-	On Pre-Empts, Defend on Everyone.
-	\begin{itemize}
-		\item Killer Bee + Yellow Element:
-		      \begin{itemize}
-			      \tidusf Defend
-			      \summon{\valefor}
-			      \valeforf Boost
-			      \valeforf Thunder Killer Bee
-		            \valeforf Water Yellow Element
-		      \end{itemize}
-		\item Dinonix + Yellow Element
-		      \begin{itemize}
-			      \tidusf Attack Dinonix
-			      \summon{\valefor}
-			      \valeforf Boost x2
-			      \valeforf Water Yellow Element
-		      \end{itemize}
-		\item Killer Bee + Dinonix + Yellow Element
-		      \begin{itemize}
-			      \tidusf Attack Dinonix
-			      \summon{\valefor}
-			      \valeforf Boost
-			      \valeforf Thunder Killer Bee
-			      \valeforf Water Yellow Element
-		      \end{itemize}
-		\item Killer Bee x2 + Ragora
-			\begin{itemize}
-				\tidusf Attack Ragora
-				\summon{\valefor}
-				\valeforf Thunder Killer Bee
-				\valeforf Thunder Killer Bee
-				\valeforf Fire x2 Ragora
-			\end{itemize}
-		\item Ragora (Bad Encounter)
-		      \begin{itemize}
-			      \tidusf Defend
-			      \summon{\valefor}
-			      \valeforf Boost
-			      \valeforf Sonic Wings
-			      \valeforf Fire x2
-		      \end{itemize}
-		\item 2x Ragora (Super Bad Encounter)
-		      \begin{itemize}
-			      \tidusf Defend
-			      \summon{\valefor}
-			      \valeforf Boost
-			      \valeforf Dismiss
-			      \wakkaf Defend
-			      \item Flee
-		      \end{itemize}
-	\end{itemize}
-\end{encounters}
-\begin{encounters}
-	\begin{itemize}
-		\item \textit{If there is a Killer Bee:}
-			\begin{itemize}
-				\tidusf Attack a Dinonix if present, else Defend
-				\yunaf Defend
-				\wakkaf Attack the Killer Bee
-				\item Flee
-			\end{itemize}
-		\item \textit{If there is a Dinonix but no Killer Bee:}
-			\begin{itemize}
-				\tidusf Defend
-				\yunaf Defend
-				\wakkaf Attack the Dinonix
-				\item Flee
-			\end{itemize}
-		\item \textit{Else:}
-			\begin{itemize}
-				\item Flee
-			\end{itemize}
-	\end{itemize}
+    \begin{itemize}
+        \item \texit{If there is only Ragoras}:
+            \begin{itemize}
+                \tidusf Flee
+            \end{itemize}
+        \tidusf Attack the Dinonix if present, else Defend
+        \wakkaf Attack the Killer Bee if present, else Defend
+        \luluf Water the Yellow Element or Killer Bee
+        \tidusf Flee
+    \end{itemize}
 \end{encounters}
 \begin{enumerate}[resume]
-	\item \sd
-	\item \formation{\tidus}{\yuna}{\wakka}
-	\item \save
+    \item \sd
+    \item \formation{\tidus}{\yuna}{\lulu}
+    \item \save
 \end{enumerate}
 \bothvfill\winvfill\lossvfill
 \begin{battle}[3000]{Sinspawn Geneaux}
-	\begin{itemize}
-		\item \textit{If \tidus\ is going before \yuna:}
-		      \begin{itemize}
-			      \tidusf Attack Main Body
-			      \summon{\valefor}
-			      \valeforf \od\ Energy Blast
-			      \valeforf Fire x4-5
-		      \end{itemize}
-		\item \textit{Else:}
-		      \begin{itemize}
-			      \switch{\yuna}{\kimahri}
-			      \kimahrif Attack Main Body
-			      \tidusf Defend
-			      \switch{anyone}{\yuna}
-			      \summon{\valefor}
-			      \valeforf \od\ Energy Blast
-			      \valeforf Fire x4
-		      \end{itemize}
-	\end{itemize}
-Guaranteed 2 Power Spheres.
+    \begin{itemize}
+        \item \textit{If \tidus\ is going before \yuna:}
+              \begin{itemize}
+                  \tidusf Defend
+              \end{itemize}
+        \item \textit{Else:}
+              \begin{itemize}
+                  \switch{\yuna}{\wakka}
+                  \wakkaf Defend
+                  \tidusf Defend
+                  \switch{anyone}{\yuna}
+              \end{itemize}
+        \summon{\valefor}
+        \valeforf \od\ Energy Ray
+        \valeforf Fire x3
+        \valeforf \od\ Energy Ray
+    \end{itemize}
+Guaranteed 4 Power Spheres.
 \end{battle}
 \begin{enumerate}[resume]
-	\item \sd\ on stone steps and temple. go into temple. Walk up to \wakka\ and Pray. \sd\ inside temple and go up steps. Wait for lift and \sd.
+    \item \sd\ on stone steps and temple. go into temple. Walk up to \wakka\ and Pray. \sd\ inside temple and go up steps. Wait for lift and \sd.
 \end{enumerate}
 \begin{trial}
-	\begin{itemize}
-		\item Take the sphere from the pedestal
-		\item Place into the door, take it off of the door.
-		\item Place sphere into the next door, take the sphere back.
-		\item Place the sphere into the right holder
-		\item Touch glpyh
-		\item Take the sphere from the next room
-		\item Place it into the left holder
-		\item Take the glyph sphere from the pedestal
-		\item Place it in the Fire Room
-		\item Take the sphere that you put into the right holder
-		\item Use it to open the door in the Fire Room
-		\item Take the sphere off the door
-		\item Enter the Fayth room
-	\end{itemize}
+    \begin{itemize}
+        \item Take the sphere from the pedestal
+        \item Place into the door, take it off of the door.
+        \item Place sphere into the next door, take the sphere back.
+        \item Place the sphere into the right holder
+        \item Touch glpyh
+        \item Take the sphere from the next room
+        \item Place it into the left holder
+        \item Take the glyph sphere from the pedestal
+        \item Place it in the Fire Room
+        \item Take the sphere that you put into the right holder
+        \item Use it to open the door in the Fire Room
+        \item Take the sphere off the door
+        \item Enter the Fayth room
+    \end{itemize}
 \end{trial}
 \begin{enumerate}[resume]
-	\item In Fayth room, \sd, speak to \wakka\ first. Try to leave room, \sd, name \ifrit
-	\item Hold down to exit temple, \cs[0:40], \sd
-	\item Go south through Kilika Woods, take the left path and \pickup{Luck Sphere}, referencing map.
-	\item Exit Kilika Woods same way that you entered, treating fights the same way as above.
-	\item Go down and right to S.S. Winno. \sd
+    \item In Fayth room, \sd, speak to \wakka\ first. Try to leave room, \sd, name \ifrit
+    \item Hold down to exit temple, \cs[0:40], \sd
+    \item \formation{\tidus}{\wakka}{\lulu}
+    \item Go south through Kilika Woods, take the left path and \pickup{Luck Sphere}, referencing map.
+    \item Exit Kilika Woods same way that you entered, treating fights the same way as above.
+    \item Go down and right to S.S. Winno. \sd
 \end{enumerate}
