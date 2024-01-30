@@ -40,9 +40,10 @@
 	\begin{itemize}
 		\kimahrif (12 S.Lvl)
 		\begin{itemize}
-			\item Move on the Luck node \#TODO add movement
+			\item Move $\downarrow\downarrow\downarrow\downarrow$ on the Luck node
 			\item HP +200, Agi+4
 		\end{itemize}
+		\ifthenelse{\equal{\colstyle}{multi}}{\includegraphics[width=.8\columnwidth]{graphics/macalania_kimahri}}{\includegraphics[width=.5\columnwidth]{graphics/macalania_kimahri}}
 		\tidusf (22 S.Lvl)
 		\begin{itemize}
 			\item Level 2 Key Sphere
@@ -66,13 +67,7 @@
 		\ifthenelse{\equal{\colstyle}{multi}}{\includegraphics[width=.8\columnwidth]{graphics/Tidus_post_crawler}}{\includegraphics[width=.5\columnwidth]{graphics/Tidus_post_crawler}}
 	\end{itemize}
 \end{spheregrid}
-\begin{equip}
-	\begin{itemize}
-		\tidusf Equip Brotherhood
-	\end{itemize}	
-\end{equip}
 \begin{enumerate}[resume]
-	\item 
 	\item \sd, \cs[0:40], head to next screen
 	\item Head to Temple, \sd. \save.
 	\wincb
@@ -92,7 +87,7 @@
 	\begin{itemize}
 		\tidusf Haste \tidus
 		\yunaf Change Weapon to Staff
-		\kimahrif \od Stone Breath
+		\kimahrif \od\ Stone Breath
 		\tidusf Talk to Seymour
 		\switch{\yuna}{\auron}
 		\auronf Defend
