@@ -219,9 +219,14 @@
 \newcommand{\bothnp}{\ifthenelse{\equal{\colstyle}{multi}}{\ifthenelse{\equal{\blitzresult}{both}}{\newpage}{}}{}}
 \newcommand{\winnp}{\ifthenelse{\equal{\colstyle}{multi}}{\ifthenelse{\equal{\blitzresult}{win}}{\newpage}{}}{}}
 \newcommand{\lossnp}{\ifthenelse{\equal{\colstyle}{multi}}{\ifthenelse{\equal{\blitzresult}{loss}}{\newpage}{}}{}}
+\newcommand{\bothnpsingle}{\ifthenelse{\equal{\colstyle}{multi}}{}{\ifthenelse{\equal{\blitzresult}{both}}{\newpage}{}}}
 
 \newcommand{\colstart}{\ifthenelse{\equal{\colstyle}{multi}}{\begin{multicols}{2}}{}}
 \newcommand{\colend}{\ifthenelse{\equal{\colstyle}{multi}}{\end{multicols}}{}}
+
+
+\newcommand{\colstartstar}{\ifthenelse{\equal{\colstyle}{multi}}{\begin{multicols}{2}}{}}
+\newcommand{\colendstar}{\ifthenelse{\equal{\colstyle}{multi}}{\end{multicols*}}{}}
 
 \newcommand{\blitzballSphereGrid}[6]{%
 \ifthenelse{%
