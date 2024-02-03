@@ -23,7 +23,7 @@
 			\switch{\yuna}{\tidus}
 			\tidusf If \kimahri\ is dead Phoenix Down him, otherwise Equip Brotherhood
 		}{%
-			\kimahrif If \blitzloss and you need a Lunar Curtain Steal Crawler, else Defend
+			\kimahrif If \blitzloss\ and you need a Lunar Curtain Steal Crawler, else Defend
 			\switch{\lulu}{\yuna}
 			\yunaf If 2 Characters dead Mega Phoenix, else Phoenix Down \rikku
 			\switch{\yuna}{\tidus}
@@ -97,7 +97,7 @@
 		}{\ifthenelse{\equal{\blitzresult}{loss}}{%
 			\tidusf Cheer
 		}{%
-			\tidusf if \blitzloss Cheer, else Defend
+			\tidusf if \blitzloss\ Cheer, else Defend
 		}}
 		\tidusf Attack
 	\end{itemize}
@@ -125,8 +125,8 @@
 			\enemyf Pain
 			\switch{first survivor}{\tidus}
 			\tidusf Attack x4
-			\item second survivor: switch for \rikku or \kimahri
-			\item \rikku or \kimahri: Steal
+			\switch{second survivor}{\rikku\ or \kimahri}
+			\item \rikku\ or \kimahri: Steal
 		}
 		\item \textit{If Tidus Misses:}
 			\begin{itemize}
@@ -140,7 +140,11 @@
 \end{battle}
 \begin{battle}[6000]{Seymour}
 	\begin{itemize}
-		\tidusf Phoenix Down \rikku\ if she died before Multi-Thundara, otherwise Defend x2 until Multi-Thundara. 
+		\blitzballdetermination[true]{%
+			\tidusf Phoenix Down \rikku\ if she died before Multi-Thundara, otherwise Change Weapon to Sonic Steel, then Defend x2 until Multi-Thundara. 
+		}{%
+			\tidusf Phoenix Down \rikku\ if she died before Multi-Thundara, otherwise Defend x2 until Multi-Thundara. 
+		}
 		\rikkuf Defend
 		\tidusf Attack x2
 	\end{itemize}
@@ -162,13 +166,18 @@
 	\end{itemize}
 \end{spheregrid}
 \winvfill
-\begin{equip}
-	\begin{itemize}
-		\tidusf Sonic Steel
-	\end{itemize}
-\end{equip}
 \begin{enumerate}[resume]
 	\item \formation{\rikku}{\tidus}{\yuna}
+	\ifthenelse{\equal{\blitzresult}{win}}{}{
+		\ifthenelse{\equal{\blitzresult}{both}}{
+			\item \textit{If you \lostblitz:}
+		}{}
+		\begin{equip}
+			\begin{itemize}
+				\tidusf Equip Sonic Steel
+			\end{itemize}
+		\end{equip}
+	}
 	\item \save, exit Fayth room.
 \end{enumerate}
 \begin{trial}
