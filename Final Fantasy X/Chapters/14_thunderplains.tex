@@ -6,9 +6,11 @@
 \begin{enumerate}[resume]
     \item \sd\ when approaching Al Bhed shop. Walk into the shop when \rikku\ begs to go inside.
 \end{enumerate}
-\begin{shop}{2025-2325}
+\begin{shop}{1200+}
     \begin{itemize}
-        \blitzballdetermination[true]{\item Items menu only.}{%
+        \blitzballdetermination[true]{%
+            \item Items menu only.
+        }{%
             \item Sell: 1st Equipment on the 2nd page (after the equipped ones)
             \item Sell: Other Equipment worth 1k+ Gil
             \item Buy: Baroque Sword (Equip)
@@ -16,10 +18,16 @@
         \item Buy:
         \begin{itemize}
             \item 3 Phoenix Downs
-            \item 3 Grenades, +1 if \blitzloss, +1 for every 3 Speed Spheres you are missing (need 14 Speed Spheres for the rest of the run)
+            \ifthenelse{\equal{\blitzresult}{win}}{%
+                \item 3 Grenades
+            }{\ifthenelse{\equal{\blitzresult}{both}}{%
+                \item 3 Grenades, +1 if \blitzloss
+            }{%
+                \item 4 Grenades
+            }}, +1 for every 3 Speed Spheres you are missing (need 15 Speed Spheres for the rest of the run)
         \end{itemize}
     \end{itemize}
-    Try to leave the shop with 9550 Gil
+    Try to leave the shop with at least 6839 Gil.
 \end{shop}
 \begin{enumerate}[resume]
     \item Walk into shop corridor, \cs[2:00]

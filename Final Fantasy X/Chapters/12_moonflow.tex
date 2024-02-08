@@ -63,7 +63,13 @@
     \begin{itemize}
         \item Mash through the tutorial
         \rikkuf Steal from the Treasure Chest
-        \item \textit{If you have less than 34 Power Spheres:}
+        \ifthenelse{\equal{\blitzresult}{win}}{%
+            \item \textit{If you have less than 34 Power Spheres:}
+        }{\ifthenelse{\equal{\blitzresult}{both}}{%
+            \item \textit{If you have less than 34 (35 on \blitzloss) Power Spheres:}
+        }{%
+            \item \textit{If you have less than 35 Power Spheres:}
+        }}
         \begin{itemize}
             \rikkuf \od\ Two Ability Spheres
         \end{itemize}

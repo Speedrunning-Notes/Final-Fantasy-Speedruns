@@ -3,7 +3,6 @@
 \begin{enumerate}
     \item \sd, walk north, \sd, \save
     \item \formation{\tidus}{\rikku}{\auron}
-    \item Follow path, \pickup{2000 Gil}
     \item Cure \tidus\ if he's ever below 404 HP.
     \item Make sure that you charge \rikku\ \od, and that you do at least one of each of the following steals.
 \end{enumerate}
@@ -15,10 +14,10 @@
     \end{itemize}
 \end{encounters}
 \begin{enumerate}[resume]
-    \item Once \rikku\ has \od\ and you have at least 1 Arctic Wind and 1 Fish Scale, \formation{\tidus}{\yuna}{\kimahri}
+    \item Once \rikku\ has \od\ and you have at least 1 Arctic Wind and 1 Fish Scale, \formation{\tidus}{\kimahri}{\auron}
     \item Follow path, \sd\ twice
     \item Catch butterfly near the exit to avoid encounters
-    \formation{\tidus}{\yuna}{\kimahri}
+    \formation{\tidus}{\kimahri}{\auron}
     \item \save, talk to O'aka, pick the first option ("Got any weapons?"), exit the shop, pick the first option ("Too pricey."), talk to him again ("Got any weapons?")
 \end{enumerate}
 \begin{shop}{11550}
@@ -37,11 +36,13 @@
 \bothvfill\winvfill\lossvfill
 \begin{battle}[12000]{Spherimorph}
     \begin{itemize}
-        \tidusf Change Weapon to Sonic Steel
         \tidusf Defend
-        \switch{\tidus}{\rikku}
+        \switch{\tidus}{\yuna}
+        \yunaf Defend
+        \kimahrif Defend
+        \switch{\auron}{\rikku}
         \rikkuf Grenade, check the Element
-        \item \kimahri\ and \yuna: If anyone is dead \textbf{Phoenix Down}, otherwise Defend
+        \yunaf Defend
         \rikkuf \od, HP Sphere with
         \begin{itemize}
             \item Fire: Arctic Wind
@@ -53,9 +54,8 @@
         \begin{itemize}
             \switch{\rikku}{\lulu}
             \luluf Use the spell opposite of what Spherimorph used
-            \yunaf Defend
             \kimahrif Attack, check the Element
-            \switch{\lulu}{\rikku}
+            \switch{\yuna}{\rikku}
             \rikkuf \od
         \end{itemize}
     \end{itemize}
@@ -76,11 +76,18 @@
             \includegraphics[width=.5\columnwidth]{graphics/macalaniarikku}
             \kimahrif (15 S.Lvl)
             \begin{itemize}
-                \item Move $\downarrow x7$ or $\swarrow\swarrow\downarrow\downarrow$, next to Lv. 1 Lock
+                \item Move $\downarrow x5 \leftarrow$, next to Lv. 1 Lock
                 \item Level 1 Key Sphere
                 \item Move $\leftarrow\leftarrow\leftarrow\leftarrow$
                 \item Level 1 Key Sphere
-                \item Move $\uparrow\uparrow\leftarrow$
+                \columnbreak
+                \blitzballdetermination[true]{%
+                    \item Move $\uparrow\uparrow\leftarrow$
+                }{%
+                    \item Move $\uparrow\uparrow\downarrow$
+                    \item HP+200, HP+200
+                    \item Move $\leftarrow$
+                }
                 \item Steal, Use
             \end{itemize}
             \includegraphics[width=.8\columnwidth]{graphics/Kimahri_post_spheremorph}
@@ -88,8 +95,7 @@
     \end{multicols}
 \end{spheregrid}
 \colstart
-\begin{enumerate}
-    \setcounter{enumi}{10}
+\begin{enumerate}[resume]
     \item \formation{\tidus}{\lulu}{\kimahri}
     \ifthenelse{\equal{\blitzresult}{both}}{%
         \item If \blitzloss\ and don't have a Light Curtain heal everyone
@@ -98,4 +104,3 @@
     }{}}
     \item Talk to \auron\ on the way out, then exit
 \end{enumerate}
-\newpage
