@@ -1,57 +1,65 @@
 \chapter{Thunder Plains}
 
 \begin{enumerate}
-	\item Walk north, dodging lightning, Flee all encounters.
+    \item Walk north, dodging lightning, Flee all encounters.
 \end{enumerate}
 \begin{enumerate}[resume]
-	\item \sd\ when approaching Al Bhed shop. Walk into the shop when \rikku\ begs to go inside.
+    \item \sd\ when approaching Al Bhed shop. Walk into the shop when \rikku\ begs to go inside.
 \end{enumerate}
-\begin{shop}{2025-2325}
-	\begin{itemize}
-		\blitzballdetermination[true]{\item Items menu only.}{%
-				  \item Sell: 1st Equipment on the 2nd page (after the equipped ones)
-			      \item Sell: Other Equipment worth 1k+ Gil
-			      \item Buy: Baroque Sword (Equip)
-		}
-		\item Buy:
-		      \begin{itemize}
-			      \item 3 Phoenix Downs
-			      \item 3 Grenades, +1 if \blitzloss, +1 for every 3 Speed Spheres you are missing (need 14 Speed Spheres for the rest of the run)
-		      \end{itemize}
-	\end{itemize}
-	Try to leave the shop with 9550 Gil
+\begin{shop}{1200+}
+    \begin{itemize}
+        \blitzballdetermination[true]{%
+            \item Items menu only.
+        }{%
+            \item Sell: 1st Equipment on the 2nd page (after the equipped ones)
+            \item Sell: Other Equipment worth 1k+ Gil
+            \item Buy: Baroque Sword (Equip)
+        }
+        \item Buy:
+        \begin{itemize}
+            \item 3 Phoenix Downs
+            \ifthenelse{\equal{\blitzresult}{win}}{%
+                \item 3 Grenades
+            }{\ifthenelse{\equal{\blitzresult}{both}}{%
+                \item 3 Grenades, +1 if \blitzloss
+            }{%
+                \item 4 Grenades
+            }}, +1 for every 3 Speed Spheres you are missing (need 15 Speed Spheres for the rest of the run)
+        \end{itemize}
+    \end{itemize}
+    Try to leave the shop with at least 6839 Gil.
 \end{shop}
 \begin{enumerate}[resume]
-	\item Walk into shop corridor, \cs[2:00]
-	\item Speak to \auron, then to \rikku, \sd.
-	\item Pickup the \textbf{Yellow Shield} outside the shop on the ground and equip it.
-	\item Try to end Thunder Plains with the Light Curtain.
+    \item Walk into shop corridor, \cs[2:00]
+    \item Speak to \auron, then to \rikku, \sd.
+    \item Pickup the \textbf{Yellow Shield} outside the shop on the ground and equip it.
+    \item Try to end Thunder Plains with the Light Curtain.
 \end{enumerate}
 \begin{encounters}
-	Iron Giants will always target the Character with the least HP, make sure everyone's HP is above Rikku's
-	\begin{itemize}
-		\item Iron Giant + 2 Buers, if you bought extra Grenades for Speed Spheres:
-			\begin{itemize}
-				\switch{\tidus}{\rikku}
-				\rikkuf Use Grenade
-				\wakkaf Defend
-				\auronf Defend
-				\enemyf Attacks \rikku
-				\switch{\wakka}{\tidus}
-				\item Flee
-			\end{itemize}
-		\item Iron Giant:
-			\begin{itemize}
-				\tidusf Defend
-				\switch{\wakka}{\rikku}
-				\rikkuf Steal Light Curtain
-				\auronf Defend
-				\enemyf Attacks \rikku
-				\item Flee
-			\end{itemize}
-		\blitzballdetermination[true]{}{\item Larva: Steal Lunar Curtain}
-	\end{itemize}
+    Iron Giants will always target the Character with the least HP, make sure everyone's HP is above Rikku's
+    \begin{itemize}
+        \item Iron Giant + 2 Buers, if you bought extra Grenades for Speed Spheres:
+        \begin{itemize}
+            \switch{\tidus}{\rikku}
+            \rikkuf Use Grenade
+            \wakkaf Defend
+            \auronf Defend
+            \enemyf Attacks \rikku
+            \switch{\wakka}{\tidus}
+            \item Flee
+        \end{itemize}
+        \item Iron Giant:
+        \begin{itemize}
+            \tidusf Defend
+            \switch{\wakka}{\rikku}
+            \rikkuf Steal Light Curtain
+            \auronf Defend
+            \enemyf Attacks \rikku
+            \item Flee
+        \end{itemize}
+        \blitzballdetermination[true]{}{\item Larva: Steal Lunar Curtain}
+    \end{itemize}
 \end{encounters}
 \begin{enumerate}[resume]
-	\item Exit screen, go north, near the exit \sd, \cs[3:10]
+    \item Exit screen, go north, near the exit \sd, \cs[3:10]
 \end{enumerate}
