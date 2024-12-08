@@ -6,18 +6,28 @@
 \begin{battle}{Bombs}
     \begin{itemize}
         \tidusf Haste \tidus
-        \tidusf Attack each, starting with Guado
         \blitzballdetermination[true]{%
+            \tidusf Attack each, starting with Guado
             \item Others: Defend
         }{%
+            \tidusf Attack Guado
             \rikkuf Grenade
-            \kimahrif Lancet Bomb to refill OD, then switch to \auron\ and Defend
+            \tidusf Attack Bomb x2
+            \auronf Defend
+            \item \textit{If Kimahri doesn't have OD:}
+            \begin{itemize}
+                \switch{anyone}{\kimahri}
+                \kimahrif Lancet Bomb
+                \switch{anyone}{\tidus}
+            \end{itemize}
+            \tidusf Attack Bomb
         }
     \end{itemize}
     Guaranteed 6 Power Spheres.
 \end{battle}
 \begin{enumerate}[resume]
-    \item \sd
+    \item \formation{\tidus}{\lulu}{\auron}
+    \item Follow the others, \sd
 \end{enumerate}
 \begin{battle}{Dual Horn}
     \begin{itemize}
@@ -35,6 +45,7 @@
         \item You will be forced into another Dual Horn encounter
         \begin{battle}{Dual Horns}
             \begin{itemize}
+                \switch{anyone}{\kimahri}
                 \kimahrif Lancet Dual Horn (Fire Breath)
                 \kimahrif \od\ Stone Breath
             \end{itemize}

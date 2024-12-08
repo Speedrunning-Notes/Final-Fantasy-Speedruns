@@ -58,7 +58,7 @@
                 \item Use Strength Sphere, Activate it
                 \item Move $\uparrow\leftarrow\leftarrow$ or $\nwarrow\nwarrow$
             }{%
-                \item Move $\uparrow\nwarrow$
+                \item Move $\uparrow\leftarrow$
             }
             \item HP+200, Str+4, Agi+2
             \item Move $\leftarrow$
@@ -140,12 +140,10 @@
 \end{battle}
 \begin{battle}[6000]{Seymour}
     \begin{itemize}
-        \blitzballdetermination[true]{%
-            \tidusf Phoenix Down \rikku\ if she died before Multi-Thundara, otherwise Change Weapon to Sonic Steel, then Defend x2 until Multi-Thundara.
-        }{%
-            \tidusf Phoenix Down \rikku\ if she died before Multi-Thundara, otherwise Defend x2 until Multi-Thundara.
-        }
-        \rikkuf Defend
+        \tidusf Phoenix Down \rikku\ if she died before Multi-Thundara.
+        \blitzballdetermination[true]{\tidusf Change Weapon to Sonic Steel}{}
+        \item Anyone: Defend until Multi-Thundara.
+        \enemyf Multi-Thundara
         \tidusf Attack x2
     \end{itemize}
     \tidus\ and \yuna\ need AP.
@@ -168,7 +166,7 @@
 \winvfill
 \begin{enumerate}[resume]
     \item You need 21 Power Spheres and 10 Speed Spheres \textbf{at this point} to be done farming them.
-    \item \formation{\rikku}{\tidus}{\yuna}
+    \item \formation{\rikku}{\tidus}{\kimahri}
     \ifthenelse{\equal{\blitzresult}{win}}{}{
         \ifthenelse{\equal{\blitzresult}{both}}{
             \item \textit{If you \lostblitz:}
@@ -206,19 +204,23 @@
             \begin{itemize}
                 \tidusf Attack Guado, then Surviving Enemies
                 \rikkuf Silence Grenade
-                \yunaf Defend
+                \kimahrif Defend
             \end{itemize}
         \end{encounters}
     }
 \end{enumerate}
 \blitzballdetermination{}{
-\begin{spheregrid}
-    \begin{itemize}
-        \tidusf Move $\downarrow$
-        \item Str+4
-    \end{itemize}
-    \includegraphics[width=.8\columnwidth]{graphics/tidus_bikanel}
-\end{spheregrid}}
+    \begin{spheregrid}
+        \begin{itemize}
+            \tidusf
+            \begin{itemize}
+                \item Move $\downarrow\downarrow$ (or $\downarrow$)
+                \item Str+4
+            \end{itemize}
+        \end{itemize}
+        \includegraphics[width=.8\columnwidth]{graphics/tidus_bikanel}
+    \end{spheregrid}
+}
 \winvfill
 \bothvfill
 \begin{battle}[18000]{Wendigo}
@@ -233,16 +235,23 @@
         \textit{Else:}
         \begin{itemize}
             \switch{\rikku}{\auron}
-            \auronf Power Break
+            \auronf Power Break Wendigo
+            \switch{\auron}{\rikku} on his next turn
         \end{itemize}
-        \tidusf Spiral Cut Wendigo, then Attack it until it's dead, then Attack Guado
-        \yunaf Elixir \tidus/Phoenix Down dead character/Defend
-        \switch{\yuna}{\lulu} on \yuna's 2nd turn
-        \rikkuf Elixir \tidus/Phoenix Down dead character/Steal from the Guado/Defend
+        \tidusf Spiral Cut Wendigo, then Attack it until it's dead
+        \kimahrif Steal from Guado if everyone is at full HP, otherwise switch to \lulu
         \luluf Elixir \tidus/Phoenix Down dead character/Defend
+        \rikkuf Elixir \tidus/Phoenix Down dead character/Steal from Guado/Defend
+        \item After Wendigo is dead:
+        \begin{itemize}
+            \switch{anyone}{\yuna}
+            \yunaf Defend
+            \switch{anyone}{\tidus}
+            \tidusf Attack Guado
+        \end{itemize}
     \end{itemize}
     \yuna, \tidus\ need AP. Helpful if \lulu\ gets it.
-    Guaranteed 2 Power Spheres.
+    Guaranteed 2 Power Spheres, if Rare Drop from Wendigo +2 Power Spheres.
 \end{battle}
 \begin{enumerate}[resume]
     \item Run up to \rikku, \sd, walk up to \yuna, \sd, \save, run past \kimahri\ and go to the hidden area to \pickup{Level 2 Key Sphere}
