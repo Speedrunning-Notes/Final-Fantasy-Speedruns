@@ -89,8 +89,14 @@
                     \item Move $\leftarrow$
                 }
                 \item Steal, Use
+                \ifthenelse{\equal{\blitzresult}{win}}{%
+                    \item \includegraphics[width=.8\columnwidth]{graphics/Kimahri_post_spheremorph}
+                }{\ifthenelse{\equal{\blitzresult}{both}}{%
+                    \item \includegraphics[width=.8\columnwidth]{graphics/Kimahri_post_spheremorph}
+                }{%
+                    \item \includegraphics[width=.8\columnwidth]{graphics/Kimahri_post_spheremorph_loss}
+                }}
             \end{itemize}
-            \includegraphics[width=.8\columnwidth]{graphics/Kimahri_post_spheremorph}
         \end{itemize}
     \end{multicols}
 \end{spheregrid}
