@@ -24,6 +24,7 @@
 \usepackage[super]{nth}
 \usepackage{setspace}
 \usepackage[document]{ragged2e}
+\usepackage{amssymb}
 
 \hypersetup{
     colorlinks,
@@ -63,12 +64,6 @@
 
 \newcommand{\important}[1]{\textbf{\textcolor{Red}{\hl{#1}}}}
 
-\newcommand{\blitzloss}{\textbf{\textcolor{Magenta}{Blitz Loss}}}
-\newcommand{\lostblitz}{\textbf{\textcolor{Magenta}{lost Blitz}}}
-
-\newcommand{\blitzwin}{\textbf{\textcolor{OliveGreen}{Blitz Win}}}
-\newcommand{\wonblitz}{\textbf{\textcolor{OliveGreen}{won Blitz}}}
-
 \newcommand{\category}{WOFF - Any\%}
 
 \usepackage{enumitem}
@@ -87,11 +82,29 @@
 \patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
 \makeatother
 
-\newcommand{\lann}{\textbf{Lann}: }
-\newcommand{\reynn}{\textbf{Reynn}: }
+\newcommand{\createCharacter}[3]{%
+\expandafter\newcommand\csname #1\endcsname{\textbf{\textcolor{#2}{#3}}}
+\expandafter\newcommand\csname #1f\endcsname{\item \textbf{\textcolor{#2}{#3}}: }
+}
 
-\newcommand{\lannf}{\item \textbf{Lann}: }
-\newcommand{\reynnf}{\item \textbf{Reynn}: }
+\createCharacter{lann}{NavyBlue}{Lann}
+\createCharacter{reynn}{VioletRed}{Reynn}
+
+\newcommand{\zap}{\textbf{\textcolor{Yellow}{Zap}}}
+
+\newcommand{\enemy}[1]{\textbf{\textcolor{Red}{#1}}}
+\newcommand{\enemyattack}[1]{\textbf{\textcolor{Mahogany}{#1}}}
+
+\newcommand{\bigc}{\textbf{\textcolor{Lavender}{Big}}}
+\newcommand{\smallc}{\textbf{\textcolor{Cyan}{Small}}}
+
+\newcommand{\gate}{\textbf{\textcolor{Green}{Gate}}}
+\newcommand{\location}[1]{\textbf{\textcolor{Plum}{#1}}}
+\newcommand{\travel}[1]{Walk to the \gate\ and travel to \location{#1}}
+
+\newcommand{\imprism}{\textbf{\textcolor{WildStrawberry}{Imprism}}}
+
+\newcommand{\menuskip}[2]{Open and Close the menu #1 times to skip dialogue when #2}
 
 \newenvironment{battle}[2][]{\begin{tcolorbox}[title=\begin{center}\MakeUppercase{#2} \ifthenelse{\isempty{#1}}{}{- \num{#1} HP}\end{center},colbacktitle=red!50!white,colframe=red!55,coltitle=black]}{\end{tcolorbox}}
 
@@ -135,6 +148,8 @@
 	}
 }
 
+\newcommand{\image}[1]{\begin{center}\includegraphics[width=0.5\textwidth]{Pictures/#1}\end{center}}
+
 \setlength{\columnsep}{.5cm}
 
 \section*{Acknowledgements}
@@ -142,7 +157,7 @@
 KawaiNL, Cereth, ChrisTenarium, MrTyton
 \newpage
 
-\onehalfspacing
+\onehalfspacing%
 
 \input{Chapters/000_introduction.tex}
 
@@ -156,16 +171,16 @@ KawaiNL, Cereth, ChrisTenarium, MrTyton
 	\input{Chapters/008_Chapter8.tex}
 	\input{Chapters/009_Chapter9.tex}
 	\input{Chapters/010_Chapter10.tex}
-%	\input{Chapters/011_Chapter11.tex}
-%	\input{Chapters/012_Chapter12.tex}
-%	\input{Chapters/013_Chapter13.tex}
-%	\input{Chapters/014_Chapter14.tex}
-%	\input{Chapters/015_Chapter15.tex}
-%	\input{Chapters/016_Chapter16.tex}
-%	\input{Chapters/017_Chapter17.tex}
-%	\input{Chapters/018_Chapter18.tex}
-%	\input{Chapters/019_Chapter19.tex}
-%	\input{Chapters/020_Chapter20.tex}
+	\input{Chapters/011_Chapter11.tex}
+	\input{Chapters/012_Chapter12.tex}
+	\input{Chapters/013_Chapter13.tex}
+	\input{Chapters/014_Chapter14.tex}
+	\input{Chapters/015_Chapter15.tex}
+	\input{Chapters/016_Chapter16.tex}
+	\input{Chapters/017_Chapter17.tex}
+	\input{Chapters/018_Chapter18.tex}
+	\input{Chapters/019_Chapter19.tex}
+	\input{Chapters/020_Chapter20.tex}
 %	\input{Chapters/021_Chapter21.tex}
 %	\input{Chapters/022_Postscript.tex}
 
