@@ -224,6 +224,8 @@
 \newcommand{\winnp}{\ifthenelse{\equal{\colstyle}{multi}}{\ifthenelse{\equal{\blitzresult}{win}}{\newpage}{}}{}}
 \newcommand{\lossnp}{\ifthenelse{\equal{\colstyle}{multi}}{\ifthenelse{\equal{\blitzresult}{loss}}{\newpage}{}}{}}
 \newcommand{\bothnpsingle}{\ifthenelse{\equal{\colstyle}{multi}}{}{\ifthenelse{\equal{\blitzresult}{both}}{\newpage}{}}}
+\newcommand{\winnpsingle}{\ifthenelse{\equal{\colstyle}{multi}}{}{\ifthenelse{\equal{\blitzresult}{win}}{\newpage}{}}}
+\newcommand{\lossnpsingle}{\ifthenelse{\equal{\colstyle}{multi}}{}{\ifthenelse{\equal{\blitzresult}{loss}}{\newpage}{}}}
 
 \newcommand{\colstart}{\ifthenelse{\equal{\colstyle}{multi}}{\begin{multicols}{2}}{}}
 \newcommand{\colend}{\ifthenelse{\equal{\colstyle}{multi}}{\end{multicols}}{}}
@@ -289,6 +291,7 @@ CloseToWar, Flobberworm, Roosta, Keeano, TheMixedHerb, Madhyama, Shenef, Grayfox
 \input{Chapters/01_introduction.tex}
 
 \colstart
+\raggedcolumns
     \input{Chapters/02_zanarkand.tex}
     \input{Chapters/03_baajtemple.tex}
     \input{Chapters/04_besaid.tex}
