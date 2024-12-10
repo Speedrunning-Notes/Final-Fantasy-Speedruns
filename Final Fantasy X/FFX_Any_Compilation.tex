@@ -206,6 +206,8 @@
 \ 
 }
 
+\newcommand{\sggraphics}[3]{\ifthenelse{\equal{\colstyle}{multi}}{\includegraphics[width=#1\columnwidth]{#3}}{\includegraphics[width=#2\columnwidth]{#3}}}
+
 \newcommand{\bothnewline}{\ifthenelse{\equal{\colstyle}{multi}}{\ifthenelse{\equal{\blitzresult}{both}}{\newline}{}}{}}
 \newcommand{\winnewline}{\ifthenelse{\equal{\colstyle}{multi}}{\ifthenelse{\equal{\blitzresult}{win}}{\newline}{}}{}}
 \newcommand{\lossnewline}{\ifthenelse{\equal{\colstyle}{multi}}{\ifthenelse{\equal{\blitzresult}{loss}}{\newline}{}}{}}
@@ -230,22 +232,22 @@
 \newcommand{\colstartstar}{\ifthenelse{\equal{\colstyle}{multi}}{\begin{multicols}{2}}{}}
 \newcommand{\colendstar}{\ifthenelse{\equal{\colstyle}{multi}}{\end{multicols*}}{}}
 
-\newcommand{\blitzballSphereGrid}[6]{%
+\newcommand{\blitzballSphereGrid}[8]{%
 \ifthenelse{%
         \equal{\blitzresult}{win}
     }{%
         \begin{itemize}
             #1
         \end{itemize}
-        \includegraphics[width=#2\columnwidth]{#3}
+        \sggraphics{#2}{#3}{#4}
     }{%
         \ifthenelse{%
             \equal{\blitzresult}{loss}
         }{
             \begin{itemize}
-                #4
+                #5
             \end{itemize}
-            \includegraphics[width=#5\columnwidth]{#6}
+            \sggraphics{#6}{#7}{#8}
         }{%
             \ifthenelse{%
                 \equal{\blitzresult}{both}
@@ -256,15 +258,15 @@
                         \begin{itemize}
                             #1
                         \end{itemize}
-                         \includegraphics[width=#2\columnwidth]{#3}
+                        \sggraphics{#2}{#3}{#4}
                 }
                 \ifthenelse{\isempty{#4}}{}{%
                         \ifthenelse{\isempty{#1}}{}{\newline}
                         \blitzloss:
                         \begin{itemize}
-                            #4
+                            #5
                         \end{itemize}
-                        \includegraphics[width=#5\columnwidth]{#6}
+                        \sggraphics{#6}{#7}{#8}
                     
                     
                 }

@@ -43,7 +43,7 @@
             \item Move $\downarrow\downarrow\downarrow\downarrow$ on the Luck node
             \item HP +200, Agi+4
         \end{itemize}
-        \ifthenelse{\equal{\colstyle}{multi}}{\includegraphics[width=.8\columnwidth]{graphics/macalania_kimahri}}{\includegraphics[width=.5\columnwidth]{graphics/macalania_kimahri}}
+        \sggraphics{.7}{.4}{graphics/macalania_kimahri}
         \tidusf (22 S.Lvl)
         \begin{itemize}
             \item Level 2 Key Sphere
@@ -64,7 +64,13 @@
             \item Move $\leftarrow$
             \item Str+4
         \end{itemize}
-        \ifthenelse{\equal{\colstyle}{multi}}{\includegraphics[width=.8\columnwidth]{graphics/Tidus_post_crawler}}{\includegraphics[width=.5\columnwidth]{graphics/Tidus_post_crawler}}
+        \ifthenelse{\equal{\blitzresult}{win}}{%
+            \sggraphics{.7}{.4}{graphics/Tidus_post_crawler}
+        }{\ifthenelse{\equal{\blitzresult}{both}}{%
+            \sggraphics{.7}{.4}{graphics/Tidus_post_crawler}
+        }{%
+            \sggraphics{.7}{.4}{graphics/Tidus_post_crawler_loss}
+        }}
     \end{itemize}
 \end{spheregrid}
 \begin{enumerate}[resume]
@@ -160,7 +166,7 @@
             \item Move $\leftarrow$
             \item Agi+2
         \end{itemize}
-        \includegraphics[width=.8\columnwidth]{graphics/Tidus_Post_Seymour}
+        \sggraphics{.7}{.4}{graphics/Tidus_Post_Seymour}
     \end{itemize}
 \end{spheregrid}
 \winvfill
@@ -218,7 +224,7 @@
                 \item Str+4
             \end{itemize}
         \end{itemize}
-        \includegraphics[width=.8\columnwidth]{graphics/tidus_bikanel}
+        \sggraphics{.7}{.4}{graphics/tidus_bikanel}
     \end{spheregrid}
 }
 \winvfill

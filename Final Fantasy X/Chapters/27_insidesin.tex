@@ -44,68 +44,62 @@
 \end{enumerate}
 \bothvfill\winvfill\lossvfill
 \ 
-\colend
 \begin{spheregrid}
-    \begin{multicols}{2}
+    \begin{itemize}
+        \item \textit{If you got 2 or 4 \textbf{Return Spheres}:}
         \begin{itemize}
-            \item \textit{If you got 2 or 4 \textbf{Return Spheres}:}
-            \begin{itemize}
-                \item Move $\downarrow\downarrow$
-                \item Agi+2
-                \item Move $\leftarrow x5$
-                \item Agi+4 (be careful to not activate the Acc+2 Node)
-                \item Move $\nwarrow$
-                \item Spare Change
-                \item Attribute Sphere \kimahri's +4 Agi
-            \end{itemize}
-            \includegraphics[width=.8\columnwidth]{graphics/4_Return_final_grid}
-            \item \textit{If you got 0 \textbf{Return Spheres}:}
-            \begin{itemize}
-                \item Attribute Sphere \rikku's +3 Agi $\rightarrow$
-                \item Spare Change
-                \item Move $\downarrow$
-                \item Agi+4 (be careful to not activate the Acc+2 Node)
-                \item Move $\rightarrow x6$
-                \item Agi+4
-            \end{itemize}
-            \includegraphics[width=.8\columnwidth]{graphics/0_return_before_BFA}
-            \columnbreak
-            \tidusf \textit{If you didn't get a \textbf{Zombie Strike} weapon}:
-            \begin{itemize}
-                \item Move $\uparrow x5$
-                \item Level 4 Keysphere
-                \item Move $\uparrow$
-                \item Zombie Attack
-            \end{itemize}
-            \includegraphics[width=.8\columnwidth]{graphics/Tidus_BFA}
-            \rikkuf If no \od, use Skill Sphere to learn Armor Break $\uparrow$
+            \item Move $\downarrow\downarrow$
+            \item Agi+2
+            \item Move $\leftarrow x5$
+            \item Agi+4 (be careful to not activate the Acc+2 Node)
+            \item Move $\nwarrow$
+            \item Spare Change
+            \item Attribute Sphere \kimahri's +4 Agi
         \end{itemize}
-    \end{multicols}
+        \sggraphics{.7}{.4}{graphics/4_Return_final_grid}
+        \item \textit{If you got 0 \textbf{Return Spheres}:}
+        \begin{itemize}
+            \item Attribute Sphere \rikku's +3 Agi $\rightarrow$
+            \item Spare Change
+            \item Move $\downarrow$
+            \item Agi+4 (be careful to not activate the Acc+2 Node)
+            \item Move $\rightarrow x6$
+            \item Agi+4
+        \end{itemize}
+        \sggraphics{.7}{.4}{graphics/0_return_before_BFA}
+        \tidusf \textit{If you didn't get a \textbf{Zombie Strike} weapon}:
+        \begin{itemize}
+            \item Move $\uparrow x5$
+            \item Level 4 Keysphere
+            \item Move $\uparrow$
+            \item Zombie Attack
+        \end{itemize}
+        \sggraphics{.7}{.4}{graphics/Tidus_BFA}
+        \rikkuf If no \od, use Skill Sphere to learn Armor Break $\uparrow$
+    \end{itemize}
 \end{spheregrid}
-\colstart
-    \begin{equip}
+\begin{equip}
+    \begin{itemize}
+        \item \textit{If you got a \lulu/\kimahri/\wakka/\rikku\ Zombie Strike weapon:}
         \begin{itemize}
-            \item \textit{If you got a \lulu/\kimahri/\wakka/\rikku\ Zombie Strike weapon:}
-            \begin{itemize}
-                \item Equip Zombie Strike Weapon
-            \end{itemize}
+            \item Equip Zombie Strike Weapon
         \end{itemize}
-    \end{equip}
-    \begin{enumerate}[resume]
-        \item Walk up to Jecht, \cs[4:30]
-    \end{enumerate}
-    \bothvfill\winvfill\lossvfill
-    \begin{battle}[180000]{Braska's Final Aeon}
-        \begin{itemize}
-            \switch{\yuna}{\rikku}
-            \rikkuf \od\ Mix Grenade + HP Sphere or Armor Break
-            \tidusf Talk
-            \switch{\auron}{\yuna}
-            \summon{\bahamut}
-            \bahamutf Attack
-        \end{itemize}
-    \end{battle}
-\colend
+    \end{itemize}
+\end{equip}
+\begin{enumerate}[resume]
+    \item Walk up to Jecht, \cs[4:30]
+\end{enumerate}
+\bothvfill\winvfill\lossvfill
+\begin{battle}[180000]{Braska's Final Aeon}
+    \begin{itemize}
+        \switch{\yuna}{\rikku}
+        \rikkuf \od\ Mix Grenade + HP Sphere or Armor Break
+        \tidusf Talk
+        \switch{\auron}{\yuna}
+        \summon{\bahamut}
+        \bahamutf Attack
+    \end{itemize}
+\end{battle}
 \begin{enumerate}[resume]
     \item \cs+\skippablefmv[4:00]
 \end{enumerate}
@@ -124,6 +118,7 @@
 \begin{enumerate}[resume]
     \item \cs[1:40]
 \end{enumerate}
+\colend
 \begin{battle}[99999]{Yu Yevon}
     \begin{itemize}
         \item Zombie Attack:
