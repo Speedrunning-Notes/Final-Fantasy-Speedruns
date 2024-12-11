@@ -4,26 +4,24 @@
     \item Run up past the first telepad
     \item Go to the second telepad and travel north.
 \end{enumerate}
-\bothvfill
-\winvfill
 \begin{spheregrid}
     \begin{itemize}
         \auronf
         \begin{itemize}
             \item Move $\rightarrow\rightarrow\rightarrow$
             \item Level 2 Keysphere
-            \item Move $\rightarrow\rightarrow\rightarrow\rightarrow$
+            \item Move $\rightarrow x4$ (or Hold $\rightarrow$)
             \item Level 2 Keysphere
-            \item Move $\uparrow\uparrow$
+            \item Move $\uparrow\uparrow$ ($\uparrow\leftarrow$ if you are not on the correct Node)
             \item Mag+3
         \end{itemize}
-        \ifthenelse{\equal{\colstyle}{multi}}{\includegraphics[width=.8\columnwidth]{graphics/Auron_Via_Purifico}}{\includegraphics[width=.45\columnwidth]{graphics/Auron_Via_Purifico}}
+        \sggraphics{.7}{.4}{graphics/Auron_Via_Purifico}
         \yunaf
         \begin{itemize}
             \begin{multicols}{2}
                 \item Move $\uparrow\uparrow$
                 \item Level 4 Keysphere
-                \item Move $\rightarrow\rightarrow\rightarrow\rightarrow\leftarrow$
+                \item Move $\rightarrow x3 \uparrow$
                 \item Str+2, Str+2, Str+2
                 \item Teleport Sphere to \auron's Magic Node $\uparrow$
                 \item Use Magic Sphere
@@ -47,8 +45,8 @@
                 \item Str+2, MP+20, Agi+3
             \end{multicols}
         \end{itemize}
-        \ifthenelse{\equal{\colstyle}{multi}}{\includegraphics[width=.8\columnwidth]{graphics/via_purifico_yuna_1}}{\includegraphics[width=.45\columnwidth]{graphics/via_purifico_yuna_1}}
-        \ifthenelse{\equal{\colstyle}{multi}}{\includegraphics[width=.8\columnwidth]{graphics/via_purifico_yuna_2}}{\includegraphics[width=.45\columnwidth]{graphics/via_purifico_yuna_2}}
+        \sggraphics{.7}{.4}{graphics/via_purifico_yuna_1}
+        \sggraphics{.7}{.4}{graphics/via_purifico_yuna_2}
     \end{itemize}
 \end{spheregrid}
 \begin{enumerate}[resume]
@@ -61,9 +59,6 @@
         \item Maze Larva: Summon \ixion, Attack
     \end{itemize}
 \end{encounters}
-\bothvfill
-\winvfill
-\lossvfill
 \begin{battle}{Isaaru}
     \begin{itemize}
         \item Grothia (8000 HP):
@@ -84,7 +79,9 @@
     \end{itemize}
 \end{battle}
 \begin{enumerate}[resume]
-    \item Swim right and then up. Can use the underwater chest at the start to buy Power/Speed Distillers. If needed, you can attack Yellow Starfish and Sahagins with \tidus\ for 2x Power Spheres.
+    \item You can use the underwater chest on the right at the start to buy a Speed Distiller (this is the last convenient opportunity to acquire Speed Spheres) or a Power Distiller.
+    \item If needed, you can attack a Phlegias or a Sahagin with \tidus\ for 2x Power Spheres (only do so on a non-Ambush).
+    \item Swim up, then up again when the camera changes. 
 \end{enumerate}
 \begin{battle}{Evrae Altana}
     \begin{itemize}
@@ -95,10 +92,4 @@
 \begin{enumerate}[resume]
     \item Swim to exit, \sd
 \end{enumerate}
-\ 
-\bothvfill
-\ \bothnewline
-\bothcb
-\ 
-
-\bothnpsingle
+\bothnp\bothnpsingle

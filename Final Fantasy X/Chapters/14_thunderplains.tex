@@ -7,43 +7,41 @@
     \item \sd\ when approaching Al Bhed shop. Walk into the shop when \rikku\ begs to go inside.
 \end{enumerate}
 \begin{shop}{1200+}
+    Buy:
     \begin{itemize}
-        \blitzballdetermination[true]{%
-            \item Items menu only.
+        \ifthenelse{\equal{\blitzresult}{win}}{%
+        }{\ifthenelse{\equal{\blitzresult}{both}}{%
+            \item If \blitzloss\ Baroque Sword (Equip)
         }{%
-            \item Sell: 1st Equipment on the 2nd page (after the equipped ones)
-            \item Sell: Other Equipment worth 1k+ Gil
-            \item Buy: Baroque Sword (Equip)
-        }
-        \item Buy:
-        \begin{itemize}
-            \item 3 Phoenix Downs
-            \ifthenelse{\equal{\blitzresult}{win}}{%
-                \item 3 Grenades
-            }{\ifthenelse{\equal{\blitzresult}{both}}{%
-                \item 3 Grenades, +1 if \blitzloss
-            }{%
-                \item 4 Grenades
-            }}, +1 for every 3 Speed Spheres you are missing (need 15 Speed Spheres for the rest of the run)
-        \end{itemize}
+            \item Baroque Sword (Equip)
+        }}
+        \item 3 Phoenix Downs
+        \ifthenelse{\equal{\blitzresult}{win}}{%
+            \item 3 Grenades
+        }{\ifthenelse{\equal{\blitzresult}{both}}{%
+            \item 3 Grenades, +1 if \blitzloss
+        }{%
+            \item 4 Grenades
+        }}, +1 if you are missing any Speed Spheres (need 15 Speed Spheres for the rest of the run)
     \end{itemize}
-    Try to leave the shop with at least 6839 Gil.
 \end{shop}
 \begin{enumerate}[resume]
     \item Walk into shop corridor, \cs[2:00]
     \item Speak to \auron, then to \rikku, \sd.
     \item Pickup the \textbf{Yellow Shield} outside the shop on the ground.
-    \item Try to end Thunder Plains with the Light Curtain.
 \end{enumerate}
 \begin{equip}
-\begin{itemize}
-\tidusf Yellow Shield
-\end{itemize}
+    \begin{itemize}
+        \tidusf Yellow Shield
+    \end{itemize}
 \end{equip}
+\begin{enumerate}[resume]
+    \item Try to end Thunder Plains with the Light Curtain.
+\end{enumerate}
 \begin{encounters}
     Iron Giants will always target the Character with the least HP, make sure everyone's HP is above Rikku's
     \begin{itemize}
-        \item Iron Giant + 2 Buers, if you bought extra Grenades for Speed Spheres:
+        \item Iron Giant + 2 Buers, if you bought an extra Grenade for Speed Spheres (only do this once):
         \begin{itemize}
             \switch{\tidus}{\rikku}
             \rikkuf Use Grenade
@@ -53,7 +51,7 @@
             \switch{\wakka}{\tidus}
             \item Flee
         \end{itemize}
-        \item Iron Giant:
+        \item Iron Giant (only do this once):
         \begin{itemize}
             \tidusf Defend
             \switch{\wakka}{\rikku}

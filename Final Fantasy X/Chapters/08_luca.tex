@@ -7,41 +7,33 @@
     \item \sd, run to the cafe. \sd, \skippablefmv+\cs[1:20], \sd
     \item Run left to next screen, then left to the docks.
     \item Talk to O'aka on the first docks screen, before going into the Machina Fights. Do the following shop:
-    \begin{shop}{3050}
+\end{enumerate}
+\begin{shop}{3050}
+    \begin{itemize}
+        \item Sell
         \begin{itemize}
-            \item Sell
-            \begin{itemize}
-                \item All Weapons and Armor other than Official Ball, Lightning Steel, Thunder Ball.
-            \end{itemize}
-            \item Buy
-            \begin{itemize}
-                \item Stunning Steel, Equip
-            \end{itemize}
-            \item If you don't have enough gil after selling Equipment, on the same dock as O'aka there are 2 chests with 600 Gil and a Tidal Spear you can sell
+            \item All Weapons and Armor other than Official Ball, Lightning Steel, Thunder Ball.
         \end{itemize}
-    \end{shop}
+        \item Buy
+        \begin{itemize}
+            \item Stunning Steel, Equip
+        \end{itemize}
+        \item If you don't have enough gil after selling Equipment, on the same dock as O'aka there are 2 chests with 600 Gil and a Tidal Spear you can sell
+    \end{itemize}
+\end{shop}
+\begin{enumerate}[resume]
     \item Run north to the next screen.
 \end{enumerate}
 \begin{battle}{Machina - First Two Encounters}
     \begin{itemize}
-        \item \textit{No Early Haste:}
-        \begin{itemize}
-            \tidusf Defend
-            \kimahrif Defend
-            \luluf Thunder
-        \end{itemize}
-        \item \textit{Early Haste:}
-        \begin{itemize}
-            \tidusf Haste Lulu, then Defend
-            \kimahrif Defend
-            \luluf Thunder
-        \end{itemize}
+        \tidusf \textit{if Early Haste} Haste \lulu\ on his first turn, otherwise Defend
+        \kimahrif Defend
+        \luluf Thunder
     \end{itemize}
 \end{battle}
 \begin{enumerate}[resume]
     \item Do the below Sphere Grid if \tidus\ has 5 S.Levels.
 \end{enumerate}
-\vfill
 \begin{battle}{Machina Third Encounter}
     \begin{itemize}
         \item \textit{No Early Haste:}
@@ -52,7 +44,7 @@
                 \kimahrif Attack
                 \luluf Thunder a different Machina
                 \tidusf Attack
-                \kimahrif \od\ Seed Cannon \textit{if no crits else} Attack
+                \kimahrif \textit{if no crits} \od\ Seed Cannon, else Attack
             \end{itemize}
             \item \textit{Second Wave:}
             \begin{itemize}
@@ -69,21 +61,21 @@
         \end{itemize}
         \item \textit{Early Haste:}
         \begin{itemize}
-            \tidusf Haste Lulu, then Defend
+            \tidusf Haste \lulu, then Defend
             \kimahrif Defend
             \luluf Thunder
         \end{itemize}
     \end{itemize}
 \end{battle}
 \begin{enumerate}[resume]
-    \item If anyone is Critical HP, use Potions. If you had Early Haste, take the Save Sphere to restore \tidus's MP.
+    \item If anyone is Critical HP, use Potions. If you had Early Haste, \save\ to restore \tidus's MP.
     \item Do the below Sphere Grid if \tidus\ has 5 S.Levels.
     \item Run right.
 \end{enumerate}
 \begin{battle}[3000]{Oblitzerator}
     \begin{itemize}
         \kimahrif Defend
-        \tidusf Defend \textit{If No Early Haste Else} Haste \lulu
+        \tidusf \textit{If Early Haste} Haste \lulu, else Defend
         \luluf Thunder Crane x3
         \tidusf Use Crane after \lulu's 3rd Thunder
         \kimahrif Defend
@@ -102,8 +94,8 @@
             \item Move $\downarrow \searrow\searrow$
             \item +1 Str, Haste, +20 MP
         \end{itemize}
+        \sggraphics{.7}{.4}{graphics/haste}
     \end{itemize}
-    \ifthenelse{\equal{\colstyle}{multi}}{\includegraphics[width=.6\columnwidth]{graphics/haste}}{\includegraphics[width=.3\columnwidth]{graphics/haste}}
 \end{spheregrid}
 \begin{equip}
     \begin{itemize}
@@ -121,7 +113,6 @@
     \item Run South for the next two screens. \save. Go up the stairs to the locker room, \sd
     \item Go back into locker room, speak to \wakka, \sd, \cs[1:20]. \sd\ after \lulu\ scene. \cs[1:40] on \auron\ Entrance.
 \end{enumerate}
-\bothvfill\winvfill\lossvfill
 \begin{blitzball}
     \begin{itemize}
         \item \textbf{First Half:}
@@ -172,7 +163,6 @@
 \begin{enumerate}[resume]
     \item \sd, Don't Save, \cs[1:00]
 \end{enumerate}
-\bothvfill\winvfill\lossvfill
 \begin{battle}{Sahagin Chief}
     \begin{itemize}
         \item \textit{If no Thunder Ball:}

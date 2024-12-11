@@ -19,106 +19,96 @@
         \item \textbf{0 Return Spheres and 4 Friend Spheres}
     \end{itemize}
     \item These three branching paths will from now on be referred to by the number of \textbf{Return Spheres} that dropped.
+    \item Do the \lulu\ Grid below first, then one of the three Grids depending on the drop from the previous fight.
 \end{enumerate}
-\bothvfill
-\winvfill
-\ \winnewline
-\colend
-\bothnp
-\begin{spheregrid}
-    \begin{multicols}{2}
+\begin{spheregrid}[Lulu]
+    \begin{itemize}
+        \luluf
         \begin{itemize}
-            \luluf
-            \begin{itemize}
-                \item Move $\uparrow\uparrow$
-                \item Level 2 Key Sphere
-                \item Move $\downarrow x9$
-                \item Level 3 Key Sphere
-                \item Move $\searrow\searrow$
-            \end{itemize}
-            \includegraphics[width=.75\columnwidth]{graphics/lulu_grid}
-            \yunaf
-            \begin{itemize}
-                \item \textit{If you got \textbf{4 Return Spheres}:}
-                \begin{itemize}
-                    \blitzballdetermination[true]{%
-                        \item Use Return Sphere to Str+4 Node
-                        \item Move to the empty node $\leftarrow\downarrow$
-                        \item Str+4, Agi+2
-                        \includegraphics[width=.250\columnwidth]{graphics/4_returns_1}
-                    }{%
-                        \item Use Return Sphere to Str+4 Node $\uparrow\leftarrow$
-                        \item Move to the empty node $\rightarrow\rightarrow\rightarrow$
-                        \item Str+4, Def+3
-                        \item \includegraphics[width=.250\columnwidth]{graphics/loss_4_returns_1}
-                    }
-                    \end{itemize}
-                \item \textit{If you got \textbf{2 Return Spheres}:}
-                \begin{itemize}
-                    \blitzballdetermination[true]{%
-                        \item Move to the empty node $\leftarrow$
-                        \item Str+4, Agi+2
-                        \item \includegraphics[width=.25\columnwidth]{graphics/2_and_2-1}
-                        \bothcb
-                    }{%
-                        \item Move to the empty node $\rightarrow\rightarrow\rightarrow$
-                        \item Str+4, Def+3
-                        \item \includegraphics[width=.25\columnwidth]{graphics/loss_2_and_2-1}
-                    }
-                    \item Friend Sphere to \lulu, $\downarrow\downarrow$
-                    \item Str+4, Str+4
-                    \luluf Move $\nearrow\uparrow\uparrow$
-                    \yunaf Friend Sphere to \lulu,
-                    \item Str+3, Agi+4, Agi+4
-                \end{itemize}
-                \includegraphics[width=.25\columnwidth]{graphics/2_and_2}
-                \wincb
-                \losscb
-                \item \textit{If you got \textbf{0 Return Spheres}:}
-                \begin{itemize}
-                    \kimahrif Move $\swarrow x2$
-                    \blitzballdetermination[true]{%
-                        \tidusf Move to Str+4 by Mental Break $\rightarrow x3, \downarrow, \rightarrow x3$
-                        \yunaf Move to the empty node $\leftarrow$
-                        \yunaf Str+4, Agi+2
-                    }{%
-                        \tidusf Move to Armor Break $\rightarrow x3, \downarrow x6$
-                        \tidusf Armor Break
-                        \tidusf Move to HP $\searrow\searrow$
-                        \item Move to the empty node $\rightarrow\rightarrow\rightarrow$
-                        \item Str+4, Def+3
-                    }
-                    \yunaf Friend Sphere to \tidus
-                    \yunaf Str+4
-                    \item Friend Sphere to Lulu x2 like described \textbf{in the 2 Return Sphere Menu}
-                    \yunaf Friend to \kimahri\ $\downarrow$
-                    \yunaf Agi+4
-                \end{itemize}
-                \includegraphics[width=.25\columnwidth]{graphics/post_BY_0_returns}
-                \includegraphics[width=.25\columnwidth]{graphics/0_returns_pt2}
-            \end{itemize}
-            \item \tidus\ \textit{if you didn't get Armor Break:}
-            \begin{itemize}
-                \item \textit{If you got \textbf{4 Return Spheres}:}
-                \begin{itemize}
-                    \item Move to Armor Break $\rightarrow x3, \downarrow x6$
-                \end{itemize}
-                \item \textit{If you got \textbf{2 Return Spheres}:}
-                \begin{itemize}
-                    \item Return Sphere $\downarrow\searrow\searrow$, Str+4 near Armor Break
-                    \item Move $\nwarrow\leftarrow$ or $\swarrow\swarrow$
-                \end{itemize}
-                \item \textit{If you got \textbf{0 Return Spheres}:}
-                \begin{itemize}
-                    \item Move $\nwarrow\leftarrow$ or $\swarrow\swarrow$
-                \end{itemize}
-                \item Armor Break
-            \end{itemize}
+            \item Move $\uparrow\uparrow$
+            \item Level 2 Key Sphere
+            \item Move $\downarrow x9$
+            \item Level 3 Key Sphere
+            \item Move $\searrow\searrow$
         \end{itemize}
-    \end{multicols}
+        \sggraphics{.7}{.4}{graphics/lulu_grid}
+    \end{itemize}
 \end{spheregrid}
-\bothnp
-\colstart
+\begin{spheregrid}[\textbf{4 Return Spheres}]
+    \begin{itemize}
+        \blitzballdetermination[true]{%
+            \yunaf Use Return Sphere to Str+4 Node
+            \yunaf Move to the empty node $\leftarrow\downarrow$
+            \yunaf Str+4, Agi+2
+            \item \sggraphics{.7}{.4}{graphics/4_returns_1}
+        }{%
+            \yunaf Use Return Sphere to Str+4 Node $\leftarrow$
+            \yunaf Move to the empty node $\rightarrow\rightarrow\rightarrow$
+            \yunaf Str+4, Def+3
+            \item \sggraphics{.7}{.4}{graphics/loss_4_returns_1}
+        }
+        \tidusf Move to Armor Break $\rightarrow x3, \downarrow x5$
+        \tidusf Armor Break
+        \item \sggraphics{.7}{.4}{graphics/Tidus armor break 4 returns}
+    \end{itemize}
+\end{spheregrid}
+\begin{spheregrid}[\textbf{2 Return Spheres}]
+    \begin{itemize}
+        \blitzballdetermination[true]{%
+            \yunaf Move to the empty node $\leftarrow$
+            \yunaf Str+4, Agi+2
+            \item \sggraphics{.7}{.4}{graphics/2_and_2-1}
+        }{%
+            \yunaf Move to the empty node $\rightarrow\rightarrow$
+            \yunaf Str+4, Def+3
+            \item \sggraphics{.7}{.4}{graphics/loss_2_and_2-1}
+        }
+        \yunaf Friend Sphere to \lulu\ $\downarrow\downarrow$
+        \yunaf Str+4, Str+4
+        \luluf Move $\nearrow\uparrow\uparrow$
+        \yunaf Friend Sphere to \lulu
+        \yunaf Str+3, Agi+4, Agi+4
+        \item \sggraphics{.7}{.4}{graphics/2_and_2}
+        \tidusf Return Sphere $\downarrow\searrow\searrow$ (or Hold $\searrow$) to Str+4 near Armor Break
+        \tidusf Move $\nwarrow\leftarrow$ or $\leftarrow x3$
+        \tidusf Armor Break
+        \item \sggraphics{.7}{.4}{graphics/Tidus armor break 2 returns}
+    \end{itemize}
+\end{spheregrid}
+\begin{spheregrid}[\textbf{0 Return Spheres}]
+    \begin{itemize}
+        \blitzballdetermination[true]{%
+            \tidusf Move to Str+4 by Mental Break $\rightarrow x3, \downarrow, \rightarrow x3$
+            \item \sggraphics{.7}{.4}{graphics/0_returns_pt2}
+            \yunaf Move to the empty node $\leftarrow$
+            \yunaf Str+4, Agi+2
+            \item \sggraphics{.7}{.4}{graphics/2_and_2-1}
+        }{%
+            \tidusf Move to Armor Break $\rightarrow x3, \downarrow x6$
+            \tidusf Armor Break
+            \tidusf Move to HP $\rightarrow\rightarrow\downarrow$
+            \yunaf Move to the empty node $\rightarrow\rightarrow$
+            \yunaf Str+4, Def+3
+            \item \sggraphics{.7}{.4}{graphics/loss_2_and_2-1}
+        }
+        \yunaf Friend Sphere to \tidus
+        \yunaf Str+4
+        \item Friend Sphere to Lulu twice like described \textbf{in the 2 Return Sphere Menu}
+        \kimahrif Move $\swarrow x2$
+        \yunaf Friend to \kimahri\ $\downarrow$
+        \yunaf Agi+4
+        \item \sggraphics{.7}{.4}{graphics/post_BY_0_returns}
+        \blitzballdetermination[true]{%
+            \tidusf Move $\nwarrow\leftarrow$ or $\leftarrow x3$
+            \tidusf Armor Break
+            \ifthenelse{\equal{\blitzresult}{both}}{%
+                \item \sggraphics{.7}{.2}{graphics/Tidus armor break 0 returns}
+            }{%
+                \item \sggraphics{.7}{.4}{graphics/Tidus armor break 0 returns}
+            }
+        }{}
+    \end{itemize}
+\end{spheregrid}
 \begin{enumerate}[resume]
     \item \textit{If you got \textbf{4 Return Spheres}:}
     \begin{itemize}
@@ -135,9 +125,6 @@
             \yunaf Staff $\rightarrow$ First Strike
         \end{itemize}
     \end{itemize}
-    \bothvfill
-    \winvfill
-    \lossvfill
     \item \textit{If you need need to charge \rikku's \od} \formation{\tidus}{\rikku}{\auron}, otherwise \formation{\tidus}{\kimahri}{\wakka}.
 \end{enumerate}
 \begin{enumerate}[resume]
@@ -159,6 +146,7 @@
             \yunaf Attack
             \tidusf \textit{If you used a Silence Grenade} Attack once, otherwise Defend
             \rikkuf Defend
+            \item Check if you get the Overkill on Seymour Flux
         \end{itemize}
         \item \textit{If you had 2 \textbf{Return Spheres}:}
         \begin{itemize}
@@ -184,9 +172,6 @@
     \item Go up left path, \sd, continue up the path, \save\ if \bahamut\ was banished and you didn't touch one earlier.
     \item \formation{\tidus}{\yuna}{\wakka}. Go onto the next screen.
 \end{enumerate}
-\bothvfill
-\winvfill
-\lossvfill
 \begin{battle}[40000]{Sanctuary Keeper}
     \begin{itemize}
         \item \textit{If you got 2 or 4 \textbf{Return Spheres}:}
@@ -202,3 +187,4 @@
         \bahamutf Attack
     \end{itemize}
 \end{battle}
+\winnpsingle\lossnpsingle

@@ -33,7 +33,6 @@
 \begin{enumerate}[resume]
     \item Run up, \sd. Enter the hidden path, walk to \auron, \sd
 \end{enumerate}
-\bothvfill\winvfill\lossvfill
 \begin{battle}[12000]{Spherimorph}
     \begin{itemize}
         \tidusf Defend
@@ -64,43 +63,45 @@
 \begin{enumerate}[resume]
     \item \cs[1:50], \sd, \sd
 \end{enumerate}
-\colend
 \begin{spheregrid}
-    \begin{multicols}{2}
+    \begin{itemize}
+        \rikkuf (1 S.Lvl)
         \begin{itemize}
-            \rikkuf (1 S.Lvl)
-            \begin{itemize}
-                \item Move $\downarrow$
-                \item Agi+3
-            \end{itemize}
-            \includegraphics[width=.5\columnwidth]{graphics/macalaniarikku}
-            \kimahrif (15 S.Lvl)
-            \begin{itemize}
-                \item Move $\downarrow x5 \leftarrow$, next to Lv. 1 Lock
-                \item Level 1 Key Sphere
-                \item Move $\leftarrow\leftarrow\leftarrow\leftarrow$
-                \item Level 1 Key Sphere
-                \columnbreak
-                \blitzballdetermination[true]{%
-                    \item Move $\uparrow\uparrow\leftarrow$
-                }{%
-                    \item Move $\uparrow\uparrow\downarrow$
-                    \item HP+200, HP+200
-                    \item Move $\leftarrow$
-                }
-                \item Steal, Use
-            \end{itemize}
-            \includegraphics[width=.8\columnwidth]{graphics/Kimahri_post_spheremorph}
+            \item Move $\downarrow$
+            \item Agi+3
         \end{itemize}
-    \end{multicols}
+        \sggraphics{.7}{.4}{graphics/macalaniarikku}
+        \kimahrif (15 S.Lvl)
+        \begin{itemize}
+            \item Move $\downarrow x6$ (or Hold $\downarrow$), next to Lv. 1 Lock
+            \item Level 1 Key Sphere
+            \item Move $\leftarrow x4$ (or Hold $\leftarrow$)
+            \item Level 1 Key Sphere
+            \blitzballdetermination[true]{%
+                \item Move $\uparrow\uparrow\leftarrow$
+            }{%
+                \item Move $\uparrow\uparrow\downarrow$
+                \item HP+200, HP+200
+                \item Move $\leftarrow$
+            }
+            \item Steal, Use
+        \end{itemize}
+        \ifthenelse{\equal{\blitzresult}{win}}{%
+            \sggraphics{.7}{.4}{graphics/Kimahri_post_spheremorph}
+        }{\ifthenelse{\equal{\blitzresult}{both}}{%
+            \sggraphics{.7}{.4}{graphics/Kimahri_post_spheremorph_loss}
+        }{%
+            \sggraphics{.7}{.4}{graphics/Kimahri_post_spheremorph_loss}
+        }}
+    \end{itemize}
 \end{spheregrid}
-\colstart
 \begin{enumerate}[resume]
     \item \formation{\tidus}{\lulu}{\kimahri}
     \ifthenelse{\equal{\blitzresult}{both}}{%
-        \item If \blitzloss\ and don't have a Light Curtain heal everyone
+        \item If \blitzloss\ and don't have a Light Curtain: Use a Mega-Potion
     }{\ifthenelse{\equal{\blitzresult}{loss}}{%
-        \item If you don't have a Light Curtain heal everyone
+        \item If you don't have a Light Curtain: Use a Mega-Potion
     }{}}
     \item Talk to \auron\ on the way out, then exit
 \end{enumerate}
+\winnp

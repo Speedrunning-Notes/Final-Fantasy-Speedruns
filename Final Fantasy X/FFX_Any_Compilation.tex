@@ -95,7 +95,7 @@
 
 \newenvironment{shop}[1]{\begin{tcolorbox}[title=\begin{center}SHOP\, #1 GIL\end{center},colbacktitle=blue!50!white,coltitle=black,colframe=blue!50!white]}{\end{tcolorbox}}
 
-\newenvironment{spheregrid}{\begin{tcolorbox}[title=\begin{center}SPHERE GRID\end{center},colbacktitle=purple!50!white,colframe=purple!55,coltitle=black]}{\end{tcolorbox}}
+\newenvironment{spheregrid}[1][]{\begin{tcolorbox}[title=\begin{center}SPHERE GRID\ifthenelse{\isempty{#1}}{}{ - #1}\end{center},colbacktitle=purple!50!white,colframe=purple!55,coltitle=black]}{\end{tcolorbox}}
 
 \newenvironment{encounters}{\begin{tcolorbox}[title=\begin{center}ENCOUNTERS\end{center},colbacktitle=VioletRed!50!white,colframe=VioletRed!55,coltitle=black]}{\end{tcolorbox}}
 
@@ -206,6 +206,8 @@
 \ 
 }
 
+\newcommand{\sggraphics}[3]{\ifthenelse{\equal{\colstyle}{multi}}{\includegraphics[width=#1\columnwidth]{#3}}{\includegraphics[width=#2\columnwidth]{#3}}}
+
 \newcommand{\bothnewline}{\ifthenelse{\equal{\colstyle}{multi}}{\ifthenelse{\equal{\blitzresult}{both}}{\newline}{}}{}}
 \newcommand{\winnewline}{\ifthenelse{\equal{\colstyle}{multi}}{\ifthenelse{\equal{\blitzresult}{win}}{\newline}{}}{}}
 \newcommand{\lossnewline}{\ifthenelse{\equal{\colstyle}{multi}}{\ifthenelse{\equal{\blitzresult}{loss}}{\newline}{}}{}}
@@ -222,6 +224,8 @@
 \newcommand{\winnp}{\ifthenelse{\equal{\colstyle}{multi}}{\ifthenelse{\equal{\blitzresult}{win}}{\newpage}{}}{}}
 \newcommand{\lossnp}{\ifthenelse{\equal{\colstyle}{multi}}{\ifthenelse{\equal{\blitzresult}{loss}}{\newpage}{}}{}}
 \newcommand{\bothnpsingle}{\ifthenelse{\equal{\colstyle}{multi}}{}{\ifthenelse{\equal{\blitzresult}{both}}{\newpage}{}}}
+\newcommand{\winnpsingle}{\ifthenelse{\equal{\colstyle}{multi}}{}{\ifthenelse{\equal{\blitzresult}{win}}{\newpage}{}}}
+\newcommand{\lossnpsingle}{\ifthenelse{\equal{\colstyle}{multi}}{}{\ifthenelse{\equal{\blitzresult}{loss}}{\newpage}{}}}
 
 \newcommand{\colstart}{\ifthenelse{\equal{\colstyle}{multi}}{\begin{multicols}{2}}{}}
 \newcommand{\colend}{\ifthenelse{\equal{\colstyle}{multi}}{\end{multicols}}{}}
@@ -230,22 +234,22 @@
 \newcommand{\colstartstar}{\ifthenelse{\equal{\colstyle}{multi}}{\begin{multicols}{2}}{}}
 \newcommand{\colendstar}{\ifthenelse{\equal{\colstyle}{multi}}{\end{multicols*}}{}}
 
-\newcommand{\blitzballSphereGrid}[6]{%
+\newcommand{\blitzballSphereGrid}[8]{%
 \ifthenelse{%
         \equal{\blitzresult}{win}
     }{%
         \begin{itemize}
             #1
         \end{itemize}
-        \includegraphics[width=#2\columnwidth]{#3}
+        \sggraphics{#2}{#3}{#4}
     }{%
         \ifthenelse{%
             \equal{\blitzresult}{loss}
         }{
             \begin{itemize}
-                #4
+                #5
             \end{itemize}
-            \includegraphics[width=#5\columnwidth]{#6}
+            \sggraphics{#6}{#7}{#8}
         }{%
             \ifthenelse{%
                 \equal{\blitzresult}{both}
@@ -256,15 +260,15 @@
                         \begin{itemize}
                             #1
                         \end{itemize}
-                         \includegraphics[width=#2\columnwidth]{#3}
+                        \sggraphics{#2}{#3}{#4}
                 }
                 \ifthenelse{\isempty{#4}}{}{%
                         \ifthenelse{\isempty{#1}}{}{\newline}
                         \blitzloss:
                         \begin{itemize}
-                            #4
+                            #5
                         \end{itemize}
-                        \includegraphics[width=#5\columnwidth]{#6}
+                        \sggraphics{#6}{#7}{#8}
                     
                     
                 }
@@ -287,6 +291,7 @@ CloseToWar, Flobberworm, Roosta, Keeano, TheMixedHerb, Madhyama, Shenef, Grayfox
 \input{Chapters/01_introduction.tex}
 
 \colstart
+\raggedcolumns
     \input{Chapters/02_zanarkand.tex}
     \input{Chapters/03_baajtemple.tex}
     \input{Chapters/04_besaid.tex}
