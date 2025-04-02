@@ -1,94 +1,95 @@
-\chapter{Macalania Woods}
+\chapter{Macalania Woods, Ya?}
 
 \begin{enumerate}
-    \item \sd, walk north, \sd, \save
+    \item \sd, head north, \sd, \save. Gotta keep Yuna safe, ya?
     \item \formation{\tidus}{\rikku}{\auron}
-    \item Cure \tidus\ if he's ever below 404 HP.
-    \item Make sure that you charge \rikku\ \od, and that you do at least one of each of the following steals.
+    \item Heal Tidus if he's below 404 HP, ya? Can't let the star blitzball player get hurt!
+    \item Charge Rikku's...Rikku's?!... \od, and steal at least one of each thing, ya? Gotta get those items!
 \end{enumerate}
 \begin{encounters}
     \begin{itemize}
-        \item Chimera: Steal Arctic Wind, Flee
-        \item Blue Elemental: Steal Fish Scale x2, Flee
-        \item Else: Flee
+        \item Chimera? Steal an Arctic Wind, then FLEE!
+        \item Blue Elemental? Steal Fish Scale x2, then run, ya?
+        \item Anything else? No time, just Flee!
     \end{itemize}
 \end{encounters}
 \begin{enumerate}[resume]
-    \item Once \rikku\ has \od\ and you have at least 1 Arctic Wind and 1 Fish Scale, \formation{\tidus}{\kimahri}{\auron}
-    \item Follow path, \sd\ twice
-    \item Catch butterfly near the exit to avoid encounters
+    \item Once Rikku's...Rikku's?!... got \od\ and we got at least 1 Arctic Wind and 1 Fish Scale, \formation{\tidus}{\kimahri}{\auron}
+    \item Follow the path, \sd\ twice.
+    \item Catch that butterfly near the exit to avoid those battles, ya?
     \formation{\tidus}{\kimahri}{\auron}
-    \item \save, talk to O'aka, pick the first option ("Got any weapons?"), exit the shop, pick the first option ("Too pricey."), talk to him again ("Got any weapons?")
+    \item \save, talk to O'aka, ask about weapons ("Got any weapons?"), then exit the shop. Say it's too pricey ("Too pricey."), then ask again ("Got any weapons?")
 \end{enumerate}
 \begin{shop}{11550}
     \begin{itemize}
-        \item Sell: Stunning Steel, Buckler, Hunter Spear, any other equipment to go above 11550 Gil
+        \item Sell: Stunning Steel, Buckler, Hunter Spear, anything else to get over 11550 Gil, ya?
         \item Buy:
         \begin{itemize}
-            \item Sonic Steel, Equip
-            \item Shimmering Blade, Equip
+            \item Sonic Steel, Equip it on Tidus, ya?
+            \item Shimmering Blade, Equip it on Auron, ya?
         \end{itemize}
     \end{itemize}
 \end{shop}
 \begin{enumerate}[resume]
-    \item Run up, \sd. Enter the hidden path, walk to \auron, \sd
+    \item Run up ahead, \sd. Go into the hidden path, walk to Auron, \sd
 \end{enumerate}
-\begin{battle}[12000]{Spherimorph}
+\begin{battle}[12000]{Spherimorph, the elemental blitzball!}
     \begin{itemize}
-        \tidusf Defend
+        \tidusf Tidus defends, ya?
         \switch{\tidus}{\yuna}
-        \yunaf Defend
-        \kimahrif Defend
+        \yunaf Yuna defends, gotta protect her!
+        \kimahrif Kimahri defends, like a good Guardian, ya?
         \switch{\auron}{\rikku}
-        \rikkuf Grenade, check the Element
-        \yunaf Defend
-        \rikkuf \od, HP Sphere with
+        \rikkuf Rikku...Rikku?! uses a Grenade, and check what element it is, ya?
+        \yunaf Yuna defends, ya?
+        \rikkuf Rikku's...Rikku's?!... \od, HP Sphere with:
         \begin{itemize}
-            \item Fire: Arctic Wind
-            \item Ice: Bomb Core
-            \item Water: Lightning Marble
-            \item Thunder: Fish Scale
+            \item Fire? Use Arctic Wind, ya?
+            \item Ice? Bomb Core, ya?
+            \item Water? Lightning Marble, ya?
+            \item Thunder? Fish Scale, ya?
         \end{itemize}
-        \item \textit{If you don't have the elemental item:}
+        \item \textit{If we're outta stuff:}
         \begin{itemize}
             \switch{\rikku}{\lulu}
-            \luluf Use the spell opposite of what Spherimorph used
-            \kimahrif Attack, check the Element
+            \luluf Lulu uses the opposite spell of what Spherimorph used, ya?
+            \kimahrif Kimahri attacks, check the element, ya?
             \switch{\yuna}{\rikku}
-            \rikkuf \od
+            \rikkuf Rikku's...Rikku's?!... \od, ya?
         \end{itemize}
     \end{itemize}
-    \tidus, \yuna, \kimahri, \rikku\ all need AP.
+    Tidus, Yuna, Kimahri, and Rikku...Rikku?!... all need AP, ya?
 \end{battle}
 \begin{enumerate}[resume]
     \item \cs[1:50], \sd, \sd
 \end{enumerate}
 \begin{spheregrid}
     \begin{itemize}
-        \rikkuf (1 S.Lvl)
+        \rikkuf (1 S.Lvl), Rikku...Rikku?!... gotta move, ya?
         \begin{itemize}
-            \item Move $\downarrow$
-            \item Agi+3
+            \item Move down, ya? $\downarrow$
+            \item Agi+3, nice!
         \end{itemize}
         \sggraphics{.7}{.4}{graphics/macalaniarikku}
-        \kimahrif (15 S.Lvl)
+        \kimahrif (15 S.Lvl), Kimahri's turn, ya?
         \begin{itemize}
-            \item Move $\downarrow x6$ (or Hold $\downarrow$), next to Lv. 1 Lock
-            \item Level 1 Key Sphere
-            \item Move $\leftarrow x4$ (or Hold $\leftarrow$)
-            \item Level 1 Key Sphere
+            \item Move down six times, ya? $\downarrow x6$ (or Hold $\downarrow$), next to that Lv. 1 Lock, ya?
+            \item Level 1 Key Sphere, ya?
+            \item Move left four times $\leftarrow x4$ (or Hold $\leftarrow$), ya?
+            \item Another Level 1 Key Sphere, ya?
             \blitzballdetermination[true]{%
-                \item Move $\uparrow\uparrow\leftarrow$
+                \item Move up twice and left once $\uparrow\uparrow\leftarrow$, like a blitzball play, ya?
             }{%
-                \item Move $\uparrow\uparrow\downarrow$
-                \item HP+200, HP+200
-                \item Move $\leftarrow$
+                \item Move up twice and down once $\uparrow\uparrow\downarrow$, ya?
+                \item HP+200, HP+200, nice HP boost!
+                \item Move left, ya? $\leftarrow$
             }
-            \item Steal, Use
+            \item Steal, and Use, ya?
         \end{itemize}
         \ifthenelse{\equal{\blitzresult}{win}}{%
             \sggraphics{.7}{.4}{graphics/Kimahri_post_spheremorph}
-        }{\ifthenelse{\equal{\blitzresult}{both}}{%
+        }{%
+            \ifthenelse{\equal{\blitzresult}{both}}{%
             \sggraphics{.7}{.4}{graphics/Kimahri_post_spheremorph_loss}
         }{%
             \sggraphics{.7}{.4}{graphics/Kimahri_post_spheremorph_loss}
@@ -98,10 +99,11 @@
 \begin{enumerate}[resume]
     \item \formation{\tidus}{\lulu}{\kimahri}
     \ifthenelse{\equal{\blitzresult}{both}}{%
-        \item If \blitzloss\ and don't have a Light Curtain: Use a Mega-Potion
-    }{\ifthenelse{\equal{\blitzresult}{loss}}{%
-        \item If you don't have a Light Curtain: Use a Mega-Potion
+        \item If we lost at blitzball and don't have a Light Curtain, use a Mega-Potion, ya?
+    }{%
+        \ifthenelse{\equal{\blitzresult}{loss}}{%
+        \item If we don't have a Light Curtain, use a Mega-Potion, ya?
     }{}}
-    \item Talk to \auron\ on the way out, then exit
+    \item Talk to Auron on the way out, then leave, ya?
 \end{enumerate}
 \winnp

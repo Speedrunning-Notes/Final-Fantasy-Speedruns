@@ -1,68 +1,69 @@
-\chapter{Thunder Plains}
+\chapter{Thunder Plains, Brudda!}
 
 \begin{enumerate}
-    \item Walk north, dodging lightning, Flee all encounters.
+    \item Head north, dodge that lightning, ya? Just like dodging blitzballs from the Al Bhed! Flee from all the battles, no time to waste!
 \end{enumerate}
 \begin{enumerate}[resume]
-    \item \sd\ when approaching Al Bhed shop. Walk into the shop when \rikku\ begs to go inside.
+    \item \sd\ when we see the Al Bhed shop. Walk inside when Rikku... Rikku?!... begs to go. Probably full of machina junk, ya?
 \end{enumerate}
-\begin{shop}{1200+}
+\begin{shop}{1200}
     Buy:
     \begin{itemize}
         \ifthenelse{\equal{\blitzresult}{win}}{%
         }{\ifthenelse{\equal{\blitzresult}{both}}{%
-            \item If \blitzloss\ Baroque Sword (Equip)
+            \item If \blitzloss\  Baroque Sword (Equip), ya?
         }{%
-            \item Baroque Sword (Equip)
+            \item If we lost the blitz game a bit, buy Baroque Sword (Equip)
         }}
-        \item 3 Phoenix Downs
+        \item 3 Phoenix Downs, gotta keep Yuna safe, ya?
         \ifthenelse{\equal{\blitzresult}{win}}{%
-            \item 3 Grenades
+            \item 3 Grenades, those Al Bhed grenades are nasty!
         }{\ifthenelse{\equal{\blitzresult}{both}}{%
-            \item 3 Grenades, +1 if \blitzloss
+            \item 3 Grenades, +1 if we lost a lil' in the blitz tourney
         }{%
-            \item 4 Grenades
-        }}, +1 if you are missing any Speed Spheres (need 15 Speed Spheres for the rest of the run)
+            \item 4 Grenades, just in case, ya?
+        }}
+        , +1 if we need more Speed Spheres (need 15 Speed Spheres for the rest of the run, ya?).
     \end{itemize}
 \end{shop}
 \begin{enumerate}[resume]
-    \item Walk into shop corridor, \cs[2:00]
-    \item Speak to \auron, then to \rikku, \sd.
-    \item Pickup the \textbf{Yellow Shield} outside the shop on the ground.
+    \item Walk into the shop thingy, \cs[2:00]
+    \item Talk to Auron, then Rikku...Rikku?!, \sd.
+    \item Gotta grab the \textbf{Yellow Shield} outside the shop, ya? It's on the ground.
 \end{enumerate}
 \begin{equip}
     \begin{itemize}
-        \tidusf Yellow Shield
+        \tidusf Yellow Shield for Tidus, ya?
     \end{itemize}
 \end{equip}
 \begin{enumerate}[resume]
-    \item Try to end Thunder Plains with the Light Curtain.
+    \item Try to finish up in Thunder Plains with the Light Curtain, ya?
 \end{enumerate}
 \begin{encounters}
-    Iron Giants will always target the Character with the least HP, make sure everyone's HP is above Rikku's
+    Iron Giants always go for the person with the least HP, so make sure everyone's HP is higher than Rikku's...Rikku?!
     \begin{itemize}
-        \item Iron Giant + 2 Buers, if you bought an extra Grenade for Speed Spheres (only do this once):
+        \item Iron Giant + 2 Buers, if we bought an extra grenade for Speed Spheres (only do this once, ya?):
         \begin{itemize}
             \switch{\tidus}{\rikku}
-            \rikkuf Use Grenade
-            \wakkaf Defend
-            \auronf Defend
-            \enemyf Attacks \rikku
+            \rikkuf Rikku...Rikku?! throws a Grenade, ya?
+            \wakkaf Wakka defends, gotta protect Yuna!
+            \auronf Auron defends too, ya?
+            \enemyf They attack Rikku...Rikku?!
             \switch{\wakka}{\tidus}
-            \item Flee
+            \item Gotta flee, brudda!
         \end{itemize}
-        \item Iron Giant (only do this once):
+        \item Just an Iron Giant (only do this once):
         \begin{itemize}
-            \tidusf Defend
+            \tidusf Tidus defends, ya?
             \switch{\wakka}{\rikku}
-            \rikkuf Steal Light Curtain
-            \auronf Defend
-            \enemyf Attacks \rikku
-            \item Flee
+            \rikkuf Rikku...Rikku?! tries to steal a Light Curtain, ya?
+            \auronf Auron defends, like a blitzball goalie!
+            \enemyf Attacks Rikku...Rikku?!
+            \item Gotta run, brudda!
         \end{itemize}
-        \blitzballdetermination[true]{}{\item Larva: Steal Lunar Curtain}
+        \blitzballdetermination[true]{}{\item A Larva, eh? Gotta steal a Lunar Curtain, ya?}
     \end{itemize}
 \end{encounters}
 \begin{enumerate}[resume]
-    \item Exit screen, go north, near the exit \sd, \cs[3:10]
+    \item Exit the screen, head north, near the exit \sd, \cs[3:10]
 \end{enumerate}
