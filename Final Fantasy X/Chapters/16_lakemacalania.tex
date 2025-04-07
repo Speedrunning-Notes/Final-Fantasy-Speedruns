@@ -1,66 +1,65 @@
-\chapter{Lake Macalania, ya? Like a Blitzball Arena, Brudda!}
+\chapter{Lake Macalania}
 
 \begin{enumerate}
-    \item Run up and \sd, like runnin' up the field, ya?
+    \item Run up and \sd
 \end{enumerate}
-\begin{battle}[16000]{Crawler, huh? Sounds like Al Bhed Machina}
+\begin{battle}[16000]{Crawler}
     \begin{itemize}
         \switch{\tidus}{\rikku}
-        \rikkuf Rikku's...Rikku's?!... gonna mix a Lightning Marble with a Negator (1\,000 HP), ya?
-        \rikkuf Then mix a Lightning Marble with the Crawler, gotta stop that Al Bhed junk, ya?
-        \kimahrif Kimahri's gonna hit that Crawler with a Lightning Marble, show 'em Ronso power!
-        \luluf Lulu uses a Phoenix Down on Rikku...Rikku?!, gotta keep her alive!
-        \rikkuf Then another Lightning Marble on the Crawler, Al Bhed are always makin' trouble, ya?
+        \rikkuf Lightning Marble x1/2 Negator (1\,000 HP)
+        \rikkuf Lightning Marble Crawler
+        \kimahrif Lightning Marble Crawler
+        \luluf Phoenix Down \rikku
+        \rikkuf Lightning Marble Crawler
         \ifthenelse{\equal{\blitzresult}{win}}{%
             \switch{\lulu}{\yuna}
-            \yunaf Yuna uses Mega Phoenix, send those baddies to the Farplane!
+            \yunaf Mega Phoenix
             \switch{\yuna}{\tidus}
-            \tidusf Tidus equips Bruddahood, time to get serious, ya?
+            \tidusf Equip Brotherhood
+        }{\ifthenelse{\equal{\blitzresult}{loss}}{%
+            \kimahrif If you need a Lunar Curtain Steal Crawler, else Defend
+            \switch{\lulu}{\yuna}
+            \yunaf If 2 Characters dead Mega Phoenix, else Phoenix Down \rikku
+            \switch{\yuna}{\tidus}
+            \tidusf If \kimahri\ is dead Phoenix Down him, otherwise Equip Brotherhood
         }{%
-            \ifthenelse{\equal{\blitzresult}{loss}}{%
-                \kimahrif If we need a Lunar Curtain, Kimahri steals from the Crawler, else defends! Gotta protect us!
-                \switch{\lulu}{\yuna}
-                \yunaf If two people are dead, Mega Phoenix, else Phoenix Down Rikku...Rikku?!, keepin' us goin'
-                \switch{\yuna}{\tidus}
-                \tidusf If Kimahri's down, Phoenix Down him, otherwise equip Bruddahood! Gotta keep the team alive!
-            }{%
-                \kimahrif If we lost blitz and need a Lunar Curtain, Kimahri steals from the Crawler, else defend! Gotta watch out!
-                \switch{\lulu}{\yuna}
-                \yunaf If two people are dead, Mega Phoenix, else Phoenix Down Rikku...Rikku?!, Yuna's prayin' to Yevon!
-                \switch{\yuna}{\tidus}
-                \tidusf If Kimahri's dead, Phoenix Down him, otherwise equip Bruddahood! Gotta be ready!
-            }}
-        \rikkuf Rikku's...Rikku's?!... \od\ for a Lv. 2 Key Sphere and a Lightning Marble! Gotta get those goodies!
+            \kimahrif If \blitzloss\ and you need a Lunar Curtain Steal Crawler, else Defend
+            \switch{\lulu}{\yuna}
+            \yunaf If 2 Characters dead Mega Phoenix, else Phoenix Down \rikku
+            \switch{\yuna}{\tidus}
+            \tidusf If \kimahri\ is dead Phoenix Down him, otherwise Equip Brotherhood
+        }}
+        \rikkuf \od\ Lv. 2 Key Sphere and Lightning Marble
     \end{itemize}
-    Tidus, Yuna, Lulu and Kimahri all need AP! Gotta get stronger for the pilgrimage!
+    \tidus, \yuna, \lulu\ and \kimahri\ need AP.
 \end{battle}
 \begin{spheregrid}
     \begin{itemize}
-        \kimahrif (12 S.Lvl), gotta make Kimahri stronger, ya?
+        \kimahrif (12 S.Lvl)
         \begin{itemize}
-            \item Move down four times on the Luck node, ya? $\downarrow\downarrow\downarrow\downarrow$ Gotta get lucky like winning the Blitzball tourney, ya?
-            \item HP + 200, Agi+4, Gotta make sure he's ready to defend Yuna!
+            \item Move $\downarrow\downarrow\downarrow\downarrow$ on the Luck node
+            \item HP +200, Agi+4
         \end{itemize}
         \sggraphics{.7}{.4}{graphics/macalania_kimahri}
-        \tidusf (22 S.Lvl), Tidus needs to bulk up, ya?
+        \tidusf (22 S.Lvl)
         \begin{itemize}
-            \item Level 2 Key Sphere, just like gettin' the Jecht Shot, ya?
-            \item Move right then up, gotta move fast like on the blitzball field, ya? $\rightarrow\uparrow$
-            \item Str + 4, Gotta get stronger for Yuna, ya?
-            \item Move up twice, ya? $\uparrow\uparrow$, Gotta get up there like the Aurochs tryin' to win, ya?
-            \item HP+200, Gotta keep Tidus alive, ya?
-            \item Move right twice then up, Gotta move fast, ya? $\rightarrow\rightarrow\uparrow$
-            \item HP+200, Str+4, Agi+2, Time to get ready for Sin, ya?
-            \item \blitzballdetermination[true]{%
-                \item Move right, gotta move right on the blitzball field, ya? $\rightarrow$
-                \item Use a Strength Sphere and activate it, like usin' the Jecht Shot, ya?
-                \item Move up then left twice, or northwest twice, gotta go left sometimes, ya? $\uparrow\leftarrow\leftarrow$ or $\nwarrow\nwarrow$
+            \item Level 2 Key Sphere
+            \item Move $\rightarrow\uparrow$
+            \item Str +4
+            \item Move $\uparrow\uparrow$
+            \item HP+200
+            \item Move $\rightarrow\rightarrow\uparrow$
+            \item HP+200, Str+4, Agi+2
+            \blitzballdetermination[true]{%
+                \item Move $\rightarrow$
+                \item Use Strength Sphere, Activate it
+                \item Move $\uparrow\leftarrow\leftarrow$ or $\nwarrow\nwarrow$
             }{%
-                \item Move up then left, ya? Gotta get up, ya? $\uparrow\leftarrow$
+                \item Move $\uparrow\leftarrow$
             }
-            \item HP+200, Str+4, Agi+2, Time to be ready for anything, ya?
-            \item Move left, gotta go left, ya? $\leftarrow$
-            \item Str+4, Gotta get stronger, ya?
+            \item HP+200, Str+4, Agi+2
+            \item Move $\leftarrow$
+            \item Str+4
         \end{itemize}
         \ifthenelse{\equal{\blitzresult}{win}}{%
             \sggraphics{.7}{.4}{graphics/Tidus_post_crawler}
@@ -72,140 +71,139 @@
     \end{itemize}
 \end{spheregrid}
 \begin{enumerate}[resume]
-    \item \sd, \cs[0:40], head to the next screen, time to keep movin' for Yuna, ya?
-    \item Head to the Temple, \sd. \save, Gotta save Yuna, ya?
+    \item \sd, \cs[0:40], head to next screen
+    \item Head to Temple, \sd. \save.
     \wincb
-    \item Jyscal Skip (Ignore if playing with Cutscene Remover): No time for cutscenes, gotta get to Yuna, ya?
+    \item Jyscal Skip (Ignore if playing with Cutscene Remover):
     \begin{itemize}
-        \item Speak to Tromell for the \textbf{Shell Targe}, maybe it'll protect us from Sin, ya?
-        \item Walk into the wall to the right of Tromell, these temples are tricky, ya?
-        \item Move slightly right, turn around and talk to Tromell while moving right, Tromell's confused, ya?
-        \item If it works, walk forward while mashin' Shelinda's dialogue, Shelinda won't stop talkin', ya?
-        \item When dialogue finishes, walk up the stairs, push the man, and go through, gotta be sneaky, ya?
-        \item If Shelinda ain't sayin' nothin', talk to one of the musicians, maybe they know somethin', ya?
+        \item Speak to Tromell for \textbf{Shell Targe}
+        \item Walk into the wall to the right of Tromell
+        \item Move slightly to the right, turn around and Talk to Tromell while moving Right.
+        \item If successful, walk forward while mashing Shelinda's dialogue.
+        \item When dialogue finishes, walk up the stairs, push the man, and go through.
+        \item If Shelinda is not saying her dialogue, talk to one of the musicians
     \end{itemize}
-    \item \sd, walk to the Fayth room, \cs[2:10], gotta protect Yuna in here, ya?
+    \item \sd, walk to Fayth room, \cs[2:10]
 \end{enumerate}
-\begin{battle}[3000]{Seymour, that Maester, huh?}
+\begin{battle}[3000]{Seymour}
     \begin{itemize}
-        \tidusf Haste Tidus, Tidus needs to be quick, like a blitzball player!
-        \yunaf Change Weapon to Staff, Yuna's gonna use her faith, ya?
-        \kimahrif Kimahri uses \od\ Stone Breath, Kimahri's gonna show 'em, ya?
-        \tidusf Talk to Seymour, gotta get some answers from him, ya?
+        \tidusf Haste \tidus
+        \yunaf Change Weapon to Staff
+        \kimahrif \od\ Stone Breath
+        \tidusf Talk to Seymour
         \switch{\yuna}{\auron}
-        \auronf Defend, gotta protect Yuna, ya?
-        \enemyf Seymour uses Blizzara, Seymour's makin' it cold, ya?
+        \auronf Defend
+        \enemyf Seymour Blizzara
         \ifthenelse{\equal{\blitzresult}{win}}{%
-            \tidusf Defend, gotta protect everyone, ya?
+            \tidusf Defend
+        }{\ifthenelse{\equal{\blitzresult}{loss}}{%
+            \tidusf Cheer
         }{%
-            \ifthenelse{\equal{\blitzresult}{loss}}{%
-                \tidusf Cheer, cheer up the team, ya?
-            }{%
-                \tidusf if we lost blitz, cheer, else defend, time to cheer or defend, ya?
-            }}
-        \tidusf Attack, Gotta take 'em down, ya?
+            \tidusf if \blitzloss\ Cheer, else Defend
+        }}
+        \tidusf Attack
     \end{itemize}
 \end{battle}
-\begin{battle}[18000]{Anima, that summon is scary, ya?}
+\begin{battle}[18000]{Anima}
     \begin{itemize}
         \blitzballdetermination[true]{%
-            \kimahrif Defend, Kimahri's protectin', ya?
-            \auronf Defend, gotta protect Yuna, ya?
+            \kimahrif Defend
+            \auronf Defend
             \switch{\tidus}{\wakka}
-            \wakkaf Change Weapon to anything, I'm just protectin', ya?
-            \enemyf Anima uses Pain, gonna hurt, ya?
+            \wakkaf Change Weapon to anything
+            \enemyf Pain
             \switch{first survivor}{\tidus}
-            \tidusf Attack x4, Tidus is goin' for it, ya?
+            \tidusf Attack x4
             \switch{second survivor}{\rikku}
-            \rikkuf Steal x2, Rikku's...Rikku's?!... stealin' stuff, ya?
+            \rikkuf Steal x2
         }{%
-            \kimahrif Hit Anima with a Lightning Marble, Kimahri's gonna get 'em, ya?
+            \kimahrif Lightning Marble Anima
             \switch{\auron}{\rikku}
-            \rikkuf Rikku's...Rikku's?!... mixin' with a Lightning Marble, ya?
+            \rikkuf Lightning Marble Anima
             \switch{\tidus}{\wakka}
-            \wakkaf Change Weapon to anything, I'm just tryin' to help, ya?
-            \enemyf Anima uses Pain, gonna hurt us, ya?
+            \wakkaf Change Weapon to anything
+            \enemyf Pain
             \switch{first survivor}{\tidus}
-            \tidusf Attack x4, Tidus is attackin', ya?
+            \tidusf Attack x4
             \switch{second survivor}{\rikku\ or \kimahri}
-            \item Rikku or Kimahri: Steal, gotta steal from 'em, ya?
+            \item \rikku\ or \kimahri: Steal
         }
-        \item \textit{If Tidus Misses:}, Tidus missed, ya?
+        \item \textit{If Tidus Misses:}
         \begin{itemize}
-            \item On Tidus' 4th turn, switch him for Lulu, Lulu's gonna come in, ya?
-            \luluf Lulu uses Phoenix Down on a dead character, Lulu's gonna revive, ya?
-            \enemyf Anima uses Pain, still hurtin', ya?
+            \item On Tidus' 4th turn switch him for \lulu
+            \luluf Phoenix Down dead character
+            \enemyf Pain
             \switch{first survivor}{\tidus}
-            \item Continue the fight like normal, gotta keep goin', ya?
+            \item Continue the fight like normal
         \end{itemize}
     \end{itemize}
 \end{battle}
-\begin{battle}[6000]{Seymour again? He's persistent, ya?}
+\begin{battle}[6000]{Seymour}
     \begin{itemize}
-        \tidusf Phoenix Down Rikku...Rikku?!, if she died before Multi-Thundara, gotta revive her, ya?
-        \blitzballdetermination[true]{\tidusf Change Weapon to Sonic Steel, like usin' a Jecht Shot, ya?}{}
-        \item Anyone: Defend until Multi-Thundara, gotta brace for it, ya?
-        \enemyf Seymour uses Multi-Thundara, gonna blast us, ya?
-        \tidusf Attack x2, Tidus's gonna strike, ya?
+        \tidusf Phoenix Down \rikku\ if she died before Multi-Thundara.
+        \blitzballdetermination[true]{\tidusf Change Weapon to Sonic Steel}{}
+        \item Anyone: Defend until Multi-Thundara.
+        \enemyf Multi-Thundara
+        \tidusf Attack x2
     \end{itemize}
-    Tidus and Yuna need AP! Gotta make 'em stronger!
+    \tidus\ and \yuna\ need AP.
 \end{battle}
 \begin{enumerate}[resume]
-    \item Name Shiva, gotta name the Aeon, ya?
+    \item Name \shiva
 \end{enumerate}
 \begin{spheregrid}
     \begin{itemize}
-        \tidusf, Tidus needs to get better, ya?
+        \tidusf
         \begin{itemize}
-            \item Move left four times, gotta move left on the sphere grid, ya? $\leftarrow\leftarrow\leftarrow\leftarrow$
-            \item HP+200, Str+4, gotta get health and strength, ya?
-            \item Move left, gotta move left, ya? $\leftarrow$
-            \item Agi+2, gotta get agility up, ya?
+            \item Move $\leftarrow\leftarrow\leftarrow\leftarrow$
+            \item HP+200, Str+4
+            \item Move $\leftarrow$
+            \item Agi+2
         \end{itemize}
         \sggraphics{.7}{.4}{graphics/Tidus_Post_Seymour}
     \end{itemize}
 \end{spheregrid}
 \begin{enumerate}[resume]
-    \item We need 21 Power Spheres and 10 Speed Spheres \textbf{at this point} to be done farmin' 'em, time to get those spheres!
-    \item \formation{\rikku}{\tidus}{\kimahri}, Gotta set up the team, ya?
+    \item You need 21 Power Spheres and 10 Speed Spheres \textbf{at this point} to be done farming them.
+    \item \formation{\rikku}{\tidus}{\kimahri}
     \ifthenelse{\equal{\blitzresult}{win}}{}{
         \ifthenelse{\equal{\blitzresult}{both}}{
-            \item \textit{If you lost blitz:}, If we lost blitz, ya?
+            \item \textit{If you \lostblitz:}
         }{}
         \begin{equip}
             \begin{itemize}
-                \tidusf Equip Sonic Steel, gotta use the Sonic Steel, ya?
+                \tidusf Equip Sonic Steel
             \end{itemize}
         \end{equip}
     }
-    \item \save, exit the Fayth room. Make sure to save \textbf{after} the sphere grid, otherwise we'll die to Wendigo!
+    \item \save, exit Fayth room. Make sure that the Save Sphere touch is done \textbf{after} the above Sphere Grid, otherwise you will die to Wendigo.
 \end{enumerate}
 \begin{trial}
     \begin{itemize}
-        \item Slide the pedestal to the right, gotta move it right, ya?
-        \item Take the sphere from the right wall, place it in the pedestal, gotta put it in, ya?
-        \item Push the pedestal up, Gotta push it up, ya?
-        \item Take the Glyph sphere from the middle pillar, grab the sphere, ya?
-        \item Go downstairs and push the pedestal to the right, push it again, ya?
-        \item Place the Glyph sphere in the far left slot in the wall, gotta put it on the wall, ya?
-        \item Go upstairs, pick up the new sphere, gotta get another one, ya?
-        \item Go downstairs, place the sphere in the pillar, gotta put it in the pillar, ya?
-        \item Go upstairs, take the sphere at the top of the slope, time to climb the slope, ya?
-        \item Place it in the last pillar, last one, ya?
+        \item Slide pedestal to the right
+        \item Take sphere from the right wall, place into pedestal
+        \item Push pedestal up
+        \item Take Glyph sphere from middle pillar
+        \item Go downstairs and push pedestal to the right
+        \item Place Glyph sphere in far left slot in the wall
+        \item Go upstairs, pick up new sphere
+        \item Go downstairs, place sphere in pillar
+        \item Go upstairs, take the sphere at the top of the slope
+        \item Place in last pillar
     \end{itemize}
 \end{trial}
 \begin{enumerate}[resume]
-    \item Go to the temple entrance, \sd, gotta save Yuna, ya?
-    \item Move south and go down the left path, take the left path brudda, ya?
+    \item Go to temple entrance, \sd
+    \item Move south and go down the left path.
     \blitzballdetermination[true]{%
-        \item Try not to get caught by the Guados chasin' ya, if you get caught, flee! Like dodgin' defenders in blitzball!
+        \item Try to not get caught by the Guados chasing you, if you get caught Flee
     }{%
-        \item Intentionally get caught by a Guado, kill the enemies to get AP on Tidus, gotta fight the Guados, ya?
+        \item Intentionally get caught by a Guado, kill the enemies to gain AP on Tidus
         \begin{encounters}
             \begin{itemize}
-                \tidusf Tidus attacks a Guado, then any surviving enemies, ya?
-                \rikkuf Rikku uses a Silence Grenade, Rikku's gonna silence 'em, ya?
-                \kimahrif Kimahri defends, protectin', ya?
+                \tidusf Attack Guado, then Surviving Enemies
+                \rikkuf Silence Grenade
+                \kimahrif Defend
             \end{itemize}
         \end{encounters}
     }
@@ -214,47 +212,47 @@
 \blitzballdetermination{}{
     \begin{spheregrid}
         \begin{itemize}
-            \tidusf, Gotta make Tidus stronger, ya?
+            \tidusf
             \begin{itemize}
-                \item Move down twice, or just hold down, ya? $\downarrow\downarrow$ (or $\downarrow$)
-                \item Str+4, time to get some strength, ya?
+                \item Move $\downarrow\downarrow$ (or $\downarrow$)
+                \item Str+4
             \end{itemize}
         \end{itemize}
         \sggraphics{.7}{.4}{graphics/tidus_bikanel}
     \end{spheregrid}
 }
-\begin{battle}[18000]{Wendigo, that beast is tough, ya?}
+\begin{battle}[18000]{Wendigo}
     \begin{itemize}
-        \tidusf Haste Tidus, gotta be fast, ya?
-        \tidusf Switch to Bruddahood, Gotta use the Bruddahood, ya?
-        \tidusf Attack Guado B (Top One), gotta attack that Guado, ya?
-        \item \textit{If there's a Light Curtain:}, If there's a light curtain, ya?
+        \tidusf Haste \tidus
+        \tidusf Switch Weapon to Brotherhood
+        \tidusf Attack Guado B (Top One)
+        \item \textit{If Light Curtain:}
         \begin{itemize}
-            \rikkuf Rikku...Rikku?!... uses Light Curtain on Tidus, ya?
+            \rikkuf Light Curtain \tidus
         \end{itemize}
-        \textit{Else:}, If not, ya?
+        \textit{Else:}
         \begin{itemize}
             \switch{\rikku}{\auron}
-            \auronf Auron uses Power Break on Wendigo, gonna break his power, ya?
-            \switch{\auron}{\rikku} Switch back to Rikku on his next turn, ya?
+            \auronf Power Break Wendigo
+            \switch{\auron}{\rikku} on his next turn
         \end{itemize}
-        \tidusf Use Spiral Cut on Wendigo, then attack it until it's dead!
-        \kimahrif Steal from Guado if everyone's at full HP, else switch to Lulu, ya?
-        \luluf Elixir on Tidus / Phoenix Down on a dead character / Defend, Lulu's gotta heal, ya?
-        \rikkuf Elixir on Tidus / Phoenix Down on a dead character / Steal from Guado / Defend, Rikku's stealin', ya?
-        \item After Wendigo is dead:, After the Wendigo's gone, ya?
+        \tidusf Spiral Cut Wendigo, then Attack it until it's dead
+        \kimahrif Steal from Guado if everyone is at full HP, otherwise switch to \lulu
+        \luluf Elixir \tidus/Phoenix Down dead character/Defend
+        \rikkuf Elixir \tidus/Phoenix Down dead character/Steal from Guado/Defend
+        \item After Wendigo is dead:
         \begin{itemize}
             \switch{anyone}{\yuna}
-            \yunaf Defend, Yuna's gonna defend, ya?
+            \yunaf Defend
             \switch{anyone}{\tidus}
-            \tidusf Attack the Guado, ya?
+            \tidusf Attack Guado
         \end{itemize}
     \end{itemize}
-    Yuna, Tidus need AP. Helpful if Lulu gets it too, ya?
-    Guaranteed 2 Power Spheres, +2 more if the rare drop from Wendigo happens, ya?
+    \yuna, \tidus\ need AP. Helpful if \lulu\ gets it.
+    Guaranteed 2 Power Spheres, if Rare Drop from Wendigo +2 Power Spheres.
 \end{battle}
 \begin{enumerate}[resume]
-    \item Run up to Rikku...Rikku?!, \sd, walk up to Yuna, \sd, \save, run past Kimahri and go to the hidden area to grab the \pickup{Level 2 Key Sphere}, gotta run to Rikku and Yuna, ya?
-    \item Run up to Auron and talk to him, \sd, walk back, \cs+\skippablefmv[1:00], (press Start immediately after skip), \sd\ in the Dream Sequence, Time to talk to Auron brudda, ya?
+    \item Run up to \rikku, \sd, walk up to \yuna, \sd, \save, run past \kimahri\ and go to the hidden area to \pickup{Level 2 Key Sphere}
+    \item Run up to \auron\ and speak with him, \sd, walk back, \cs+\skippablefmv[1:00], (press Start immediately after skip), \sd\ in Dream Sequence
 \end{enumerate}
 \lossnp\bothcb\bothnpsingle

@@ -1,100 +1,100 @@
-\chapter{Moonflow, Ya?}
+\chapter{Moonflow}
 
 \begin{enumerate}
-\item Set up the team as Tidus, Kimahri, and Auron, ya?
-\item Walk north, and stop the timer on that Kimahri scene, brudda!
-\item Before Belgemine, go right into the alcove and pick up 3 Lv. 1 Key Spheres, ya?
-\item Walk north, stop the timer, walk left, stop the timer, walk left past two screens, and stop the timer, brudda!
+    \item \formation{\tidus}{\kimahri}{\auron}
+    \item Walk north, \sd\ on \kimahri\ Scene.
+    \item Before Belgemine, go right into alcove and \pickup{Lv. 1 Key Spheres x3}
+    \item Walk north, \sd, walk left, \sd, walk left past 2 screens, \sd.
 \end{enumerate}
 \begin{spheregrid}
-\begin{itemize}
-\wakkaf (7 S.Lvl), Ya? If ya don't have enough, skip this grid entirely, brudda!
-\begin{itemize}
-\item Move down twice and right to Silence Attack, ya?
-\item Gotta get that +2 Strength, brudda!
-\end{itemize}
-\sggraphics{.7}{.4}{graphics/Wakka_Grid}
-\end{itemize}
+    \begin{itemize}
+        \wakkaf (7 S.Lvl) (if you don't have enough, skip this Grid entirely)
+        \begin{itemize}
+            \item Move $\downarrow\downarrow\rightarrow$ to Silence Attack
+            \item +2 Strength
+        \end{itemize}
+        \sggraphics{.7}{.4}{graphics/Wakka_Grid}
+    \end{itemize}
 \end{spheregrid}
 \begin{equip}
-\begin{itemize}
-\item \textit{If ya don't have the Thunder Ball, ya?}
-\begin{itemize}
-\wakkaf Gotta equip the Official Ball, brudda!
-\end{itemize}
-\item \textit{If ya had the Lighting Steel, brudda:}
-\begin{itemize}
-\tidusf Gotta equip the Stunning Steel, ya?
-\end{itemize}
-\end{itemize}
+    \begin{itemize}
+        \item \textit{If you don't have Thunder Ball:}
+        \begin{itemize}
+            \wakkaf Official Ball
+        \end{itemize}
+        \item \textit{If you had Lighting Steel:}
+        \begin{itemize}
+            \tidusf Stunning Steel
+        \end{itemize}
+    \end{itemize}
 \end{equip}
 \begin{enumerate}[resume]
-\item Potion or Cure Tidus if he got hurt, brudda. Walk right and use the second option to ride the shoopuf, stop the timer!
+    \item Potion/Cure \tidus\ if he got injured. Walk right and use the \nth{2} option to ride ze shoopuf, \sd.
 \end{enumerate}
 \begin{battle}[4000]{Extractor}
-\begin{itemize}
-\tidusf Haste himself, ya?
-\wakkaf If anyone's HP is less than 216, use a Hi-Potion, otherwise Attack, brudda!
-\tidusf Attack that Extractor until you make it Slow, ya?
-\item \textit{If Extractor ain't Slowed when it Rises, ya?}
-\begin{itemize}
-\wakkaf Time for my Overdrive! Thunder Reels!
-\end{itemize}
-\tidusf Haste Wakka, ya?
-\item \textit{If ya got Lightning Steel, brudda:}
-\begin{itemize}
-\tidusf Cheer once, ya?
-\tidusf Equip Lightning Steel, ya?
-\end{itemize}
-\textit{Else:}
-\begin{itemize}
-\tidusf Cheer four times, ya?
-\tidusf Equip Bruddahood, brudda!
-\end{itemize}
-\tidusf Attack, ya?
-\end{itemize}
+    \begin{itemize}
+        \tidusf Haste self
+        \wakkaf If anyone is below 216 HP Hi-Potion them, otherwise Attack
+        \tidusf Attack Extractor until you apply Slow
+        \item \textit{If Extractor is not Slowed when it Rises:}
+        \begin{itemize}
+            \wakkaf \od\ Thunder Reels.
+        \end{itemize}
+        \tidusf Haste Wakka
+        \item \textit{If Lightning Steel:}
+        \begin{itemize}
+            \tidusf Cheer x1
+            \tidusf Equip Lightning Steel
+        \end{itemize}
+        \textit{Else:}
+        \begin{itemize}
+            \tidusf Cheer x4
+            \tidusf Equip Brotherhood
+        \end{itemize}
+        \tidusf Attack
+    \end{itemize}
 \end{battle}
 \begin{enumerate}[resume]
-\item Stop the timer, walk left to the next area, walk left and talk to Rikku, and stop the timer, ya? That Al Bhed...
-\item Walk up to the forced battle, brudda!
+    \item \sd, walk left to next screen, walk left and talk to \rikku, \sd
+    \item Walk up to the forced encounter
 \end{enumerate}
 \begin{battle}{Rikku Tutorial}
-\begin{itemize}
-\item Mash through the tutorial, brudda!
-\rikkuf Gotta Steal from that Treasure Chest, ya?
-\ifthenelse{\equal{\blitzresult}{win}}{%
-\item \textit{If ya have less than 34 Power Spheres, ya?}
-}{\ifthenelse{\equal{\blitzresult}{both}}{%
-\item \textit{If ya have less than 34 (or 35 on a loss) Power Spheres, brudda:}
-}{%
-\item \textit{If ya have less than 35 Power Spheres, brudda:}
-}}
-\begin{itemize}
-\rikkuf Time for an Overdrive! Two Ability Spheres, ya?
-\end{itemize}
-\item \textit{Else:}
-\begin{itemize}
-\rikkuf Time for an Overdrive! Two Potions or Hi-Potions, ya?
-\rikkuf Defend, brudda!
-\item Gotta run away from this fight!
-\end{itemize}
-\end{itemize}
-Ya get +2 Power Spheres when ya do that Ability Sphere Mix, brudda!
+    \begin{itemize}
+        \item Mash through the tutorial
+        \rikkuf Steal from the Treasure Chest
+        \ifthenelse{\equal{\blitzresult}{win}}{%
+            \item \textit{If you have less than 34 Power Spheres:}
+        }{\ifthenelse{\equal{\blitzresult}{both}}{%
+            \item \textit{If you have less than 34 (35 on \blitzloss) Power Spheres:}
+        }{%
+            \item \textit{If you have less than 35 Power Spheres:}
+        }}
+        \begin{itemize}
+            \rikkuf \od\ Two Ability Spheres
+        \end{itemize}
+        \item \textit{Else:}
+        \begin{itemize}
+            \rikkuf \od\ Two Potions or Hi-Potions
+            \rikkuf Defend
+            \item Flee
+        \end{itemize}
+    \end{itemize}
+    +2 Power Spheres when doing the Ability Sphere Mix.
 \end{battle}
 \begin{spheregrid}
-\begin{itemize}
-\tidusf (4 S.Lvl), ya?
-\begin{itemize}
-\item Move right then up, ya?
-\item Get Strength +1, HP +200, and Agility +2, brudda!
-\end{itemize}
-\sggraphics{.7}{.4}{graphics/Tidus_post_gui}
-\end{itemize}
+    \begin{itemize}
+        \tidusf (4 S.Lvl)
+        \begin{itemize}
+            \item Move $\rightarrow\uparrow$
+            \item Str+1, HP+200, Agil+2
+        \end{itemize}
+        \sggraphics{.7}{.4}{graphics/Tidus_post_gui}
+    \end{itemize}
 \end{spheregrid}
 \begin{enumerate}[resume]
-\item Gotta Auto-Sort the items, ya?
-\item Heal everyone with Potions (use 'em all if ya can, gotta free up that first inventory slot), brudda!
-\item If your first inventory slot ain't empty: Manual Sort, select what's in the first slot, scroll down a page with R2, and put it there, ya?
-\item Gotta set up the team with Tidus, Wakka, and Auron, brudda!
-\item Walk north to the next area, ya?
+    \item Auto-Sort items
+    \item Heal everyone with Potions (use them all if you can to free up the 1st Inventory Slot)
+    \item If your 1st Inventory Slot is not empty: Manual Sort, select whatever is in the 1st Inventory Slot and scroll down a page with R2, place it there.
+    \item \formation{\tidus}{\wakka}{\auron}
+    \item Walk north to next screen.
 \end{enumerate}
