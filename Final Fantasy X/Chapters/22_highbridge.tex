@@ -18,17 +18,17 @@
             \item Str+4, Agi+2
             \item Move $\rightarrow\rightarrow$
             \item Str+4
-            \item Move $\rightarrow\rightarrow\rightarrow\rightarrow$
-            \item Str+4
-            \item Move $\rightarrow$
+            \item Move $\rightarrow\rightarrow\rightarrow$
+            \item Str+4, MDef+1
+            \item Move $\rightarrow\rightarrow$
             \item Def+3
-        }{.7}{.4}{graphics/Yuna_blitz_loss_highbridge_1}
+        }{.7}{.4}{graphics/Yuna_blitz_loss_highbridge_1_mdef}
     \end{itemize}
 \end{spheregrid}
 \begin{enumerate}
     \item \formation{\tidus}{\yuna}{\wakka}
-    \item From this point on, watch any pre-empts if \yuna\ is in the party, because she will get the first turn. Check to make sure that \lulu\ has 35 levels.
-    \item Need 4 Maze Larva/YKT-63 Kills total, Overkills count as 1.
+    \item From this point on, watch any pre-empts if \yuna\ is in the party, because she will get the first turn.
+    \item Need 4 Maze Larva/YKT-63 Kills total, Overkills count as 1. Flee any Ambushes.
     \item Walk north
 \end{enumerate}
 \begin{encounters}
@@ -43,11 +43,9 @@
 \end{encounters}
 \begin{battle}[36000]{Seymour Natus}
     \begin{itemize}
-        \item \textit{If \lulu\ has less than 35 levels:}
+        \item \textit{If you bought a Distiller:}
         \begin{itemize}
-            \switch{\tidus}{\lulu}
-            \luluf Switch Weapon
-            \switch{\lulu}{\tidus}
+            \tidusf Distiller Natus (+4 of whatever you distilled)
         \end{itemize}
         \tidusf Attack
         \summon{\bahamut}

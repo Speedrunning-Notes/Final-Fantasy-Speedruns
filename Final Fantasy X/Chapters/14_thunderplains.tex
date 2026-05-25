@@ -15,14 +15,13 @@
         }{%
             \item Baroque Sword (Equip)
         }}
-        \item 3 Phoenix Downs
         \ifthenelse{\equal{\blitzresult}{win}}{%
-            \item 3 Grenades
+            \item 4 Grenades
         }{\ifthenelse{\equal{\blitzresult}{both}}{%
-            \item 3 Grenades, +1 if \blitzloss
+            \item 4 Grenades, +1 if \blitzloss
         }{%
             \item 4 Grenades
-        }}, +1 if you are missing any Speed Spheres (need 15 Speed Spheres for the rest of the run)
+        }}, +1 if you are missing any Speed Spheres (need 16 Speed Spheres for the rest of the run)
     \end{itemize}
 \end{shop}
 \begin{enumerate}[resume]
@@ -35,13 +34,10 @@
         \tidusf Yellow Shield
     \end{itemize}
 \end{equip}
-\begin{enumerate}[resume]
-    \item Try to end Thunder Plains with the Light Curtain.
-\end{enumerate}
 \begin{encounters}
-    Iron Giants will always target the Character with the least HP, make sure everyone's HP is above Rikku's
+    Iron Giants only attack the lowest HP party member, make sure everyone's HP is above \rikku. Try to do one of the below encounters, depending on whether or not you still need Speed Spheres.
     \begin{itemize}
-        \item Iron Giant + 2 Buers, if you bought an extra Grenade for Speed Spheres (only do this once):
+        \item Iron Giant + 2 Buers \textit{(only if you bought an extra Grenade for Speed Spheres, or you're near the exit and Rikku hasn't been hit by an Iron Giant yet)}:
         \begin{itemize}
             \switch{\tidus}{\rikku}
             \rikkuf Use Grenade
@@ -51,16 +47,16 @@
             \switch{\wakka}{\tidus}
             \item Flee
         \end{itemize}
-        \item Iron Giant (only do this once):
+        \item \textbf Iron Giant \textit{(only if Rikku hasn't been hit by an Iron Giant yet)}:
         \begin{itemize}
             \tidusf Defend
             \switch{\wakka}{\rikku}
-            \rikkuf Steal Light Curtain
+            \rikkuf Attack self
             \auronf Defend
             \enemyf Attacks \rikku
-            \item Flee
+            \item Flee 
         \end{itemize}
-        \blitzballdetermination[true]{}{\item Larva: Steal Lunar Curtain}
+        \blitzballdetermination[true]{}{\item Larva: Steal Lunar Curtain in addition to the above Iron Giant encounter}
     \end{itemize}
 \end{encounters}
 \begin{enumerate}[resume]

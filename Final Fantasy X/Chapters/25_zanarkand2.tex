@@ -2,9 +2,9 @@
 \begin{enumerate}
     \item \sd, \cs[0:50], walk left. \fmv+\cs[2:20]
     \item Move left to the sphere, \sd, \cs[1:40]. Walk further left and follow the path down, \cs[3:20], walk left onto the next screen.
-    \item \textit{If \rikku\ doesn't have \od} \formation{\tidus}{\auron}{\rikku}, otherwise \formation{\tidus}{\auron}{\kimahri}
-    \item You can charge \rikku's \od\ on an encounter with a Behemoth or a Defender Z (Escape with the others).
     \item Open the first chest on the left for the \textbf{Fortune Sphere}, continue on the path until you get inside the Dome.
+    \item \textit{If \rikku\ doesn't have \od} \formation{\tidus}{\auron}{\rikku}, otherwise \formation{\tidus}{\auron}{\kimahri}
+    \item You can charge \rikku's \od\ on an encounter with a Defender Z (Escape with the others).
     \item If you got \textbf{4 Return Spheres} and you missed the Overkill on \textbf{Seymour Flux} kill two \textbf{YKT-11} or one \textbf{Defender Z} with \formation{\tidus}{\auron}{\yuna}, only \yuna\ needs the AP.
 \end{enumerate}
 \begin{encounters}
@@ -64,7 +64,7 @@
     \end{itemize}
 \end{spheregrid}
 \begin{enumerate}[resume]
-    \item \formation{\tidus}{\auron}{\yuna}
+    \item \textit{If \rikku\ doesn't have \od} \formation{\tidus}{\rikku}{\yuna}, otherwise \formation{\tidus}{\auron}{\yuna}
     \bothcb
     \item \textit{If you had 0 Return Spheres:}
     \begin{itemize}
@@ -86,6 +86,13 @@
     \item \cs, run into the large room
 \end{enumerate}
 \begin{battle}[52000]{Spectral Keeper}
+    \begin{itemize}
+    	\item \textit{If \rikku\ doesn't have \od}
+    	\begin{itemize} \yunaf Teleport
+    		\tidusf Haste \yuna
+    		\rikkuf Attack
+    	\end{itemize}
+    \end{itemize}
     \begin{itemize}
         \summon{\bahamut}
         \bahamutf Attack x2
