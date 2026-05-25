@@ -221,10 +221,18 @@
         \tidusf Attack x2
         \switch{\yuna}{\lulu}
         \luluf Defend
-        \tidusf Haste \rikku\
+        \blitzballdetermination[true]{\tidusf Haste \rikku\
         \rikkuf Attack
         \enemyf Counterattack \rikku\ - take note of whether or not she has \od
-        \tidusf \od\ Spiral Cut
+        \tidusf \od\ Spiral Cut}
+        \blitzballdetermination[false]{\switch{\tidus}{\kimahri}
+        \kimahrif Lightning Marble/Arctic Wind
+        \rikkuf Attack
+        \kimahrif Attack
+        \switch{\lulu}{\tidus}
+        \tidusf Cheer x2
+        \tidusf Attack
+        \tidusf \od\ Spiral Cut}
     \end{itemize}
     \yuna, \tidus\ and \lulu\ need AP.
     Guaranteed 2 Power Spheres, if Rare Drop from Wendigo +2 Power Spheres.
