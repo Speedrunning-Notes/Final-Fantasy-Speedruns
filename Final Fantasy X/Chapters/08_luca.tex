@@ -187,8 +187,14 @@
     Guaranteed 17 Power Spheres. Each Overkill is +1 Power Sphere
 \end{battle}
 \begin{enumerate}[resume]
-    \item \sd, \skippablefmv. Overkill on Vouivre is +1 Power Sphere
+    \item \sd, \skippablefmv
 \end{enumerate}
+\begin{battle}[255]{Vouivre}
+    \begin{itemize}
+        \auronf Attack
+    \end{itemize}
+    Guaranteed 1 Power Sphere, Overkill is +1 Power Sphere
+\end{battle}
 \begin{battle}[1800]{Garuda}
     \begin{itemize}
         \tidusf Haste \auron
@@ -199,24 +205,12 @@
         \auronf Attack x3
         \item Don't revive non-\auron\ party members
     \end{itemize}
-    Check if \tidus\ has 2 S.Levels
-    Guaranteed 2 Power Spheres from this and the Vouivre. Any Overkills are +1 Power Sphere each
+    Guaranteed 1 Power Sphere, Overkill is +1 Power Sphere
 \end{battle}
 \begin{enumerate}[resume]
     \item \cs+\skippablefmv[1:30], buffer the FMV Skip. Don't save. \sd\ the Auroch scene
     \item \cs[4:50]. Run north to the hidden chests, \pickup{Magic and HP Sphere}
     \item Run South and try to speak to \auron\ while he's walking away.
-    \item Do the below grid if \tidus\ has 2 S.Levels
-    \begin{spheregrid}
-    	\begin{itemize}
-    		\tidusf (2 S.Lvl)
-    		\begin{itemize}
-    			\item Move $\uparrow$
-    			\item +200 HP
-    		\end{itemize}
-    		\sggraphics{.7}{.4}{graphics/Tidus_post_garuda}
-    	\end{itemize}
-    \end{spheregrid}
-    \item If you did the above grid, \formation{\tidus}{\wakka}{\auron} then \save.
     \item Follow red arrow to \yuna. \sd\ during guardian scene. Walk to \yuna, \cs[4:20]
 \end{enumerate}
+\wincb\losscb\bothcb\winnpsingle\lossnpsingle\bothnpsingle

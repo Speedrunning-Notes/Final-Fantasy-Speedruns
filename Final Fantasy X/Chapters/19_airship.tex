@@ -1,21 +1,38 @@
 \chapter{Airship}
 
 \begin{enumerate}
-    \item \sd\ during \cs+3 \skippablefmv. Walk down corridor to the next screen, go back in, \sd. Speak to Brother, \sd. Walk towards corridor, \sd. Walk towards camera to the next screen, go up.
-    \item If you need more than 4 Spheres total (Power or Speed), buy up to 3 Distillers from Rin (\sd\ when you do). The first counts as 4 Spheres, the subsequent two count as 2 Spheres each, for a possible total of 8 (need 28 Power Spheres and 10 Speed Spheres for the rest of the run). If 8 isn't enough, prioritise Speed. If you need 4 or fewer spheres (but more than 0), do not buy from Rin.
+    \item \sd\ during \cs+3 \skippablefmv. Walk down corridor to the next screen, go back in, \sd. Speak to Brother, \sd. Walk towards corridor, \sd
+    \item Walk towards camera for 3 screens, \save\, go up the stairs and towards the elevator, \sd
+    \losscb\bothcb
+    \item You need 28 Power Spheres and 10 Speed Spheres for the rest of the run
+    \begin{itemize}
+        \item \textit{If you need 5 or fewer Spheres total (Powers + Speeds):}
+        \begin{itemize}
+            \item Ignore Rin
+        \end{itemize}
+        \item \textit{If you need at least 6 Spheres total (Powers + Speeds)}
+        \begin{itemize}
+            \item Buy up to 4 Distillers from Rin (\sd\ before and after talking to him)
+            \item The first Distiller can be used on Seymour Natus, it counts as 4 Spheres
+            \item The subsequent three Distillers count as 2 Spheres each, they can be used on Guards Fights 1 and 3 and Evrae Altana
+            \item If you need more than 10 Spheres total, prioritize Speeds, this is the last opportunity to gain them easily
+        \end{itemize}
+    \end{itemize}
+    \item Take the elevator, go out, \sd
 \end{enumerate}
 \begin{battle}[32000]{Evrae}
-    Turns in this fight can be a bit random at times - Treat each character independently of each other, doing their action as their turn comes up.
     \begin{itemize}
         \blitzballdetermination[true]{%
             \tidusf Haste \tidus
             \tidusf Cheer
             \tidusf If \tidus\ is still going next, immediately after his previous action, Change Weapon to Sonic Steel
             \rikkuf \od\ Mix Luck Sphere + Map
-            \tidusf Attack x2
+            \tidusf Attack
+            \kimahrif Heal \tidus\ with an Elixir/X-Potion/Mega-Potion if he was hit from the first Attack, Steal otherwise
+            \tidusf Attack
             \tidusf Cheer
             \tidusf Attack x3
-            \item \kimahri\ or \rikku: Heal \tidus\ with an Elixir/X-Potion/Mega-Potion if he was hit in the first attack, Steal otherwise
+            \item \kimahri\ or \rikku: Steal
         }{%
             \tidusf Haste \tidus
             \tidusf Cheer x2
@@ -29,4 +46,4 @@
 \begin{enumerate}[resume]
     \item \sd, \skippablefmv[3:00] - Press Start immediately after the FMV.
 \end{enumerate}
-\wincb
+\bothnp\winnpsingle\lossnpsingle

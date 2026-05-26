@@ -14,23 +14,21 @@
             \rikkuf Grenade
             \tidusf Attack Bomb x2
             \auronf Defend
-            \item \textit{If Kimahri doesn't have OD:}
-            \begin{itemize}
-                \switch{anyone}{\kimahri}
-                \kimahrif Lancet Bomb
-                \switch{anyone}{\tidus}
-            \end{itemize}
+            \switch{anyone}{\kimahri}
+            \kimahrif Lancet Bomb
+            \switch{anyone}{\tidus}
             \tidusf Attack Bomb
         }
     \end{itemize}
     Guaranteed 6 Power Spheres.
 \end{battle}
 \begin{enumerate}[resume]
+    \item \formation{\tidus}{\rikku}{\auron}
     \item Follow the others, \sd
 \end{enumerate}
 \begin{battle}{Dual Horn}
     \begin{itemize}
-        \switch{anyone}{\kimahri}
+        \switch{\tidus}{\kimahri}
         \blitzballdetermination[true]{%
             \kimahrif Lancet Dual Horn (Fire Breath) if he doesn't have \od
         }{}
@@ -38,30 +36,30 @@
     \end{itemize}
 \end{battle}
 \begin{enumerate}[resume]
-    \item Go down the stairs. Once the camera flips, \formation{\tidus}{\rikku}{\auron} (if Rikku has \od\ or you are on Blitzloss) else \formation{\kimahri}{\rikku}{\tidus}
+    \item Go down the stairs. Once the camera flips, \blitzballdetermination[]{If \rikku\ doesn't have \od\ \formation{\tidus}{\rikku}{\kimahri}, else \formation{\tidus}{\rikku}{\auron}}{\formation{\tidus}{\rikku}{\auron}}
     \blitzballdetermination[true]{}{%
         \item Go back up the stairs into the left door.
         \item You will be forced into another Dual Horn encounter
         \begin{battle}{Dual Horns}
             \begin{itemize}
-                \switch{anyone}{\kimahri}
+                \switch{\tidus}{\kimahri}
                 \kimahrif Lancet Dual Horn (Fire Breath)
                 \kimahrif \od\ Stone Breath
             \end{itemize}
         \end{battle}
-        \item \formation{\tidus}{\rikku}{\auron}
+        \item If \rikku\ doesn't have \od\ \formation{\tidus}{\rikku}{\kimahri}, else \formation{\tidus}{\rikku}{\auron}
         \item Open the right chest for a \textbf{Friend Sphere}, with the codes: Bottom Middle (up x2), Middle Right (up x4), Middle (down x4), exit the room and go down the stairs once again
     }
     \item Go left into the door, \cs[0:50]
 \end{enumerate}
 \begin{battle}{Chimera}
-		If \rikku\ has \od
+	\textit{If \rikku\ has \od\:}
     \begin{itemize}
-        \switch{anyone}{\kimahri}
+        \switch{\tidus}{\kimahri}
         \kimahrif Lancet Chimera (Aqua Breath)
         \kimahrif \od\ Stone Breath
-    \end{itemize}   
-        \textit{Else}
+    \end{itemize}
+    \textit{Else:}
     \begin{itemize}
         \tidusf Haste \kimahri
         \kimahrif Lancet Chimera (Aqua Breath)
@@ -76,4 +74,3 @@
     \item \formation{\tidus}{\rikku}{\kimahri}
     \item Go bottom right to the next screen, run across the bridge
 \end{enumerate}
-\winnp
