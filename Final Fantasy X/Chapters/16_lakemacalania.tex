@@ -73,7 +73,6 @@
 \begin{enumerate}[resume]
     \item \sd, \cs[0:40], head to next screen
     \item Head to Temple, \sd. \save.
-    \wincb
     \item Jyscal Skip (Ignore if playing with Cutscene Remover):
     \begin{itemize}
         \item Speak to Tromell for \textbf{Shell Targe}
@@ -163,9 +162,10 @@
         \sggraphics{.7}{.4}{graphics/Tidus_Post_Seymour}
     \end{itemize}
 \end{spheregrid}
+\losscb
 \begin{enumerate}[resume]
-    \item You need 21 Power Spheres and 10 Speed Spheres \textbf{at this point} to be done farming them.
-    \item \formation{\rikku}{\tidus}{\kimahri}
+    \item You need 21 Power Spheres and 11 Speed Spheres \textbf{at this point} to be done farming them.
+    \item \formation{\rikku}{\tidus}{\yuna}
     \ifthenelse{\equal{\blitzresult}{win}}{}{
         \ifthenelse{\equal{\blitzresult}{both}}{
             \item \textit{If you \lostblitz:}
@@ -176,7 +176,7 @@
             \end{itemize}
         \end{equip}
     }
-    \item \save, exit Fayth room. Make sure that the Save Sphere touch is done \textbf{after} the above Sphere Grid, otherwise you will die to Wendigo.
+    \item \save, exit Fayth room.
 \end{enumerate}
 \begin{trial}
     \begin{itemize}
@@ -195,64 +195,46 @@
 \begin{enumerate}[resume]
     \item Go to temple entrance, \sd
     \item Move south and go down the left path.
-    \blitzballdetermination[true]{%
-        \item Try to not get caught by the Guados chasing you, if you get caught Flee
-    }{%
-        \item Intentionally get caught by a Guado, kill the enemies to gain AP on Tidus
-        \begin{encounters}
-            \begin{itemize}
-                \tidusf Attack Guado, then Surviving Enemies
-                \rikkuf Silence Grenade
-                \kimahrif Defend
-            \end{itemize}
-        \end{encounters}
-    }
+    \item Try to not get caught by the Guados chasing you, if you get caught Flee
 \end{enumerate}
-\bothcb
-\blitzballdetermination{}{
-    \begin{spheregrid}
-        \begin{itemize}
-            \tidusf
-            \begin{itemize}
-                \item Move $\downarrow\downarrow$ (or $\downarrow$)
-                \item Str+4
-            \end{itemize}
-        \end{itemize}
-        \sggraphics{.7}{.4}{graphics/tidus_bikanel}
-    \end{spheregrid}
-}
 \begin{battle}[18000]{Wendigo}
     \begin{itemize}
         \tidusf Haste \tidus
         \tidusf Switch Weapon to Brotherhood
-        \tidusf Attack Guado B (Top One)
-        \item \textit{If Light Curtain:}
-        \begin{itemize}
-            \rikkuf Light Curtain \tidus
-        \end{itemize}
-        \textit{Else:}
-        \begin{itemize}
-            \switch{\rikku}{\auron}
-            \auronf Power Break Wendigo
-            \switch{\auron}{\rikku} on his next turn
-        \end{itemize}
-        \tidusf Spiral Cut Wendigo, then Attack it until it's dead
-        \kimahrif Steal from Guado if everyone is at full HP, otherwise switch to \lulu
-        \luluf Elixir \tidus/Phoenix Down dead character/Defend
-        \rikkuf Elixir \tidus/Phoenix Down dead character/Steal from Guado/Defend
-        \item After Wendigo is dead:
-        \begin{itemize}
-            \switch{anyone}{\yuna}
+        \tidusf Attack Wendigo
+        \rikkuf \od\ Mix Magic Sphere + Grenade
+        \tidusf Attack
+        \yunaf Defend
+        \tidusf Attack
+        \blitzballdetermination[true]{%
             \yunaf Defend
-            \switch{anyone}{\tidus}
-            \tidusf Attack Guado
-        \end{itemize}
+            \switch{\tidus}{\lulu}
+            \luluf Defend
+            \rikkuf Attack
+            \enemyf Counterattack \rikku\ - take note of whether or not she has \od
+            \switch{\yuna}{\tidus}
+        }{%
+            \switch{\yuna\ or \tidus}{\lulu}
+            \luluf Defend
+            \switch{\yuna\ or \tidus}{\kimahri}
+            \kimahrif Lightning Marble/Arctic Wind
+            \rikkuf Attack
+            \enemyf Counterattack \rikku\ - take note of whether or not she has \od
+            \kimahrif Attack
+            \switch{\lulu}{\tidus}
+            \tidusf Cheer x2
+            \item \textit{If Tidus didn't crit any Attacks:}
+            \begin{itemize}
+                \tidusf Attack
+            \end{itemize}
+            }
+        \tidusf \od\ Spiral Cut
     \end{itemize}
-    \yuna, \tidus\ need AP. Helpful if \lulu\ gets it.
+    \yuna, \tidus\ and \lulu\ need AP.
     Guaranteed 2 Power Spheres, if Rare Drop from Wendigo +2 Power Spheres.
 \end{battle}
 \begin{enumerate}[resume]
     \item Run up to \rikku, \sd, walk up to \yuna, \sd, \save, run past \kimahri\ and go to the hidden area to \pickup{Level 2 Key Sphere}
     \item Run up to \auron\ and speak with him, \sd, walk back, \cs+\skippablefmv[1:00], (press Start immediately after skip), \sd\ in Dream Sequence
 \end{enumerate}
-\lossnp\bothcb\bothnpsingle
+\lossnpsingle\winnp

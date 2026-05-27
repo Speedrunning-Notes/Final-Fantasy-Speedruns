@@ -6,28 +6,6 @@
     \item Before Belgemine, go right into alcove and \pickup{Lv. 1 Key Spheres x3}
     \item Walk north, \sd, walk left, \sd, walk left past 2 screens, \sd.
 \end{enumerate}
-\begin{spheregrid}
-    \begin{itemize}
-        \wakkaf (7 S.Lvl) (if you don't have enough, skip this Grid entirely)
-        \begin{itemize}
-            \item Move $\downarrow\downarrow\rightarrow$ to Silence Attack
-            \item +2 Strength
-        \end{itemize}
-        \sggraphics{.7}{.4}{graphics/Wakka_Grid}
-    \end{itemize}
-\end{spheregrid}
-\begin{equip}
-    \begin{itemize}
-        \item \textit{If you don't have Thunder Ball:}
-        \begin{itemize}
-            \wakkaf Official Ball
-        \end{itemize}
-        \item \textit{If you had Lighting Steel:}
-        \begin{itemize}
-            \tidusf Stunning Steel
-        \end{itemize}
-    \end{itemize}
-\end{equip}
 \begin{enumerate}[resume]
     \item Potion/Cure \tidus\ if he got injured. Walk right and use the \nth{2} option to ride ze shoopuf, \sd.
 \end{enumerate}
@@ -62,6 +40,7 @@
     \begin{itemize}
         \item Mash through the tutorial
         \rikkuf Steal from the Treasure Chest
+        \item Check Power and Speed Spheres count
         \ifthenelse{\equal{\blitzresult}{win}}{%
             \item \textit{If you have less than 34 Power Spheres:}
         }{\ifthenelse{\equal{\blitzresult}{both}}{%
@@ -85,16 +64,18 @@
     \begin{itemize}
         \tidusf (4 S.Lvl)
         \begin{itemize}
-            \item Move $\rightarrow\uparrow$
-            \item Str+1, HP+200, Agil+2
+            \item Move $\rightarrow\uparrow$ ($\uparrow\uparrow$ if you already got the HP node)
+            \item Str+1, (HP+200,) Agil+2
         \end{itemize}
         \sggraphics{.7}{.4}{graphics/Tidus_post_gui}
     \end{itemize}
 \end{spheregrid}
+\wincb\losscb
 \begin{enumerate}[resume]
     \item Auto-Sort items
-    \item Heal everyone with Potions (use them all if you can to free up the 1st Inventory Slot)
+    \item Heal everyone with Potions (use them all if you can to free up the 1st Inventory Slot) and Hi-Potions
     \item If your 1st Inventory Slot is not empty: Manual Sort, select whatever is in the 1st Inventory Slot and scroll down a page with R2, place it there.
     \item \formation{\tidus}{\wakka}{\auron}
     \item Walk north to next screen.
 \end{enumerate}
+\winnpsingle\lossnpsingle\bothnpsingle
