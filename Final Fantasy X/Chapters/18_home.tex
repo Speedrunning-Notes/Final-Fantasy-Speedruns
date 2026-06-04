@@ -53,15 +53,23 @@
     \item Go left into the door, \cs[0:50]
 \end{enumerate}
 \begin{battle}{Chimera}
-	\textit{If \rikku\ has \od\:}
+    \textit{If \rikku\ has \od\:}
     \begin{itemize}
         \switch{\tidus}{\kimahri}
         \kimahrif Lancet Chimera (Aqua Breath)
         \kimahrif \od\ Stone Breath
     \end{itemize}
-    \textit{Else:}
+    \textit{If \rikku\ doesn't have \od\:}
     \begin{itemize}
-        \tidusf Haste \kimahri
+        \item \textit{If Preemptive:}
+        \begin{itemize}
+            \tidusf Haste Guado
+            \rikkuf Defend
+        \end{itemize}
+        \item \textit{Else:}
+        \begin{itemize}
+            \tidusf Haste \kimahri
+        \end{itemize}
         \kimahrif Lancet Chimera (Aqua Breath)
         \enemyf Fira \rikku\ to fill her \od
         \kimahrif \od\ Stone Breath
