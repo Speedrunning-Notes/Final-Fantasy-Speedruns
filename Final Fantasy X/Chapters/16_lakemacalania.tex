@@ -14,21 +14,17 @@
         \ifthenelse{\equal{\blitzresult}{win}}{%
             \switch{\lulu}{\yuna}
             \yunaf Mega Phoenix
-            \switch{\yuna}{\tidus}
-            \tidusf Equip Brotherhood
         }{\ifthenelse{\equal{\blitzresult}{loss}}{%
             \kimahrif If you need a Lunar Curtain Steal Crawler, else Defend
             \switch{\lulu}{\yuna}
             \yunaf If 2 Characters dead Mega Phoenix, else Phoenix Down \rikku
-            \switch{\yuna}{\tidus}
-            \tidusf If \kimahri\ is dead Phoenix Down him, otherwise Equip Brotherhood
         }{%
             \kimahrif If \blitzloss\ and you need a Lunar Curtain Steal Crawler, else Defend
             \switch{\lulu}{\yuna}
             \yunaf If 2 Characters dead Mega Phoenix, else Phoenix Down \rikku
-            \switch{\yuna}{\tidus}
-            \tidusf If \kimahri\ is dead Phoenix Down him, otherwise Equip Brotherhood
         }}
+        \switch{\yuna}{\tidus}
+        \tidusf Equip Brotherhood
         \rikkuf \od\ Lv. 2 Key Sphere and Lightning Marble
     \end{itemize}
     \tidus, \yuna, \lulu\ and \kimahri\ need AP.
@@ -117,15 +113,17 @@
             \rikkuf Steal x2
         }{%
             \kimahrif Lightning Marble Anima
-            \switch{\auron}{\rikku}
-            \rikkuf Lightning Marble Anima
+            \auronf Defend
             \switch{\tidus}{\wakka}
             \wakkaf Change Weapon to anything
             \enemyf Pain
             \switch{first survivor}{\tidus}
-            \tidusf Attack x4
-            \switch{second survivor}{\rikku\ or \kimahri}
-            \item \rikku\ or \kimahri: Steal
+            \tidusf Attack x2
+            \switch{second survivor}{\rikku}
+            \rikkuf Steal
+            \enemyf Boost
+            \tidusf Attack x2
+            \rikkuf Lightning Marble/Arctic Wind/Bomb Core Anima
         }
         \item \textit{If Tidus Misses:}
         \begin{itemize}
@@ -162,7 +160,6 @@
         \sggraphics{.7}{.4}{graphics/Tidus_Post_Seymour}
     \end{itemize}
 \end{spheregrid}
-\losscb
 \begin{enumerate}[resume]
     \item You need 21 Power Spheres and 11 Speed Spheres \textbf{at this point} to be done farming them.
     \item \formation{\rikku}{\tidus}{\yuna}
@@ -196,6 +193,7 @@
     \item Go to temple entrance, \sd
     \item Move south and go down the left path.
     \item Try to not get caught by the Guados chasing you, if you get caught Flee
+    \item \textit{If \rikku\ doesn't have \od} charge it on Random Encounters (Escape with the others), \save\ at the end of Crevasse
 \end{enumerate}
 \begin{battle}[18000]{Wendigo}
     \begin{itemize}
@@ -206,23 +204,24 @@
         \tidusf Attack
         \yunaf Defend
         \tidusf Attack
+        \switch{\tidus\ or \yuna}{\lulu}
+        \luluf Defend
         \blitzballdetermination[true]{%
-            \yunaf Defend
-            \switch{\tidus}{\lulu}
-            \luluf Defend
+            \switch{\tidus\ or \yuna}{\auron}
+            \auronf Defend
             \rikkuf Attack
             \enemyf Counterattack \rikku\ - take note of whether or not she has \od
-            \switch{\yuna}{\tidus}
-        }{%
-            \switch{\yuna\ or \tidus}{\lulu}
-            \luluf Defend
-            \switch{\yuna\ or \tidus}{\kimahri}
-            \kimahrif Lightning Marble/Arctic Wind
-            \rikkuf Attack
-            \enemyf Counterattack \rikku\ - take note of whether or not she has \od
-            \kimahrif Attack
             \switch{\lulu}{\tidus}
-            \tidusf Cheer x2
+        }{%
+            \switch{\tidus\ or \yuna}{\kimahri}
+            \kimahrif Lightning Marble/Arctic Wind/Bomb Core
+            \rikkuf Attack
+            \enemyf Counterattack \rikku\ - take note of whether or not she has \od
+            \switch{\kimahri}{\tidus}
+            \tidusf Cheer
+            \switch{\lulu}{\auron}
+            \auronf Defend
+            \tidusf Cheer
             \item \textit{If Tidus didn't crit any Attacks:}
             \begin{itemize}
                 \tidusf Attack
@@ -230,11 +229,11 @@
             }
         \tidusf \od\ Spiral Cut
     \end{itemize}
-    \yuna, \tidus\ and \lulu\ need AP.
+    \yuna, \tidus\ and \lulu\ and \auron\ need AP.
     Guaranteed 2 Power Spheres, if Rare Drop from Wendigo +2 Power Spheres.
 \end{battle}
 \begin{enumerate}[resume]
     \item Run up to \rikku, \sd, walk up to \yuna, \sd, \save, run past \kimahri\ and go to the hidden area to \pickup{Level 2 Key Sphere}
     \item Run up to \auron\ and speak with him, \sd, walk back, \cs+\skippablefmv[1:00], (press Start immediately after skip), \sd\ in Dream Sequence
 \end{enumerate}
-\lossnpsingle\winnp
+\winnp

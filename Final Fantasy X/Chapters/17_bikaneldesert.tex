@@ -15,7 +15,13 @@
 \end{battle}
 \begin{enumerate}[resume]
     \item \sd, then run up to meet with \wakka, \sd. Go left to enter next screen, go right to join with \kimahri, \sd. Run back and then up to meet \rikku, \sd, \save
-    \item Need 6 (4 if you still have 2 Bomb Cores) in any combination of Silence Grenades, Sleeping Powders, Smoke Bombs
+    \ifthenelse{\equal{\blitzresult}{win}}{%
+        \item Need 4
+    }{\ifthenelse{\equal{\blitzresult}{both}}{%
+        \item Need 4 (6 if \blitzloss\ and you have less than 2 Bomb Cores)
+    }{%
+        \item Need 6 (4 if you still have 2 Bomb Cores)
+    }} in any combination of Silence Grenades, Sleeping Powders, Smoke Bombs
 \end{enumerate}
 \begin{enumerate}[resume]
     \item Continue along path. On the next screen, go in north-west towards the save sphere, take the shortcut to the left. Go up to the next screen and fight the Sandragora fights. They're located in the Top Right Sinkhole with Chest, and then at the end of the path up and to the left, then go up and \sd
@@ -66,8 +72,9 @@
     \sggraphics{.7}{.4}{graphics/tidus_bikanel}
 \end{spheregrid}
 \begin{enumerate}[resume]
-    \item \formation{\tidus}{\rikku}{\auron}
+    \item \formation{\tidus}{\rikku}{\kimahri}
     \item You need 22 Power Spheres and 11 Speed Spheres \textbf{at this point} to be done farming them.
+    \lossnp
     \item Sandragora skip:
     \begin{itemize}
         \item Go near the Sandragora pit that blocks the entrance to Home
@@ -78,4 +85,4 @@
         \item If you have triggered the encounter, Flee and retry
     \end{itemize}
 \end{enumerate}
-\bothnpsingle
+\lossnpsingle\bothnpsingle\winnpsingle
