@@ -93,7 +93,16 @@
         }
         \yunaf Friend Sphere to \tidus
         \yunaf Str+4
-        \item Friend Sphere to Lulu twice like described \textbf{in the 2 Return Sphere Menu}
+        \ifthenelse{\equal{\blitzresult}{both}}{%
+            \item Friend Sphere to Lulu twice like described \textbf{in the 2 Return Sphere Menu}
+        }{%
+            \yunaf Friend Sphere to \lulu\ $\downarrow\downarrow$
+            \yunaf Str+4, Str+4
+            \luluf Move $\nearrow\uparrow\uparrow$
+            \yunaf Friend Sphere to \lulu
+            \yunaf Str+3, Agi+4, Agi+4
+            \item \sggraphics{.7}{.4}{graphics/2_and_2}
+        }
         \kimahrif Move $\downarrow x2$
         \yunaf Friend to \kimahri\ $\downarrow$
         \yunaf Agi+4

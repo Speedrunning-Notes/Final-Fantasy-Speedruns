@@ -8,16 +8,23 @@
         \tidusf Haste \tidus
         \blitzballdetermination[true]{%
             \tidusf Attack each, starting with Guado
-            \item Others: Defend
+            \rikkuf \textit{If you have less than 2 Bomb Cores} Steal Bomb, \textit{else} Defend
+            \kimahrif \textit{If you have less than 2 Bomb Cores} Steal Bomb, \textit{else} Lancet Bomb (Self-Destruct)
         }{%
-            \tidusf Attack Guado
-            \rikkuf Grenade
-            \tidusf Attack Bomb x2
-            \auronf Defend
-            \switch{anyone}{\kimahri}
-            \kimahrif Lancet Bomb
-            \switch{anyone}{\tidus}
-            \tidusf Attack Bomb
+            \item \textit{if Ambush and Rikku Died:}
+            \begin{itemize}
+                \tidusf Attack Guado
+                \tidusf Defend
+                \kimahrif Grenade
+                \tidusf Attack Bomb x3
+                \kimahrif Lancet Bomb (Self-Destruct)
+            \end{itemize}
+            \item \textit{Else:}
+            \begin{itemize}
+                \tidusf Attack each, starting with Guado
+                \rikkuf Grenade, then Defend
+                \kimahrif Lancet Bomb (Self-Destruct), then Defend
+            \end{itemize}
         }
     \end{itemize}
     Guaranteed 6 Power Spheres.
@@ -36,7 +43,7 @@
     \end{itemize}
 \end{battle}
 \begin{enumerate}[resume]
-    \item Go down the stairs. Once the camera flips, \blitzballdetermination[]{If \rikku\ doesn't have \od\ \formation{\tidus}{\rikku}{\kimahri}, else \formation{\tidus}{\rikku}{\auron}}{\formation{\tidus}{\rikku}{\auron}}
+    \item Go down the stairs. Once the camera flips, \blitzballdetermination[]{If \rikku\ doesn't have \od\ \formation{\tidus}{\rikku}{\kimahri} and Heal them with Hi-Potions, else \formation{\tidus}{\rikku}{\auron}}{\formation{\tidus}{\rikku}{\auron}}
     \blitzballdetermination[true]{}{%
         \item Go back up the stairs into the left door.
         \item You will be forced into another Dual Horn encounter
@@ -47,7 +54,7 @@
                 \kimahrif \od\ Stone Breath
             \end{itemize}
         \end{battle}
-        \item If \rikku\ doesn't have \od\ \formation{\tidus}{\rikku}{\kimahri}, else \formation{\tidus}{\rikku}{\auron}
+        \item If \rikku\ doesn't have \od\ \formation{\tidus}{\rikku}{\kimahri} and Heal them with Hi-Potions, else \formation{\tidus}{\rikku}{\auron}
         \item Open the right chest for a \textbf{Friend Sphere}, with the codes: Bottom Middle (up x2), Middle Right (up x4), Middle (down x4), exit the room and go down the stairs once again
     }
     \item Go left into the door, \cs[0:50]

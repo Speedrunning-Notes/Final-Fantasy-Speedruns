@@ -113,15 +113,17 @@
             \rikkuf Steal x2
         }{%
             \kimahrif Lightning Marble Anima
-            \switch{\auron}{\rikku}
-            \rikkuf Lightning Marble Anima
+            \auronf Defend
             \switch{\tidus}{\wakka}
             \wakkaf Change Weapon to anything
             \enemyf Pain
             \switch{first survivor}{\tidus}
-            \tidusf Attack x4
-            \switch{second survivor}{\rikku\ or \kimahri}
-            \item \rikku\ or \kimahri: Steal
+            \tidusf Attack x2
+            \switch{second survivor}{\rikku}
+            \rikkuf Steal
+            \enemyf Boost
+            \tidusf Attack x2
+            \rikkuf Lightning Marble/Arctic Wind/Bomb Core Anima
         }
         \item \textit{If Tidus Misses:}
         \begin{itemize}
@@ -203,23 +205,24 @@
         \tidusf Attack
         \yunaf Defend
         \tidusf Attack
+        \switch{\tidus\ or \yuna}{\lulu}
+        \luluf Defend
         \blitzballdetermination[true]{%
-            \yunaf Defend
-            \switch{\tidus}{\lulu}
-            \luluf Defend
+            \switch{\tidus\ or \yuna}{\auron}
+            \auronf Defend
             \rikkuf Attack
             \enemyf Counterattack \rikku\ - take note of whether or not she has \od
-            \switch{\yuna}{\tidus}
-        }{%
-            \switch{\yuna\ or \tidus}{\lulu}
-            \luluf Defend
-            \switch{\yuna\ or \tidus}{\kimahri}
-            \kimahrif Lightning Marble/Arctic Wind
-            \rikkuf Attack
-            \enemyf Counterattack \rikku\ - take note of whether or not she has \od
-            \kimahrif Attack
             \switch{\lulu}{\tidus}
-            \tidusf Cheer x2
+        }{%
+            \switch{\tidus\ or \yuna}{\kimahri}
+            \kimahrif Lightning Marble/Arctic Wind/Bomb Core
+            \rikkuf Attack
+            \enemyf Counterattack \rikku\ - take note of whether or not she has \od
+            \switch{\kimahri}{\tidus}
+            \tidusf Cheer
+            \switch{\lulu}{\auron}
+            \auronf Defend
+            \tidusf Cheer
             \item \textit{If Tidus didn't crit any Attacks:}
             \begin{itemize}
                 \tidusf Attack
@@ -227,7 +230,7 @@
             }
         \tidusf \od\ Spiral Cut
     \end{itemize}
-    \yuna, \tidus\ and \lulu\ need AP.
+    \yuna, \tidus\ and \lulu\ and \auron\ need AP.
     Guaranteed 2 Power Spheres, if Rare Drop from Wendigo +2 Power Spheres.
 \end{battle}
 \begin{enumerate}[resume]
